@@ -1,0 +1,210 @@
+{
+    "name": "dropsolid/rocketship-8",
+    "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "require": {
+        "composer/installers": "~1.0.21",
+        "cweagans/composer-patches": "^1.6.5",
+        "drush/drush": "~8.1",
+        "drupal-composer/drupal-scaffold": "~2.2",
+        "drupal/core": "~8.6",
+        "drupal/dropsolid_rocketship_profile": "1.x-dev",
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "drupal-pattern-lab/unified-twig-extensions": "~0.1.0",
+        "harvesthq/chosen": "~1.8",
+        "kenwheeler/slick": "1.8.1",
+        "vardot/blazy": "~1.8",
+        "jackmoore/colorbox": "^1.0",
+        "imakewebthings/waypoints": "~4.0.1",
+        "twig/twig": "1.37.1"
+    },
+    "authors": [
+        {
+            "name": "Mattias Michaux",
+            "homepage": "https://www.drupal.org/u/mollux",
+            "role": "Maintainer"
+        },
+        {
+            "name": "Nick Vanpraet",
+            "homepage": "https://www.drupal.org/u/grayle",
+            "role": "Maintainer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "autoloader-suffix": "Drupal8",
+        "platform": {
+            "php": "7.0.28"
+        }
+    },
+    "extra": {
+        "_readme": [
+            "By default Drupal loads the autoloader from ./vendor/autoload.php.",
+            "To change the autoloader you can edit ./autoload.php."
+        ],
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/purge": {
+                "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2019-03-06/3008776.add-priority-to-needs_destruct.patch"
+            },
+            "drupal/metatag": {
+                "Allow metatags to be disabled -- https://www.drupal.org/project/metatag/issues/2981793": "https://www.drupal.org/files/issues/2019-02-27/allow-metatags-to-be-disabled.2981793.11_0.patch"
+            },
+            "drupal/page_manager": {
+                "Variants take entity label not the variant title https://www.drupal.org/node/2665328": "https://www.drupal.org/files/issues/2018-07-04/2665328-variants-take-entity-label-83.patch"
+            },
+            "drupal/core": {
+                "Support priority for needs_destruction service tag": "https://www.drupal.org/files/issues/2019-03-06/support-priority-for-need_destruction-tag.patch",
+                "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2018-09-26/2949457-14.patch",
+                "Contextual links can't handle multiple occurrences of the same contextual links (again) https://www.drupal.org/project/drupal/issues/2891603": "https://www.drupal.org/files/issues/2018-10-18/2891603.16.patch",
+                "Exposed term filter is not updated when terms are added, deleted, or rearranged  https://www.drupal.org/project/drupal/issues/2900248": "https://www.drupal.org/files/issues/2900248-9.patch",
+                "Allow states to check and uncheck checkboxes and radio buttons": "https://www.drupal.org/files/issues/drupal-994360-74-states-checkboxes-checked.patch",
+                "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
+                "Fix datetime widget descriptions": "https://www.drupal.org/files/issues/2018-06-22/2791693-datetime-input-ui-29.patch",
+                "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch"
+            },
+            "drupal/blazy": {
+                "responsive image performance": "https://www.drupal.org/files/issues/2018-03-09/responsive-image-performance-2951529-2.patch"
+            },
+            "drupal/captcha": {
+                "don't set $_SESSION unless needed - https://www.drupal.org/project/captcha/issues/2996495": "https://www.drupal.org/files/issues/2018-08-31/captcha.no-needless-sessions-2.patch"
+            },
+            "drupal/config_ignore": {
+                "Ignore configuration storage collections?": "https://www.drupal.org/files/issues/2018-09-27/2973431.8.patch"
+            },
+            "drupal/display_field_copy": {
+                "Allow different formatter settings for copied field": "https://www.drupal.org/files/issues/display_field_copy-no-widget-field-settings-2822398-10.patch",
+                "Fix undefined index for disabled field": "https://www.drupal.org/files/issues/display_field_copy-2910523-undefined-index-formatter.patch"
+            },
+            "drupal/facets": {
+                "Hide facets when it is configured to hide the block - https://www.drupal.org/node/2984465": "https://www.drupal.org/files/issues/2018-12-05/2984465-19.patch"
+            },
+            "drupal/block_field": {
+                "Allow selecting categories of blocks instead of individual blocks": "https://www.drupal.org/files/issues/block-field-2876110-12.patch"
+            },
+            "drupal/office_hours": {
+                "Copy previous day action hides Add timeslot action": "https://www.drupal.org/files/issues/2018-12-31/officehours-copy_hides_add_timeslot-3005949-2-D8_6_4.patch"
+            }
+        },
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library"
+            ]
+        },
+        "drupal-scaffold": {
+            "excludes": [
+                "robots.txt",
+                ".htaccess"
+            ],
+            "initial": {
+                "robots.txt": "robots.txt",
+                ".htaccess": ".htaccess"
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Drupal\\Core\\Composer\\": "core/lib/Drupal/Core/Composer"
+        }
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "pre-autoload-dump": "Drupal\\Core\\Composer\\Composer::preAutoloadDump",
+        "post-autoload-dump": "Drupal\\Core\\Composer\\Composer::ensureHtaccess",
+        "post-package-install": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
+        "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
+        "post-install-cmd": [
+            "rm -rf docroot/modules/contrib/captcha/.git",
+            "rm -rf docroot/modules/contrib/recaptcha/.git",
+            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd .."
+        ],
+        "post-update-cmd": [
+            "@drupal-scaffold",
+            "rm -rf docroot/modules/contrib/captcha/.git",
+            "rm -rf docroot/modules/contrib/recaptcha/.git",
+            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd .."
+        ]
+    },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "harvesthq/chosen",
+                "version": "1.8.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "kenwheeler/slick",
+                "version": "1.8.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "1.6.4",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "imakewebthings/waypoints",
+                "version": "4.0.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/imakewebthings/waypoints/archive/master.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require-dev": {
+        "drupal/entity_browser": "^1.5",
+        "webflo/drupal-core-require-dev": "^8.6.0"
+    }
+}
