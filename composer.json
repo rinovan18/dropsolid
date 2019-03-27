@@ -140,7 +140,8 @@
         "post-install-cmd": [
             "rm -rf docroot/modules/contrib/captcha/.git",
             "rm -rf docroot/modules/contrib/recaptcha/.git",
-            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd .."
+            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
+            "cp etc/.gitignore .gitignore"
         ],
         "post-update-cmd": [
             "@drupal-scaffold",
