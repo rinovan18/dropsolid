@@ -1,6 +1,6 @@
 {
-    "name": "dropsolid/rocketship-8",
-    "description": "Drupal is an open source content management platform powering millions of websites and applications.",
+    "name": "dropsolid/rocketship",
+    "description": "Dropsolid Rocketship is a distribution that enables small to mid-market business to profit from an optimal start when getting your feet wet in Drupal.",
     "type": "project",
     "license": "GPL-2.0+",
     "require": {
