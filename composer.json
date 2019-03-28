@@ -9,15 +9,14 @@
         "drush/drush": "~8.1",
         "drupal-composer/drupal-scaffold": "~2.2",
         "drupal/core": "~8.6",
-        "drupal/dropsolid_rocketship_profile": "1.x-dev",
+        "drupal/dropsolid_rocketship_profile": "^1.0",
         "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal-pattern-lab/unified-twig-extensions": "~0.1.0",
         "harvesthq/chosen": "~1.8",
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
-        "imakewebthings/waypoints": "~4.0.1",
-        "twig/twig": "1.37.1"
+        "imakewebthings/waypoints": "~4.0.1"
     },
     "authors": [
         {
