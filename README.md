@@ -24,6 +24,19 @@ not make sense. Feel free to create issues on
 [drupal.org](https://drupal.org/project/dropsolid_rocketship) when you find 
 something that should be made clearer.
 
+
+### Best installed with [Composer](https://getcomposer.org/download/):
+
+To install the most recent beta release:
+```
+composer create-project dropsolid/rocketship:^8.6@beta PROJECTNAME --no-dev --no-interaction
+```
+
+To install the dev version:
+```
+composer create-project dropsolid/rocketship:8.6.x-dev PROJECTNAME --stability dev --no-interaction
+```
+
 ------------------
 
 - [Rocketship IP](#rocketship-ip)  
