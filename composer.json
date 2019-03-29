@@ -16,7 +16,9 @@
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
-        "imakewebthings/waypoints": "~4.0.1"
+        "imakewebthings/waypoints": "~4.0.1",
+        "drupal/captcha": "1.x-dev#1d21e6864ced543312d8d819a170c3553281b485",
+        "drupal/recaptcha": "2.x-dev#7872a17f8c33c30e9eb941679ed1af222d83277a"
     },
     "authors": [
         {

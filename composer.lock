@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0725c48037686f6a8ca1b51297f8d600",
+    "content-hash": "6a8aaeedade6a67b3bf7ac035fe84dbc",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -2074,7 +2074,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/captcha",
-                "reference": "e935322714de920f9378958b801cd3ab58f3d7e8"
+                "reference": "1d21e6864ced543312d8d819a170c3553281b485"
             },
             "require": {
                 "drupal/core": "*"
@@ -7294,7 +7294,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/recaptcha",
-                "reference": "0cbc6e7cb5b7b94666dc7ea0908f430e4eff1aa2"
+                "reference": "7872a17f8c33c30e9eb941679ed1af222d83277a"
             },
             "require": {
                 "drupal/captcha": "^1.0.0-alpha1",
@@ -7345,7 +7345,8 @@
             "support": {
                 "source": "https://git.drupal.org/project/recaptcha.git",
                 "issues": "https://www.drupal.org/project/issues/recaptcha"
-            }
+            },
+            "time": "2018-08-10T19:58:00+00:00"
         },
         {
             "name": "drupal/redirect",
@@ -15294,7 +15295,10 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/captcha": 20,
+        "drupal/recaptcha": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
