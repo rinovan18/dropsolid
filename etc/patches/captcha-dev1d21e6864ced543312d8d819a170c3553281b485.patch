@@ -231,16 +231,6 @@ index f4f34fd..c6b1e2f 100755
        }
        else {
          // Use NULL when no buttons were found.
-diff --git a/captcha.info.yml b/captcha.info.yml
-index cdf7a07..11925db 100755
---- a/captcha.info.yml
-+++ b/captcha.info.yml
-@@ -6,4 +6,4 @@ core: 8.x
- configure: captcha_settings
- 
- dependencies:
--  - node
-+  - drupal:node
 diff --git a/captcha.links.task.yml b/captcha.links.task.yml
 index 838cc19..da18f9d 100755
 --- a/captcha.links.task.yml
