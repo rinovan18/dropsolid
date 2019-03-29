@@ -16,9 +16,7 @@
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
-        "imakewebthings/waypoints": "~4.0.1",
-        "drupal/captcha": "1.x-dev#1d21e6864ced543312d8d819a170c3553281b485",
-        "drupal/recaptcha": "2.x-dev#7872a17f8c33c30e9eb941679ed1af222d83277a"
+        "imakewebthings/waypoints": "~4.0.1"
     },
     "authors": [
         {
@@ -74,6 +72,7 @@
                 "responsive image performance": "https://www.drupal.org/files/issues/2018-03-09/responsive-image-performance-2951529-2.patch"
             },
             "drupal/captcha": {
+                "patch to bring captcha module up to dev#1d21e6864ced543312d8d819a170c3553281b485": "etc/patches/captcha-dev1d21e6864ced543312d8d819a170c3553281b485.patch",
                 "don't set $_SESSION unless needed - https://www.drupal.org/project/captcha/issues/2996495": "https://www.drupal.org/files/issues/2018-08-31/captcha.no-needless-sessions-2.patch"
             },
             "drupal/config_ignore": {
@@ -139,15 +138,11 @@
         "post-package-install": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
         "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
         "post-install-cmd": [
-            "rm -rf docroot/modules/contrib/captcha/.git",
-            "rm -rf docroot/modules/contrib/recaptcha/.git",
             "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
             "cp etc/.gitignore .gitignore"
         ],
         "post-update-cmd": [
             "@drupal-scaffold",
-            "rm -rf docroot/modules/contrib/captcha/.git",
-            "rm -rf docroot/modules/contrib/recaptcha/.git",
             "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd .."
         ]
     },
