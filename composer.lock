@@ -1898,64 +1898,6 @@
             }
         },
         {
-            "name": "drupal/big_pipe-big_pipe",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/big_pipe",
-                "reference": "8.x-1.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/big_pipe-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "7468239e502f442222620ad28bd2c1fbce9eac6b"
-            },
-            "require": {
-                "drupal/core": "~8.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1467986128",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Fabianx",
-                    "homepage": "https://www.drupal.org/user/693738"
-                },
-                {
-                    "name": "Wim Leers",
-                    "homepage": "https://www.drupal.org/user/99777"
-                },
-                {
-                    "name": "effulgentsia",
-                    "homepage": "https://www.drupal.org/user/78040"
-                },
-                {
-                    "name": "moshe weitzman",
-                    "homepage": "https://www.drupal.org/user/23"
-                }
-            ],
-            "homepage": "https://www.drupal.org/project/big_pipe",
-            "support": {
-                "source": "http://cgit.drupalcode.org/big_pipe"
-            }
-        },
-        {
             "name": "drupal/blazy",
             "version": "1.0.0-rc4",
             "source": {
@@ -5942,7 +5884,7 @@
         },
         {
             "name": "drupal/menu_clickthrough",
-            "version": "1.0.0-beta2",
+            "version": "1.0.0-beta3",
             "require": {
                 "drupal/core": "*",
                 "drupal/rocketship_paragraphs": "self.version"
@@ -5953,8 +5895,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1553779684",
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1553855285",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7537,17 +7479,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "1.0.0-beta2",
+            "version": "1.0.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/rocketship_core",
-                "reference": "8.x-1.0-beta2"
+                "reference": "8.x-1.0-beta4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "cce30581069b7c9e413c955e83600d347ffcfdeb"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.0-beta4.zip",
+                "reference": "8.x-1.0-beta4",
+                "shasum": "d05962be2fb011ed377cf4b60060ed1ab5d7a5fd"
             },
             "require": {
                 "drupal/admin_toolbar": "~1.17",
@@ -7556,7 +7498,6 @@
                 "drupal/advagg": "~3.3",
                 "drupal/advagg_js_minify": "*",
                 "drupal/better_exposed_filters": "3.0-alpha5",
-                "drupal/big_pipe-big_pipe": "*",
                 "drupal/blazy": "1.0-rc4",
                 "drupal/block_content_permissions": "~1.6",
                 "drupal/colorbox": "~1.4",
@@ -7655,8 +7596,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1553779684",
+                    "version": "8.x-1.0-beta4",
+                    "datestamp": "1553854981",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7691,17 +7632,17 @@
         },
         {
             "name": "drupal/rocketship_paragraphs",
-            "version": "1.0.0-beta2",
+            "version": "1.0.0-beta3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/rocketship_paragraphs",
-                "reference": "8.x-1.0-beta2"
+                "reference": "8.x-1.0-beta3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-8.x-1.0-beta2.zip",
-                "reference": "8.x-1.0-beta2",
-                "shasum": "5cc3e943d00dcbedcd528ebf4132f19cfc5907f5"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "16f0864bdb9aaad5f2734b36ba37df066a81d96f"
             },
             "require": {
                 "drupal/blazy": "*",
@@ -7732,8 +7673,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta2",
-                    "datestamp": "1553779684",
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1553855285",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -9047,7 +8988,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.2",
-                    "datestamp": "1553768585",
+                    "datestamp": "1553801966",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9212,7 +9153,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.2",
-                    "datestamp": "1553768585",
+                    "datestamp": "1553801966",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
