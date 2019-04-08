@@ -4392,17 +4392,17 @@
         },
         {
             "name": "drupal/editor_file",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/editor_file.git",
-                "reference": "8.x-1.3"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/editor_file-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "665b20a510a60dd469334f6338504875ae053ad1"
+                "url": "https://ftp.drupal.org/files/projects/editor_file-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "9a03e0ac4f21cfa3fa4772fb30861d7e4a82a8c1"
             },
             "require": {
                 "drupal/core": "*"
@@ -4413,8 +4413,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1542624480",
+                    "version": "8.x-1.4",
+                    "datestamp": "1554478985",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -4434,7 +4434,7 @@
             "description": "Allow users to link uploaded files in the text Editor.",
             "homepage": "https://www.drupal.org/project/editor_file",
             "support": {
-                "source": "http://cgit.drupalcode.org/editor_file"
+                "source": "https://git.drupalcode.org/project/editor_file"
             }
         },
         {
@@ -5147,17 +5147,17 @@
         },
         {
             "name": "drupal/geofield_map",
-            "version": "2.34.0",
+            "version": "2.35.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/geofield_map.git",
-                "reference": "8.x-2.34"
+                "reference": "8.x-2.35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.34.zip",
-                "reference": "8.x-2.34",
-                "shasum": "6475c93a6d2640e6f0abae02e1b4b16dbc69c281"
+                "url": "https://ftp.drupal.org/files/projects/geofield_map-8.x-2.35.zip",
+                "reference": "8.x-2.35",
+                "shasum": "8877ca116ec16fc70a900482b3b4e25538956d0b"
             },
             "require": {
                 "drupal/core": "~8.0",
@@ -5169,8 +5169,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.34",
-                    "datestamp": "1553646181",
+                    "version": "8.x-2.35",
+                    "datestamp": "1554500881",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -5191,7 +5191,7 @@
             "description": "Geofield Map is an advanced, complete and easy-to-use Geo Mapping solution for Drupal 8, based on and fully compatible with the Geofield module.",
             "homepage": "https://www.drupal.org/project/geofield_map",
             "support": {
-                "source": "http://git.drupal.org/project/geofield_map.git",
+                "source": "https://git.drupalcode.org/project/geofield_map",
                 "issues": "https://www.drupal.org/project/issues/geofield_map"
             }
         },
@@ -13360,7 +13360,7 @@
             "version": "1.7.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupal.org/project/entity_browser",
+                "url": "https://git.drupalcode.org/project/entity_browser.git",
                 "reference": "8.x-1.7"
             },
             "dist": {
