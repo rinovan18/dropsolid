@@ -1438,7 +1438,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.26",
-                    "datestamp": "1549218480",
+                    "datestamp": "1549559402",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1708,6 +1708,10 @@
                 {
                     "name": "rupl",
                     "homepage": "https://www.drupal.org/user/411999"
+                },
+                {
+                    "name": "thalles",
+                    "homepage": "https://www.drupal.org/user/3589086"
                 }
             ],
             "description": "Improved aggregation of CSS/JS files to speed up page load times.",
@@ -1780,7 +1784,7 @@
             "description": "Minify JavaScript with a 3rd party minifier; JSMin+, JSMin c ext, JShrink, and JSqueeze currently.",
             "homepage": "https://www.drupal.org/project/advagg",
             "support": {
-                "source": "https://git.drupalcode.org/project/advagg"
+                "source": "http://cgit.drupalcode.org/advagg"
             }
         },
         {
@@ -1854,7 +1858,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.0-alpha5",
-                    "datestamp": "1540513084",
+                    "datestamp": "1550449381",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -2132,7 +2136,7 @@
             "description": "The CAPTCHA module provides this feature to virtually any user facing web form on a Drupal site.",
             "homepage": "https://www.drupal.org/project/captcha",
             "support": {
-                "source": "https://git.drupalcode.org/project/captcha"
+                "source": "http://cgit.drupalcode.org/captcha"
             }
         },
         {
@@ -2699,7 +2703,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha2",
-                    "datestamp": "1528237080",
+                    "datestamp": "1550188080",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -2806,7 +2810,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.0-alpha6",
-                    "datestamp": "1537468380",
+                    "datestamp": "1550290687",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3052,7 +3056,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.0-beta4",
-                    "datestamp": "1541177884",
+                    "datestamp": "1550290984",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3408,16 +3412,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.6.13",
+            "version": "8.6.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "8d5b80030ac3f13df2d66aeef0ea388fd9a90632"
+                "reference": "7f5f0369ffe08478aa0f26bd48dc95bcc9cde4b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/8d5b80030ac3f13df2d66aeef0ea388fd9a90632",
-                "reference": "8d5b80030ac3f13df2d66aeef0ea388fd9a90632",
+                "url": "https://api.github.com/repos/drupal/core/zipball/7f5f0369ffe08478aa0f26bd48dc95bcc9cde4b5",
+                "reference": "7f5f0369ffe08478aa0f26bd48dc95bcc9cde4b5",
                 "shasum": ""
             },
             "require": {
@@ -3653,7 +3657,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-03-20T06:01:19+00:00"
+            "time": "2019-04-08T01:37:34+00:00"
         },
         {
             "name": "drupal/crop",
@@ -4939,7 +4943,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta6",
-                    "datestamp": "1519932484",
+                    "datestamp": "1553270584",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -5893,7 +5897,7 @@
                     "datestamp": "1553855285",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
@@ -5918,7 +5922,7 @@
             "description": "Provides description to menu items and show menu's in a overview.",
             "homepage": "https://www.drupal.org/project/rocketship_paragraphs",
             "support": {
-                "source": "https://git.drupalcode.org/project/rocketship_paragraphs"
+                "source": "http://cgit.drupalcode.org/rocketship_paragraphs"
             }
         },
         {
@@ -6263,8 +6267,8 @@
                     "version": "8.x-1.0",
                     "datestamp": "1552389486",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
@@ -6562,12 +6566,16 @@
                 {
                     "name": "japerry",
                     "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "tim.plunkett",
+                    "homepage": "https://www.drupal.org/user/241634"
                 }
             ],
             "description": "Provides a simple UI for Page Manager.",
             "homepage": "https://www.drupal.org/project/page_manager",
             "support": {
-                "source": "https://git.drupalcode.org/project/page_manager"
+                "source": "http://cgit.drupalcode.org/page_manager"
             }
         },
         {
@@ -6760,7 +6768,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha3",
-                    "datestamp": "1542703980",
+                    "datestamp": "1550830384",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -6841,7 +6849,7 @@
             "description": "Allows users to configure permissions for individual Paragraphs types.",
             "homepage": "https://www.drupal.org/project/paragraphs",
             "support": {
-                "source": "https://git.drupalcode.org/project/paragraphs"
+                "source": "http://cgit.drupalcode.org/paragraphs"
             }
         },
         {
@@ -6957,12 +6965,12 @@
                     "homepage": "https://www.drupal.org/user/214652"
                 },
                 {
-                    "name": "Xano",
-                    "homepage": "https://www.drupal.org/user/62965"
-                },
-                {
                     "name": "bradjones1",
                     "homepage": "https://www.drupal.org/user/405824"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
                 }
             ],
             "description": "Provides tools that extend Drupal's plugin system.",
@@ -7238,7 +7246,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta4",
-                    "datestamp": "1506790444",
+                    "datestamp": "1550891284",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -7263,7 +7271,7 @@
                     "homepage": "https://www.drupal.org/user/536298"
                 },
                 {
-                    "name": "olofjohansson",
+                    "name": "olofbokedal",
                     "homepage": "https://www.drupal.org/user/1198438"
                 },
                 {
@@ -7673,7 +7681,7 @@
                     "datestamp": "1553855285",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
@@ -7700,7 +7708,7 @@
             "description": "Contains predefined paragraph types.",
             "homepage": "https://drupal.org/project/rocketship_paragraphs",
             "support": {
-                "source": "https://git.drupalcode.org/project/rocketship_paragraphs",
+                "source": "http://cgit.drupalcode.org/rocketship_paragraphs",
                 "docs": "https://drupal.org/project/rocketship_paragraphs"
             }
         },
@@ -7978,10 +7986,6 @@
                     "homepage": "https://www.drupal.org/user/122682"
                 },
                 {
-                    "name": "borisson_",
-                    "homepage": "https://www.drupal.org/user/2393360"
-                },
-                {
                     "name": "drunken monkey",
                     "homepage": "https://www.drupal.org/user/205582"
                 }
@@ -7989,7 +7993,7 @@
             "description": "Offers an implementation of the Search API that uses database tables for indexing content.",
             "homepage": "https://www.drupal.org/project/search_api",
             "support": {
-                "source": "https://git.drupalcode.org/project/search_api"
+                "source": "http://cgit.drupalcode.org/search_api"
             }
         },
         {
@@ -8038,7 +8042,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.0-alpha2",
-                    "datestamp": "1547835780",
+                    "datestamp": "1549646884",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -8253,6 +8257,10 @@
                 {
                     "name": "gausarts",
                     "homepage": "https://www.drupal.org/user/159062"
+                },
+                {
+                    "name": "thalles",
+                    "homepage": "https://www.drupal.org/user/3589086"
                 }
             ],
             "description": "Slick carousel, the last carousel you'll ever need.",
@@ -8984,7 +8992,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.2",
-                    "datestamp": "1553768585",
+                    "datestamp": "1553801966",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9205,7 +9213,7 @@
             "description": "Provides a user interface for building and maintaining webforms.",
             "homepage": "https://www.drupal.org/project/webform",
             "support": {
-                "source": "https://git.drupalcode.org/project/webform"
+                "source": "http://cgit.drupalcode.org/webform"
             }
         },
         {
@@ -13677,16 +13685,16 @@
         },
         {
             "name": "mikey179/vfsStream",
-            "version": "v1.6.5",
+            "version": "v1.6.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mikey179/vfsStream.git",
-                "reference": "d5fec95f541d4d71c4823bb5e30cf9b9e5b96145"
+                "url": "https://github.com/bovigo/vfsStream.git",
+                "reference": "095238a0711c974ae5b4ebf4c4534a23f3f6c99d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/d5fec95f541d4d71c4823bb5e30cf9b9e5b96145",
-                "reference": "d5fec95f541d4d71c4823bb5e30cf9b9e5b96145",
+                "url": "https://api.github.com/repos/bovigo/vfsStream/zipball/095238a0711c974ae5b4ebf4c4534a23f3f6c99d",
+                "reference": "095238a0711c974ae5b4ebf4c4534a23f3f6c99d",
                 "shasum": ""
             },
             "require": {
@@ -13719,7 +13727,7 @@
             ],
             "description": "Virtual file system to mock the real file system in unit tests.",
             "homepage": "http://vfs.bovigo.org/",
-            "time": "2017-08-01T08:02:14+00:00"
+            "time": "2019-04-08T13:54:32+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -15250,16 +15258,16 @@
         },
         {
             "name": "webflo/drupal-core-require-dev",
-            "version": "8.6.13",
+            "version": "8.6.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webflo/drupal-core-require-dev.git",
-                "reference": "ec02673dbd55068e4fff8edc322af4a226d7f59c"
+                "reference": "a34a91c78db67979e3fd574bbec6045a932d2ca7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/ec02673dbd55068e4fff8edc322af4a226d7f59c",
-                "reference": "ec02673dbd55068e4fff8edc322af4a226d7f59c",
+                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/a34a91c78db67979e3fd574bbec6045a932d2ca7",
+                "reference": "a34a91c78db67979e3fd574bbec6045a932d2ca7",
                 "shasum": ""
             },
             "require": {
@@ -15267,7 +15275,7 @@
                 "behat/mink-goutte-driver": "^1.2",
                 "behat/mink-selenium2-driver": "1.3.x-dev",
                 "drupal/coder": "^8.2.12",
-                "drupal/core": "8.6.13",
+                "drupal/core": "8.6.14",
                 "jcalderonzumba/gastonjs": "^1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
                 "mikey179/vfsstream": "^1.2",
@@ -15283,7 +15291,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "require-dev dependencies from drupal/core",
-            "time": "2019-03-20T16:31:35+00:00"
+            "time": "2019-04-08T02:01:38+00:00"
         }
     ],
     "aliases": [],
