@@ -6495,7 +6495,7 @@
                     }
                 },
                 "patches_applied": {
-                    "zefzef": "https://www.drupal.org/files/issues/2019-02-26/3033057-ctools31-15.patch",
+                    "Page Manager currently not working with CTools 3.1+": "https://www.drupal.org/files/issues/2019-02-26/3033057-ctools31-15.patch",
                     "Variants take entity label not the variant title https://www.drupal.org/node/2665328": "https://www.drupal.org/files/issues/2018-07-04/2665328-variants-take-entity-label-83.patch"
                 }
             },
@@ -6742,17 +6742,17 @@
         },
         {
             "name": "drupal/paragraphs_asymmetric_translation_widgets",
-            "version": "1.0.0-alpha3",
+            "version": "1.0.0-beta1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs_asymmetric_translation_widgets.git",
-                "reference": "8.x-1.0-alpha3"
+                "reference": "8.x-1.0-beta1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs_asymmetric_translation_widgets-8.x-1.0-alpha3.zip",
-                "reference": "8.x-1.0-alpha3",
-                "shasum": "a06c68fff5833cb9f163980dbd2f656b6c10d0b8"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_asymmetric_translation_widgets-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "9bfb0a3ee8781004a81e3864737b4f28442e1f7b"
             },
             "require": {
                 "drupal/core": "~8",
@@ -6764,11 +6764,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha3",
+                    "version": "8.x-1.0-beta1",
                     "datestamp": "1550830384",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -6793,7 +6793,7 @@
             "description": "Extends the paragraphs field widgets to support asymmetric translations.",
             "homepage": "https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets",
             "support": {
-                "source": "http://cgit.drupalcode.org/paragraphs_asymmetric_translation_widgets"
+                "source": "https://git.drupalcode.org/project/paragraphs_asymmetric_translation_widgets"
             }
         },
         {
@@ -7480,17 +7480,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "1.0.0-beta6",
+            "version": "1.0.0-beta7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "8.x-1.0-beta6"
+                "reference": "8.x-1.0-beta7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.0-beta6.zip",
-                "reference": "8.x-1.0-beta6",
-                "shasum": "4d8b07c345fa9e246fa0f1932b929acaf75f966c"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.0-beta7.zip",
+                "reference": "8.x-1.0-beta7",
+                "shasum": "233ae322a6f21b479440b0e96969c81ec86c4088"
             },
             "require": {
                 "drupal/admin_toolbar": "~1.17",
@@ -7541,7 +7541,7 @@
                 "drupal/page_manager_ui": "*",
                 "drupal/panels": "~4.4",
                 "drupal/paragraphs": "~1.5",
-                "drupal/paragraphs_asymmetric_translation_widgets": "1.0-alpha3",
+                "drupal/paragraphs_asymmetric_translation_widgets": "1.0-beta1",
                 "drupal/pathauto": "~1.0",
                 "drupal/plugin": "~2.5",
                 "drupal/redirect": "~1.0",
@@ -7597,8 +7597,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta6",
-                    "datestamp": "1554911285",
+                    "version": "8.x-1.0-beta7",
+                    "datestamp": "1555328284",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -9763,9 +9763,7 @@
             "version": "1.8.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip"
             },
             "type": "drupal-library"
         },
@@ -9856,9 +9854,7 @@
             "version": "4.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/imakewebthings/waypoints/archive/master.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/imakewebthings/waypoints/archive/master.zip"
             },
             "type": "drupal-library"
         },
@@ -9867,9 +9863,7 @@
             "version": "1.6.4",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip"
             },
             "type": "drupal-library"
         },
@@ -9966,9 +9960,7 @@
             "version": "1.8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip"
             },
             "type": "drupal-library"
         },
@@ -13325,16 +13317,16 @@
         },
         {
             "name": "drupal/coder",
-            "version": "8.3.1",
+            "version": "8.3.2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/coder.git",
-                "reference": "29a25627e7148b3119c84f18e087fc3b8c85b959"
+                "reference": "44c80c21074df43572652f35bec4f184f9eae5e7"
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">=5.4.0",
-                "squizlabs/php_codesniffer": "^3.0.1",
+                "php": ">=5.5.9",
+                "squizlabs/php_codesniffer": "^3.4.1",
                 "symfony/yaml": ">=2.0.0"
             },
             "require-dev": {
@@ -13344,7 +13336,7 @@
             "autoload": {
                 "psr-0": {
                     "Drupal\\": "coder_sniffer/Drupal/",
-                    "DrupalPractice\\": "coder_sniffer/Drupal/"
+                    "DrupalPractice\\": "coder_sniffer/DrupalPractice/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -13358,7 +13350,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-09-21T14:22:49+00:00"
+            "time": "2019-04-14T17:56:07+00:00"
         },
         {
             "name": "drupal/entity_browser",
