@@ -7480,17 +7480,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "1.0.0-beta7",
+            "version": "1.0.0-beta8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "8.x-1.0-beta7"
+                "reference": "8.x-1.0-beta8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.0-beta7.zip",
-                "reference": "8.x-1.0-beta7",
-                "shasum": "233ae322a6f21b479440b0e96969c81ec86c4088"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.0-beta8.zip",
+                "reference": "8.x-1.0-beta8",
+                "shasum": "513d1b92adee771c8e06d69e824887ed2c705a9c"
             },
             "require": {
                 "drupal/admin_toolbar": "~1.17",
@@ -7597,8 +7597,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta7",
-                    "datestamp": "1555328284",
+                    "version": "8.x-1.0-beta8",
+                    "datestamp": "1555423681",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
