@@ -50,7 +50,7 @@
             ],
             "authors": [
                 {
-                    "name": "Antonio J. Garc\u00eda Lagar",
+                    "name": "Antonio J. García Lagar",
                     "email": "aj@garcialagar.es",
                     "homepage": "http://aj.garcialagar.es",
                     "role": "developer"
@@ -2402,7 +2402,7 @@
                     "homepage": "https://www.drupal.org/user/61114"
                 }
             ],
-            "description": "Registers \u201ccomponent libraries\u201d defined in modules and themes with the Twig system",
+            "description": "Registers “component libraries” defined in modules and themes with the Twig system",
             "homepage": "https://www.drupal.org/project/components",
             "support": {
                 "source": "http://cgit.drupalcode.org/components"
@@ -2593,7 +2593,7 @@
             ],
             "authors": [
                 {
-                    "name": "Tommy Lynge J\u00f8rgensen",
+                    "name": "Tommy Lynge Jørgensen",
                     "homepage": "https://www.drupal.org/u/tlyngej",
                     "email": "tlyngej@gmail.com",
                     "role": "Maintainer"
@@ -5111,7 +5111,7 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "Pablo L\u00f3pez",
+                    "name": "Pablo López",
                     "homepage": "https://www.drupal.org/u/plopesc",
                     "role": "Maintainer"
                 },
@@ -9350,7 +9350,7 @@
                     "email": "marksonnabaum@gmail.com"
                 },
                 {
-                    "name": "Antoine Beaupr\u00e9",
+                    "name": "Antoine Beaupré",
                     "email": "anarcat@koumbit.org"
                 },
                 {
@@ -9358,7 +9358,7 @@
                     "email": "greg.1.anderson@greenknowe.org"
                 },
                 {
-                    "name": "Jonathan Ara\u00f1a Cruz",
+                    "name": "Jonathan Araña Cruz",
                     "email": "jonhattan@faita.net"
                 },
                 {
@@ -10060,7 +10060,7 @@
                     "email": "donatj@gmail.com"
                 },
                 {
-                    "name": "Jonatan M\u00e4nnchen",
+                    "name": "Jonatan Männchen",
                     "email": "jonatan@maennchen.ch"
                 }
             ],
@@ -10358,7 +10358,7 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien M\u00e9nager",
+                    "name": "Fabien Ménager",
                     "email": "fabien.menager@gmail.com"
                 }
             ],
@@ -11120,7 +11120,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jean-Fran\u00e7ois Simon",
+                    "name": "Jean-François Simon",
                     "email": "jeanfrancois.simon@sensiolabs.com"
                 },
                 {
@@ -13598,7 +13598,7 @@
             ],
             "authors": [
                 {
-                    "name": "Juan Francisco Calder\u00f3n Zumba",
+                    "name": "Juan Francisco Calderón Zumba",
                     "email": "juanfcz@gmail.com",
                     "homepage": "http://github.com/jcalderonzumba"
                 }
@@ -13655,7 +13655,7 @@
             ],
             "authors": [
                 {
-                    "name": "Juan Francisco Calder\u00f3n Zumba",
+                    "name": "Juan Francisco Calderón Zumba",
                     "email": "juanfcz@gmail.com",
                     "homepage": "http://github.com/jcalderonzumba"
                 }
