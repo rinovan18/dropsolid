@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eebe93878fd21f6ab7245cca6adbf4e5",
+    "content-hash": "d5dc0dea77959685d8a29bc2807cd57f",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -4288,17 +4288,17 @@
         },
         {
             "name": "drupal/easy_breadcrumb",
-            "version": "1.8.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/easy_breadcrumb.git",
-                "reference": "8.x-1.8"
+                "reference": "8.x-1.10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-8.x-1.8.zip",
-                "reference": "8.x-1.8",
-                "shasum": "75be89f78e9b47daf0bb54429652180a2e6063b5"
+                "url": "https://ftp.drupal.org/files/projects/easy_breadcrumb-8.x-1.10.zip",
+                "reference": "8.x-1.10",
+                "shasum": "3c7d248f53e40810a815f877f1f0d6546f28d77d"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -4309,12 +4309,15 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.8",
-                    "datestamp": "1524864180",
+                    "version": "8.x-1.10",
+                    "datestamp": "1557434281",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Module assumes help module is installed": "https://www.drupal.org/files/issues/2019-05-10/3053928.2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4329,6 +4332,14 @@
                 {
                     "name": "RenatoG",
                     "homepage": "https://www.drupal.org/user/3326031"
+                },
+                {
+                    "name": "diamondsea",
+                    "homepage": "https://www.drupal.org/user/430714"
+                },
+                {
+                    "name": "hmartens",
+                    "homepage": "https://www.drupal.org/user/622826"
                 },
                 {
                     "name": "loopduplicate",
@@ -4350,7 +4361,7 @@
             "description": "Adds configuration to the system breadcrumbs.",
             "homepage": "https://www.drupal.org/project/easy_breadcrumb",
             "support": {
-                "source": "http://cgit.drupalcode.org/easy_breadcrumb"
+                "source": "https://git.drupalcode.org/project/easy_breadcrumb"
             }
         },
         {
@@ -7488,17 +7499,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "1.1.0-beta3",
+            "version": "1.1.0-beta4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "8.x-1.1-beta3"
+                "reference": "8.x-1.1-beta4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.1-beta3.zip",
-                "reference": "8.x-1.1-beta3",
-                "shasum": "5307cf0fe25b6274bb26c3e57fd12a055bdfb14d"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.1-beta4.zip",
+                "reference": "8.x-1.1-beta4",
+                "shasum": "b68045277f1aeab7c30998412195a1f9c402a5e8"
             },
             "require": {
                 "drupal/admin_toolbar": "~1.17",
@@ -7605,8 +7616,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1-beta3",
-                    "datestamp": "1557412385",
+                    "version": "8.x-1.1-beta4",
+                    "datestamp": "1557478685",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
