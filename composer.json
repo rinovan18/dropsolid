@@ -50,9 +50,6 @@
         },
         "enable-patching": true,
         "patches": {
-            "drupal/easy_breadcrumb": {
-                "Module assumes help module is installed": "https://www.drupal.org/files/issues/2019-05-10/3053928.2.patch"
-            },
             "drupal/purge": {
                 "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2019-03-06/3008776.add-priority-to-needs_destruct.patch"
             },
