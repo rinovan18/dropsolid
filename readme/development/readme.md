@@ -140,7 +140,7 @@ On the other hand, Page Manager isn't what it used to be, and so we are
 looking for alternatives. Once Layout Builder is stable, we will most likely be
 switching to that.
 
-##### Homepage construction (Flex only)
+##### Homepage construction (Flex especially)
 When you are given the Wires, or even the Design, you may be tempted to think 
 you can build the entire homepage using Paragraphs.  
 However, you need to make sure the Webadmin can't delete or change the order 
@@ -161,6 +161,50 @@ you:
 the content types
 
 But the recommendation is still to just use custom blocks to be safe.
+
+##### Views
+The homepage will often need to display a view, with a title and a 'read more' button.  
+The way to do this, is to first add your view in Page Manager, to the Homepage Panel page. 
+
+As for the Title and 'read more' button, you should use blocks for these.
+While it is tempting to just add a text area to the Header of Footer of the View, with html tags, this is not easily translatable by the client.  
+Our recommendation, is to make 2 blocks:
+- 1 for the title, this one only contains an h2
+- 1 for the button or link: this only contains a link field
+
+This way, the client can access these elements via the quickedit menu on the homepage.
+
+For Views that have their own page, you can just use the Overview paragraph in combination with the normal Page content type. 
+How do you add your own custo views to the Overview paragraph, you say?  
+Take a look one of the `.module`-files in the `basic` folder of one of the Feature modules.  
+There you will see an `HOOK_options_alter` and an `HOOK_output_alter` function, where the machine names of a View and their block variations are added.
+So you can either make a custom module or patching an existing one (eg. Core), to add your views using those functions. 
+
+So by default, the overviews from the Features are built using the (Landing) Page content type 
+and by placing a View into it (using the Overview paragraph).  
+However, you could also make a separate Page Manager page, specifically for the 
+overview of a content type.
+
+In that case, you would need to:
+- Make a new (Landing) Page with your overview in it
+  - Adding new overviews to the dropdown involves a bit of custom coding. 
+  This should be covered in the 'development' part of the readme's. If not, 
+  you can check any Feature module (eg. dropsolid_blog) for their 'basic' 
+  .module file to see how it works. Either make a custom module, or add this 
+  functionality in dropsolid_core for your content type views
+- Find the node UUID for that page
+  - surf to your page's devel page using /admin/content -> operations (dropdown)
+  - go to tab Devel -> Render -> Variable to find & copy the UUID
+- edit the node view in Page manager
+- Add variant (top right)
+- Use Type Panels, select context and Selection criteria
+- Leave Context as-is
+- Add a condition to the Selection criteria
+  - pick Node UUID
+  - fill in the UUID you copied earlier
+- Save
+- Drag your new variant ABOVE the Page variant so it gets picked by Drupal first
+
 
 ##### Facets
 Sometimes you will need to add Facets to a view. In fact, whenever possible use 

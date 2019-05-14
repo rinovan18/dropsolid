@@ -850,36 +850,13 @@ The styling is located in a separate folder of the components: 02-features
 
 - Layout: where you can choose a template (as mentioned before when talking 
 about the homepage)
-- Layout Settings: you can add extrea classes (separated by a space), this is 
+- Layout Settings: you can add extra classes (separated by a space), this is 
 handy when making overview pages. It is used by the advanced product and job 
 features.
 
 ### Overviews
 
-By default, most overviews are built using the (Landing) Page content type 
-and by placing a View into it (using the Overview paragraph).  
-However, you can make a separate Page Manager page, specifically for the 
-overview of a content type.
-
-In that case, you would need to:
-- Make a new (Landing) Page with your overview in it
-  - Adding new overviews to the dropdown involves a bit of custom coding. 
-  This should be covered in the 'development' part of the readme's. If not, 
-  you can check any Feature module (eg. dropsolid_blog) for their 'basic' 
-  .module file to see how it works. Either make a custom module, or add this 
-  functionality in dropsolid_core for your content type views
-- Find the node UUID for that page
-  - surf to your page's devel page using /admin/content -> operations (dropdown)
-  - go to tab Devel -> Render -> Variable to find & copy the UUID
-- edit the node view in Page manager
-- Add variant (top right)
-- Use Type Panels, select context and Selection criteria
-- Leave Context as-is
-- Add a condition to the Selection criteria
-  - pick Node UUID
-  - fill in the UUID you copied earlier
-- Save
-- Drag your new variant ABOVE the Page variant so it gets picked by Drupal first
+See the info in the 'development' readme for making your own views, how to add them to the homepage or adding them to a Page.
 
 ### Details
 
