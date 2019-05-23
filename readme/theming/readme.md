@@ -884,14 +884,22 @@ files generated from `component/02-features` and `component/01-paragraphs` files
 - **THEMENAME.theme**:
   `HOOK_rocketship_paragraphs_bg_color_options_list`
   This is where you need to add the extra colors that the simple header 
-  and other paragraphs use.
+  and other paragraphs use for the front-facing theme.
 - `00-theme/admin.style.scss`
-  add the colors for that options list in the admin area
+  You don't need to touch this file to work on paragraphs
 - `components/01-paragraphs/03-organisms/_paragraphs.scss`
-  define the background colors and related styling for the paragraphs
-- `components/00-theme/03-organisms/00-page/page-header`
-  define the background colors and related styling for the Simple Header, 
+  define the background colors and related styling for the paragraphs in the front-facing theme
+- `components/01-paragraphs/03-organisms/p015-simple-header`  
+   `components/01-paragraphs/03-organisms/p016-focus-header`
+  define the background colors and related styling for the headers, 
   as used in Page content type, Office, Product, …
+  
+In order for the background-colors preview to work in the admin theme, you need to fill in your color variants at `/admin/config/system/rocketship-paragraphs/settings`.  
+
+**Note:**
+- Saving this form will also a default colors CSS-file that is loaded if you check the `Enable default CSS` options. Dropsolid sites DO NOT USE the default CSS, so you still need to add your front-facing colors & other theming in the `03-paragraphs` folder of your theme.
+
+More info on how this all works, can be found in the Rocketship Paragraphs module README file
 
 ### Libraries & styling
 
