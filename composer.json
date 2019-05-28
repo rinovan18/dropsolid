@@ -50,6 +50,9 @@
         },
         "enable-patching": true,
         "patches": {
+            "drupal/linkit": {
+                "Add support for multilanguage - https://www.drupal.org/project/linkit/issues/2886455": "https://www.drupal.org/files/issues/2019-05-03/linkit-multilanguage_matching-2886455-19.patch"
+            },
             "drupal/purge": {
                 "Give destruct service tags priority. Depends on related core patch": "https://www.drupal.org/files/issues/2019-03-06/3008776.add-priority-to-needs_destruct.patch"
             },
