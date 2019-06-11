@@ -71,7 +71,8 @@
                 "Allow states to check and uncheck checkboxes and radio buttons": "https://www.drupal.org/files/issues/drupal-994360-74-states-checkboxes-checked.patch",
                 "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
                 "Fix datetime widget descriptions": "https://www.drupal.org/files/issues/2019-03-16/2791693-38.patch",
-                "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch"
+                "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch",
+                "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch"
             },
             "drupal/blazy": {
                 "responsive image performance": "https://www.drupal.org/files/issues/2018-03-09/responsive-image-performance-2951529-2.patch"
@@ -95,6 +96,9 @@
             },
             "drupal/office_hours": {
                 "Copy previous day action hides Add timeslot action": "https://www.drupal.org/files/issues/2018-12-31/officehours-copy_hides_add_timeslot-3005949-2-D8_6_4.patch"
+            },
+            "drupal/paragraphs_asymmetric_translation_widgets": {
+                "Add support for experimental widget -- https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets/issues/2959900": "https://www.drupal.org/files/issues/2018-11-12/2959900-13.patch"
             }
         },
         "installer-paths": {
