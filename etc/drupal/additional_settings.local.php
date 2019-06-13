@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * @file
+ * The additional settings for the local environment.
+ */
+
+// Ignore front-end folders.
+$settings['file_scan_ignore_directories'] = [
+  'node_modules',
+  'bower_components',
+];
+
 // Configure config split directory.
 $config['config_split.config_split.whitelist']['status'] = TRUE;
 $config['config_split.config_split.blacklist']['status'] = TRUE;
@@ -21,10 +32,12 @@ $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml'
 $settings['container_yamls'][] = DRUPAL_ROOT . '/sites/environments/local.services.yml';
 
 /**
- * Memcache configuration
+ * Memcache configuration.
  *
  * Uncomment ONLY when memcache module is installed!
- * If Memcache is installed, also uncomment the lock service in local.services.yml!
+ *
+ * If Memcache is installed, also uncomment the
+ * lock service in local.services.yml!
  */
 //$settings['cache']['default'] = 'cache.backend.memcache';
 //$settings['cache']['bins']['form'] = 'cache.backend.database';

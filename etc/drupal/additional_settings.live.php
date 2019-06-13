@@ -1,21 +1,32 @@
 <?php
 
-// Configure config split directory
+/**
+ * @file
+ * The additional settings for the live environment.
+ */
+
+// Ignore front-end folders.
+$settings['file_scan_ignore_directories'] = [
+  'node_modules',
+  'bower_components',
+];
+
+// Configure config split directory.
 $config['config_split.config_split.whitelist']['status'] = TRUE;
 $config['config_split.config_split.blacklist']['status'] = TRUE;
 $config['config_split.config_split.local']['status'] = FALSE;
 $config['config_split.config_split.dev']['status'] = FALSE;
 $config['config_split.config_split.staging']['status'] = FALSE;
 $config['config_split.config_split.live']['status'] = TRUE;
-// Setup config directory
+// Setup config directory.
 $config_directories['sync'] = '../config/sync';
-// Setup private files folder
+// Setup private files folder.
 $settings['file_private_path'] = '../private/files';
 // Ignore all non-default collections, meaning languages.
 $config['config_ignore.settings']['ignored_config_entities'][9999] = 'collections.*';
 
 /**
- * Memcache configuration
+ * Memcache configuration.
  *
  * Uncomment ONLY when memcache module is installed!
  */
@@ -25,9 +36,9 @@ $config['config_ignore.settings']['ignored_config_entities'][9999] = 'collection
 //$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/environments/live.services.yml';
 
 /**
- * Varnish Purge setup
+ * Varnish Purge setup.
  *
- * Add project name to site_name before uncommenting this
+ * Add project name to site_name before uncommenting this.
  */
 //$config['dropsolid_purge.config']= [
 //  'site_name' => "SITENAME",
