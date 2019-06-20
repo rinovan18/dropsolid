@@ -4337,7 +4337,7 @@
         },
         {
             "name": "drupal/dropsolid_rocketship_drush",
-            "version": "1.0.0-beta7",
+            "version": "1.0.0-beta8",
             "require": {
                 "drupal/config_split": "*",
                 "drupal/core": "~8.0",
@@ -4349,8 +4349,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta7",
-                    "datestamp": "1560930489",
+                    "version": "8.x-1.0-beta8",
+                    "datestamp": "1561021681",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -4383,17 +4383,17 @@
         },
         {
             "name": "drupal/dropsolid_rocketship_profile",
-            "version": "1.0.0-beta7",
+            "version": "1.0.0-beta8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dropsolid_rocketship_profile.git",
-                "reference": "8.x-1.0-beta7"
+                "reference": "8.x-1.0-beta8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dropsolid_rocketship_profile-8.x-1.0-beta7.zip",
-                "reference": "8.x-1.0-beta7",
-                "shasum": "455de91fa00311301000278b33e0215727241301"
+                "url": "https://ftp.drupal.org/files/projects/dropsolid_rocketship_profile-8.x-1.0-beta8.zip",
+                "reference": "8.x-1.0-beta8",
+                "shasum": "6d2bfa4aaf3c627b187ec799bb1355b69c3202e4"
             },
             "require": {
                 "drupal/address": "^1.4",
@@ -4417,7 +4417,7 @@
                 "drupal/memcache": "~2.0",
                 "drupal/office_hours": "^1.1",
                 "drupal/purge": "3.0-beta8",
-                "drupal/rabbit_hole": "1.0-beta4",
+                "drupal/rabbit_hole": "1.0-beta6",
                 "drupal/recaptcha": "^2.4",
                 "drupal/reroute_email": "~1.0",
                 "drupal/rocketship_core": "^1.0",
@@ -4440,8 +4440,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta7",
-                    "datestamp": "1560930489",
+                    "version": "8.x-1.0-beta8",
+                    "datestamp": "1561021681",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -6182,7 +6182,7 @@
         },
         {
             "name": "drupal/menu_clickthrough",
-            "version": "1.0.0-beta17",
+            "version": "1.0.0-beta18",
             "require": {
                 "drupal/core": "*",
                 "drupal/rocketship_paragraphs": "self.version"
@@ -6193,8 +6193,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta17",
-                    "datestamp": "1560415686",
+                    "version": "8.x-1.0-beta18",
+                    "datestamp": "1561013885",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -7525,25 +7525,24 @@
         },
         {
             "name": "drupal/rabbit_hole",
-            "version": "1.0.0-beta4",
+            "version": "1.0.0-beta6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rabbit_hole.git",
-                "reference": "8.x-1.0-beta4"
+                "reference": "8.x-1.0-beta6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rabbit_hole-8.x-1.0-beta4.zip",
-                "reference": "8.x-1.0-beta4",
-                "shasum": "ef2917a8b53b7576ac8df6bda1a39d93053cd831"
+                "url": "https://ftp.drupal.org/files/projects/rabbit_hole-8.x-1.0-beta6.zip",
+                "reference": "8.x-1.0-beta6",
+                "shasum": "c62960c1393657dfdcbd74ed59bcb3f51b2aa5d1"
             },
             "require": {
                 "drupal/core": "~8.0"
             },
             "require-dev": {
                 "drupal/file_entity": "*",
-                "drupal/group": "*",
-                "drupal/media_entity": "*"
+                "drupal/group": "*"
             },
             "type": "drupal-module",
             "extra": {
@@ -7551,8 +7550,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta4",
-                    "datestamp": "1550891284",
+                    "version": "8.x-1.0-beta6",
+                    "datestamp": "1556921886",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -7942,17 +7941,17 @@
         },
         {
             "name": "drupal/rocketship_paragraphs",
-            "version": "1.0.0-beta17",
+            "version": "1.0.0-beta18",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_paragraphs.git",
-                "reference": "8.x-1.0-beta17"
+                "reference": "8.x-1.0-beta18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-8.x-1.0-beta17.zip",
-                "reference": "8.x-1.0-beta17",
-                "shasum": "c7677b33fc2f6e9192a33974f3acf3cedb887e18"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-8.x-1.0-beta18.zip",
+                "reference": "8.x-1.0-beta18",
+                "shasum": "b98e3518a020975d255a926bd38b842623cec70a"
             },
             "require": {
                 "drupal/blazy": "*",
@@ -7983,8 +7982,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta17",
-                    "datestamp": "1560415686",
+                    "version": "8.x-1.0-beta18",
+                    "datestamp": "1561013885",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -14083,17 +14082,17 @@
         },
         {
             "name": "drupal/coder",
-            "version": "8.3.4",
+            "version": "8.3.5",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/coder.git",
-                "reference": "0a274321f4930f186d9f246783f0b4d743501cf8"
+                "reference": "35277fc8675b6a2cbb194f8880145a9c85c845c4"
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": ">=5.5.9",
                 "squizlabs/php_codesniffer": "^3.4.1",
-                "symfony/yaml": ">=2.0.0"
+                "symfony/yaml": ">=2.0.5"
             },
             "require-dev": {
                 "phpunit/phpunit": ">=3.7 <6"
@@ -14116,7 +14115,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-05-24T11:44:05+00:00"
+            "time": "2019-06-14T15:06:06+00:00"
         },
         {
             "name": "drupal/entity_browser",
