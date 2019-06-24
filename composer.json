@@ -99,6 +99,9 @@
             },
             "drupal/paragraphs_asymmetric_translation_widgets": {
                 "Add support for experimental widget -- https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets/issues/2959900": "https://www.drupal.org/files/issues/2018-11-12/2959900-13.patch"
+            },
+            "drupal/field_group": {
+                "This patch will never get into the module because they went into a different direction - https://www.drupal.org/project/field_group/issues/2822299": "https://www.drupal.org/files/issues/2019-04-25/field_group-double_escaped_titles-2822299-24.patch"
             }
         },
         "installer-paths": {

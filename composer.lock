@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f33c6f24c2b76d8148a444a7b4e30f86",
+    "content-hash": "dab82b8e755c09efdde6d0ca205c9a19",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -4978,6 +4978,9 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "This patch will never get into the module because they went into a different direction - https://www.drupal.org/project/field_group/issues/2822299": "https://www.drupal.org/files/issues/2019-04-25/field_group-double_escaped_titles-2822299-24.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5455,7 +5458,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.42",
-                    "datestamp": "1560482291",
+                    "datestamp": "1561352885",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -6619,7 +6622,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0",
-                    "datestamp": "1503047644",
+                    "datestamp": "1561335486",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
