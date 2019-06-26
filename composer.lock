@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dab82b8e755c09efdde6d0ca205c9a19",
+    "content-hash": "c8d2aa54d861e9db9db9d40b4de98790",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -6658,17 +6658,17 @@
         },
         {
             "name": "drupal/office_hours",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/office_hours.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/office_hours-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "e0788d4e74ea4dfd8e1ec9b7b61c889832ce5e65"
+                "url": "https://ftp.drupal.org/files/projects/office_hours-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "8d5e98536fd11fe84be6d81768944c463970f7fc"
             },
             "require": {
                 "drupal/core": "*"
@@ -6679,15 +6679,12 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1523743380",
+                    "version": "8.x-1.2",
+                    "datestamp": "1561108381",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "Copy previous day action hides Add timeslot action": "https://www.drupal.org/files/issues/2018-12-31/officehours-copy_hides_add_timeslot-3005949-2-D8_6_4.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

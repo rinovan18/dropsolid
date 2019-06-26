@@ -94,9 +94,6 @@
             "drupal/block_field": {
                 "Allow selecting categories of blocks instead of individual blocks": "https://www.drupal.org/files/issues/block-field-2876110-12.patch"
             },
-            "drupal/office_hours": {
-                "Copy previous day action hides Add timeslot action": "https://www.drupal.org/files/issues/2018-12-31/officehours-copy_hides_add_timeslot-3005949-2-D8_6_4.patch"
-            },
             "drupal/paragraphs_asymmetric_translation_widgets": {
                 "Add support for experimental widget -- https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets/issues/2959900": "https://www.drupal.org/files/issues/2018-11-12/2959900-13.patch"
             },
