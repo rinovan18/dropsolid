@@ -16,7 +16,8 @@
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
-        "imakewebthings/waypoints": "~4.0.1"
+        "imakewebthings/waypoints": "~4.0.1",
+        "symfony/phpunit-bridge": "v3.4.28"
     },
     "authors": [
         {
@@ -99,6 +100,9 @@
             },
             "drupal/field_group": {
                 "This patch will never get into the module because they went into a different direction - https://www.drupal.org/project/field_group/issues/2822299": "https://www.drupal.org/files/issues/2019-04-25/field_group-double_escaped_titles-2822299-24.patch"
+            },
+            "drupal/imageapi_optimize_binaries": {
+                "Make tests run: PHP unit tests fail to run, due to the namespace not matching the module name - https://www.drupal.org/project/imageapi_optimize_binaries/issues/3017115": "https://www.drupal.org/files/issues/2018-11-30/0001-Use-correct-namespace-so-classes-can-be-found.patch"
             }
         },
         "installer-paths": {

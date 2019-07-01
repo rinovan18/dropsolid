@@ -122,3 +122,7 @@ so that you can mix and match with the normal Facets.
 ### Deployment
 
 - [Deployment](readme/deploying) [markdown]
+
+### Optimization
+
+- [Optimization](readme/optimization) [markdown]
