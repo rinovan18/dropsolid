@@ -16,8 +16,7 @@
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
-        "imakewebthings/waypoints": "~4.0.1",
-        "symfony/phpunit-bridge": "v3.4.28"
+        "imakewebthings/waypoints": "~4.0.1"
     },
     "authors": [
         {
@@ -72,8 +71,7 @@
                 "Allow states to check and uncheck checkboxes and radio buttons": "https://www.drupal.org/files/issues/drupal-994360-74-states-checkboxes-checked.patch",
                 "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
                 "Fix datetime widget descriptions": "https://www.drupal.org/files/issues/2019-03-16/2791693-38.patch",
-                "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch",
-                "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch"
+                "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch"
             },
             "drupal/blazy": {
                 "responsive image performance": "https://www.drupal.org/files/issues/2018-03-09/responsive-image-performance-2951529-2.patch"
@@ -94,9 +92,6 @@
             },
             "drupal/block_field": {
                 "Allow selecting categories of blocks instead of individual blocks": "https://www.drupal.org/files/issues/block-field-2876110-12.patch"
-            },
-            "drupal/paragraphs_asymmetric_translation_widgets": {
-                "Add support for experimental widget -- https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets/issues/2959900": "https://www.drupal.org/files/issues/2018-11-12/2959900-13.patch"
             },
             "drupal/field_group": {
                 "This patch will never get into the module because they went into a different direction - https://www.drupal.org/project/field_group/issues/2822299": "https://www.drupal.org/files/issues/2019-04-25/field_group-double_escaped_titles-2822299-24.patch"
@@ -215,6 +210,7 @@
     ],
     "require-dev": {
         "drupal/entity_browser": "^1.5",
-        "webflo/drupal-core-require-dev": "^8.7.0"
+        "webflo/drupal-core-require-dev": "^8.7.0",
+        "symfony/phpunit-bridge": "v3.4.28"
     }
 }
