@@ -25,6 +25,19 @@
 Currently unsupported, but the plan is that they will work the same as any 
 normal contrib module.
 
+Important to note is that most patches are inside this distribution's 
+dependencies. Eg. the patches that add support for the Experimental Asymmetric 
+Paragraphs Widget are in Rocketship Core.
+
+One bug that sometimes crops up with dependency patches, is that composer
+doesn't pick them up immediately (if, say, a new release has an extra patch).
+Either check the composer log or the composer.lock to make sure all patches
+are applied properly, or run your update command twice.
+
+If, due to updates, you no longer need a patch but it is required by a contrib
+module such as Rocketship Core you can ignore it by using the ignore-patches
+functionality of the [composer-patches package](https://github.com/cweagans/composer-patches).
+
 ## Features
 
 ### Config
