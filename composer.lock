@@ -4337,7 +4337,7 @@
         },
         {
             "name": "drupal/dropsolid_rocketship_drush",
-            "version": "1.0.0-beta13",
+            "version": "1.0.0-beta14",
             "require": {
                 "drupal/config_split": "*",
                 "drupal/core": "~8.0",
@@ -4349,8 +4349,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta13",
-                    "datestamp": "1562313185",
+                    "version": "8.x-1.0-beta14",
+                    "datestamp": "1562749985",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -4383,17 +4383,17 @@
         },
         {
             "name": "drupal/dropsolid_rocketship_profile",
-            "version": "1.0.0-beta13",
+            "version": "1.0.0-beta14",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dropsolid_rocketship_profile.git",
-                "reference": "8.x-1.0-beta13"
+                "reference": "8.x-1.0-beta14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dropsolid_rocketship_profile-8.x-1.0-beta13.zip",
-                "reference": "8.x-1.0-beta13",
-                "shasum": "2121f69a78725113ac2d653e2330acc921d0d662"
+                "url": "https://ftp.drupal.org/files/projects/dropsolid_rocketship_profile-8.x-1.0-beta14.zip",
+                "reference": "8.x-1.0-beta14",
+                "shasum": "3a4bb1f599284b96e55771cc3ba2134940be5c2c"
             },
             "require": {
                 "drupal/address": "^1.4",
@@ -4444,8 +4444,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta13",
-                    "datestamp": "1562313185",
+                    "version": "8.x-1.0-beta14",
+                    "datestamp": "1562749985",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -6372,7 +6372,7 @@
         },
         {
             "name": "drupal/menu_clickthrough",
-            "version": "1.0.0-beta21",
+            "version": "1.0.0-beta22",
             "require": {
                 "drupal/core": "*",
                 "drupal/rocketship_paragraphs": "self.version"
@@ -6383,8 +6383,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta21",
-                    "datestamp": "1562254681",
+                    "version": "8.x-1.0-beta22",
+                    "datestamp": "1562749985",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -8062,17 +8062,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "1.1.0-beta11",
+            "version": "1.1.0-beta12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "8.x-1.1-beta11"
+                "reference": "8.x-1.1-beta12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.1-beta11.zip",
-                "reference": "8.x-1.1-beta11",
-                "shasum": "ee6bba496c7ee494685446cd44a67b56912f3376"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-8.x-1.1-beta12.zip",
+                "reference": "8.x-1.1-beta12",
+                "shasum": "b30d7182c0d992357c394f71d3e51ddda69f8ba9"
             },
             "require": {
                 "drupal/admin_toolbar": "~1.17",
@@ -8179,8 +8179,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.1-beta11",
-                    "datestamp": "1562254681",
+                    "version": "8.x-1.1-beta12",
+                    "datestamp": "1562749985",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -8239,17 +8239,17 @@
         },
         {
             "name": "drupal/rocketship_paragraphs",
-            "version": "1.0.0-beta21",
+            "version": "1.0.0-beta22",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_paragraphs.git",
-                "reference": "8.x-1.0-beta21"
+                "reference": "8.x-1.0-beta22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-8.x-1.0-beta21.zip",
-                "reference": "8.x-1.0-beta21",
-                "shasum": "2252aea382a69efe31c6bc8db9a051fd4e1f0b58"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-8.x-1.0-beta22.zip",
+                "reference": "8.x-1.0-beta22",
+                "shasum": "b60326e8cc4c9ce07397166edc70ef8c0dc11741"
             },
             "require": {
                 "drupal/blazy": "*",
@@ -8280,8 +8280,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta21",
-                    "datestamp": "1562254681",
+                    "version": "8.x-1.0-beta22",
+                    "datestamp": "1562749985",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -8494,20 +8494,23 @@
         },
         {
             "name": "drupal/search_api",
-            "version": "1.13.0",
+            "version": "1.14.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api.git",
-                "reference": "8.x-1.13"
+                "reference": "8.x-1.14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.13.zip",
-                "reference": "8.x-1.13",
-                "shasum": "9f03dd5a4d9ee7c58d47aabc33d9229793d1195f"
+                "url": "https://ftp.drupal.org/files/projects/search_api-8.x-1.14.zip",
+                "reference": "8.x-1.14",
+                "shasum": "bfc45a5ea3965cd8355927cd56a8f6a148cfc5e5"
             },
             "require": {
-                "drupal/core": "^8.5"
+                "drupal/core": "^8.6"
+            },
+            "conflict": {
+                "drupal/search_api_solr": "2.* || 3.0 || 3.1"
             },
             "require-dev": {
                 "drupal/search_api_autocomplete": "@dev",
@@ -8524,8 +8527,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1557244685",
+                    "version": "8.x-1.14",
+                    "datestamp": "1562599986",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8565,7 +8568,7 @@
         },
         {
             "name": "drupal/search_api_db",
-            "version": "1.13.0",
+            "version": "1.14.0",
             "require": {
                 "drupal/core": "~8.0",
                 "drupal/search_api": "self.version"
@@ -8576,8 +8579,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.13",
-                    "datestamp": "1557244685",
+                    "version": "8.x-1.14",
+                    "datestamp": "1562599986",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -8610,28 +8613,28 @@
         },
         {
             "name": "drupal/search_api_solr",
-            "version": "3.1.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/search_api_solr.git",
-                "reference": "8.x-3.1"
+                "reference": "8.x-3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/search_api_solr-8.x-3.1.zip",
-                "reference": "8.x-3.1",
-                "shasum": "0471a809c1310a74b8f40dcc124df45cfd1c687b"
+                "url": "https://ftp.drupal.org/files/projects/search_api_solr-8.x-3.2.zip",
+                "reference": "8.x-3.2",
+                "shasum": "0c7f7e083f694eacf89f90ff7d44d4ea9ee8eeb6"
             },
             "require": {
                 "consolidation/annotated-command": "^2.12",
                 "drupal/core": "^8.6",
-                "drupal/search_api": "~1.12",
+                "drupal/search_api": "~1.14",
                 "ext-dom": "*",
                 "ext-json": "*",
                 "ext-simplexml": "*",
-                "maennchen/zipstream-php": "0.4.*",
+                "maennchen/zipstream-php": "^1.1.0",
                 "php": "^7.1",
-                "solarium/solarium": "~5.0.2",
+                "solarium/solarium": "~5.0.3",
                 "zendframework/zend-stdlib": "^3.0.1"
             },
             "conflict": {
@@ -8650,7 +8653,8 @@
             "suggest": {
                 "drupal/facets": "Provides facetted search.",
                 "drupal/search_api_autocomplete": "Provides auto complete for search boxes.",
-                "drupal/search_api_location": "Provides location searches."
+                "drupal/search_api_location": "Provides location searches.",
+                "drupal/search_api_spellcheck": "Provides spell checking and 'Did You Mean?'."
             },
             "type": "drupal-module",
             "extra": {
@@ -8658,8 +8662,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.1",
-                    "datestamp": "1560352385",
+                    "version": "8.x-3.2",
+                    "datestamp": "1562599986",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9887,16 +9891,16 @@
         },
         {
             "name": "drush/drush",
-            "version": "8.2.3",
+            "version": "8.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "bf2b2471b9410e0ff4adc23aee020ee1aff28610"
+                "reference": "59454e59b1139d3c0264504e42359397d828d459"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/bf2b2471b9410e0ff4adc23aee020ee1aff28610",
-                "reference": "bf2b2471b9410e0ff4adc23aee020ee1aff28610",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/59454e59b1139d3c0264504e42359397d828d459",
+                "reference": "59454e59b1139d3c0264504e42359397d828d459",
                 "shasum": ""
             },
             "require": {
@@ -9996,7 +10000,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2019-04-03T04:20:26+00:00"
+            "time": "2019-07-09T21:53:08+00:00"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -10654,24 +10658,29 @@
         },
         {
             "name": "maennchen/zipstream-php",
-            "version": "v0.4.1",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maennchen/ZipStream-PHP.git",
-                "reference": "89e0cdb3c9ecabef4da988852003781a7802afb7"
+                "reference": "272cab6f9b7a7e80248ec59a8d114ca197458623"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/89e0cdb3c9ecabef4da988852003781a7802afb7",
-                "reference": "89e0cdb3c9ecabef4da988852003781a7802afb7",
+                "url": "https://api.github.com/repos/maennchen/ZipStream-PHP/zipball/272cab6f9b7a7e80248ec59a8d114ca197458623",
+                "reference": "272cab6f9b7a7e80248ec59a8d114ca197458623",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
-                "php": ">= 5.6"
+                "myclabs/php-enum": "^1.5",
+                "php": ">= 7.1",
+                "psr/http-message": "^1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.3.*"
+                "ext-zip": "*",
+                "guzzlehttp/guzzle": ">= 6.3",
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": ">= 7.5"
             },
             "type": "library",
             "autoload": {
@@ -10695,6 +10704,10 @@
                 {
                     "name": "Jonatan Männchen",
                     "email": "jonatan@maennchen.ch"
+                },
+                {
+                    "name": "András Kolesár",
+                    "email": "kolesar@kolesar.hu"
                 }
             ],
             "description": "ZipStream is a library for dynamically streaming dynamic zip files from PHP without writing to the disk at all on the server.",
@@ -10702,7 +10715,7 @@
                 "stream",
                 "zip"
             ],
-            "time": "2016-09-13T10:29:17+00:00"
+            "time": "2019-04-30T17:14:47+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -10770,6 +10783,51 @@
                 "xml"
             ],
             "time": "2019-03-10T11:41:28+00:00"
+        },
+        {
+            "name": "myclabs/php-enum",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/myclabs/php-enum.git",
+                "reference": "f46847626b8739de22e4ebc6b56010f317d4448d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/myclabs/php-enum/zipball/f46847626b8739de22e4ebc6b56010f317d4448d",
+                "reference": "f46847626b8739de22e4ebc6b56010f317d4448d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
+                "squizlabs/php_codesniffer": "1.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MyCLabs\\Enum\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP Enum contributors",
+                    "homepage": "https://github.com/myclabs/php-enum/graphs/contributors"
+                }
+            ],
+            "description": "PHP Enum implementation",
+            "homepage": "http://github.com/myclabs/php-enum",
+            "keywords": [
+                "enum"
+            ],
+            "time": "2019-05-05T10:12:03+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -11563,16 +11621,16 @@
         },
         {
             "name": "solarium/solarium",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/solariumphp/solarium.git",
-                "reference": "cccdc043f369ebb47dd514a91fc175eea04a3dae"
+                "reference": "fcec6d7fa9d6704e45afed0d050ff069f3e0e86f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/cccdc043f369ebb47dd514a91fc175eea04a3dae",
-                "reference": "cccdc043f369ebb47dd514a91fc175eea04a3dae",
+                "url": "https://api.github.com/repos/solariumphp/solarium/zipball/fcec6d7fa9d6704e45afed0d050ff069f3e0e86f",
+                "reference": "fcec6d7fa9d6704e45afed0d050ff069f3e0e86f",
                 "shasum": ""
             },
             "require": {
@@ -11619,7 +11677,7 @@
                 "search",
                 "solr"
             ],
-            "time": "2019-05-14T15:20:41+00:00"
+            "time": "2019-07-05T14:34:48+00:00"
         },
         {
             "name": "stack/builder",
@@ -14106,12 +14164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/minkphp/Mink.git",
-                "reference": "6d637f7af4816c26ad8a943da2e3f7eef1231bea"
+                "reference": "7f7af8fc7649c4f74935ddd1a1fa82e205eeb25e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/minkphp/Mink/zipball/6d637f7af4816c26ad8a943da2e3f7eef1231bea",
-                "reference": "6d637f7af4816c26ad8a943da2e3f7eef1231bea",
+                "url": "https://api.github.com/repos/minkphp/Mink/zipball/7f7af8fc7649c4f74935ddd1a1fa82e205eeb25e",
+                "reference": "7f7af8fc7649c4f74935ddd1a1fa82e205eeb25e",
                 "shasum": ""
             },
             "require": {
@@ -14157,7 +14215,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2019-05-14T09:56:49+00:00"
+            "time": "2019-07-08T10:19:23+00:00"
         },
         {
             "name": "behat/mink-browserkit-driver",
