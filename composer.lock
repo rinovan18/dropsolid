@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a1ca4d3105154ad75e7906468cd82599",
+    "content-hash": "21b240ba6280a754798adb02aad3608c",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -1746,7 +1746,7 @@
                 "Toolbar"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/admin_toolbar",
+                "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
         },
@@ -1817,7 +1817,7 @@
                 "Toolbar"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/admin_toolbar",
+                "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
         },
@@ -1888,7 +1888,7 @@
                 "Toolbar"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/admin_toolbar",
+                "source": "https://git.drupalcode.org/project/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
         },
@@ -1968,7 +1968,7 @@
             "description": "Improved aggregation of CSS/JS files to speed up page load times.",
             "homepage": "https://drupal.org/project/advagg",
             "support": {
-                "source": "https://git.drupalcode.org/advagg",
+                "source": "https://git.drupalcode.org/project/advagg",
                 "issues": "https://drupal.org/project/issues/advagg",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -2210,7 +2210,7 @@
                 "lazyload"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/blazy",
+                "source": "https://git.drupalcode.org/project/blazy",
                 "issues": "https://drupal.org/project/issues/blazy"
             }
         },
@@ -2549,6 +2549,76 @@
             }
         },
         {
+            "name": "drupal/claro",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/claro.git",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/claro-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "9084956f96526c91afd039b46563e0f17bdf105f"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1561542492",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "patches_applied": {
+                    "Add a font-size toggle -- https://www.drupal.org/project/claro/issues/3067208": "https://www.drupal.org/files/issues/2019-07-11/alpha3.size-switcher.patch",
+                    "More compact overview pages -- https://www.drupal.org/project/claro/issues/3055598": "https://www.drupal.org/files/issues/2019-07-11/3055598-46-alpha3.Exposed-filters-eat-up-too-much-vertical-space-on-admincontent-view.patch.patch",
+                    "Dropbutton list resizes table cells -- https://www.drupal.org/project/claro/issues/3067262": "https://www.drupal.org/files/issues/2019-07-11/alpha3.dropbutton-sizing.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "balsama",
+                    "homepage": "https://www.drupal.org/user/223087"
+                },
+                {
+                    "name": "ckrina",
+                    "homepage": "https://www.drupal.org/user/1206650"
+                },
+                {
+                    "name": "huzooka",
+                    "homepage": "https://www.drupal.org/user/281301"
+                },
+                {
+                    "name": "lauriii",
+                    "homepage": "https://www.drupal.org/user/1078742"
+                },
+                {
+                    "name": "saschaeggi",
+                    "homepage": "https://www.drupal.org/user/1999056"
+                }
+            ],
+            "description": "A clean, accessible and powerful Drupal administration theme.",
+            "homepage": "https://www.drupal.org/project/claro",
+            "support": {
+                "source": "https://git.drupalcode.org/project/claro",
+                "docs": "https://www.drupal.org/docs/8/modules/claro",
+                "issues": "https://www.drupal.org/project/issues/claro"
+            }
+        },
+        {
             "name": "drupal/colorbox",
             "version": "1.4.0",
             "source": {
@@ -2608,7 +2678,7 @@
             "description": "A light-weight, customizable lightbox plugin for jQuery.",
             "homepage": "https://www.drupal.org/project/colorbox",
             "support": {
-                "source": "https://git.drupalcode.org/colorbox",
+                "source": "https://git.drupalcode.org/project/colorbox",
                 "issues": "https://www.drupal.org/project/colorbox"
             }
         },
@@ -2733,7 +2803,7 @@
             "description": "Framework for managing configuration updates from distributions.",
             "homepage": "https://www.drupal.org/project/config_distro",
             "support": {
-                "source": "https://git.drupalcode.org/config_distro",
+                "source": "https://git.drupalcode.org/project/config_distro",
                 "issues": "https://drupal.org/project/issues/config_distro",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -2802,7 +2872,7 @@
                 "configuration management"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/config_filter",
+                "source": "https://git.drupalcode.org/project/config_filter",
                 "issues": "https://www.drupal.org/project/issues/config_filter",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -2862,7 +2932,7 @@
             "description": "Ignore certain configuration during import.",
             "homepage": "http://drupal.org/project/config_ignore",
             "support": {
-                "source": "http://git.drupalcode.org/config_ignore",
+                "source": "https://git.drupalcode.org/project/config_ignore",
                 "issues": "http://drupal.org/project/config_ignore",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -3038,7 +3108,7 @@
             "description": "Normalizes configuration for comparison.",
             "homepage": "https://www.drupal.org/project/config_normalizer",
             "support": {
-                "source": "http://git.drupalcode.org/config_normalizer"
+                "source": "https://git.drupalcode.org/project/config_normalizer"
             }
         },
         {
@@ -3101,7 +3171,7 @@
             "description": "Enables provision of configuration by extensions.",
             "homepage": "https://www.drupal.org/project/config_provider",
             "support": {
-                "source": "http://git.drupalcode.org/config_provider"
+                "source": "https://git.drupalcode.org/project/config_provider"
             }
         },
         {
@@ -3148,7 +3218,7 @@
             "description": "Changes configuration YAML from config/install|optional with YAML from config/rewrite.",
             "homepage": "https://www.drupal.org/project/config_rewrite",
             "support": {
-                "source": "http://git.drupalcode.org/config_rewrite"
+                "source": "https://git.drupalcode.org/project/config_rewrite"
             }
         },
         {
@@ -3203,7 +3273,7 @@
             "description": "Manages snapshots of configuration as provided by modules and themes.",
             "homepage": "https://www.drupal.org/project/config_snapshot",
             "support": {
-                "source": "http://git.drupalcode.org/config_snapshot"
+                "source": "https://git.drupalcode.org/project/config_snapshot"
             }
         },
         {
@@ -3273,7 +3343,7 @@
                 "configuration management"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/config_split",
+                "source": "https://git.drupalcode.org/project/config_split",
                 "issues": "https://www.drupal.org/project/issues/config_split",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -3353,7 +3423,7 @@
             "description": "Synchronize your site with updated configuration provided by modules and themes.",
             "homepage": "https://www.drupal.org/project/config_sync",
             "support": {
-                "source": "https://git.drupalcode.org/config_sync",
+                "source": "https://git.drupalcode.org/project/config_sync",
                 "issues": "https://drupal.org/project/issues/config_sync",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -3406,7 +3476,7 @@
             "description": "Provides basic revert and update functionality for other modules",
             "homepage": "https://www.drupal.org/project/config_update",
             "support": {
-                "source": "http://git.drupalcode.org/config_update"
+                "source": "https://git.drupalcode.org/project/config_update"
             }
         },
         {
@@ -3886,7 +3956,6 @@
                     "merge-extra": false
                 },
                 "patches_applied": {
-                    "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch",
                     "Support priority for needs_destruction service tag": "https://www.drupal.org/files/issues/2019-03-06/support-priority-for-need_destruction-tag.patch",
                     "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2019-01-25/2949457-28.patch",
                     "Contextual links can't handle multiple occurrences of the same contextual links (again) https://www.drupal.org/project/drupal/issues/2891603": "https://www.drupal.org/files/issues/2018-10-18/2891603.16.patch",
@@ -3894,7 +3963,8 @@
                     "Allow states to check and uncheck checkboxes and radio buttons": "https://www.drupal.org/files/issues/drupal-994360-74-states-checkboxes-checked.patch",
                     "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
                     "Fix datetime widget descriptions": "https://www.drupal.org/files/issues/2019-03-16/2791693-38.patch",
-                    "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch"
+                    "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch",
+                    "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch"
                 }
             },
             "autoload": {
@@ -3972,7 +4042,7 @@
             "description": "Provides storage and API for image crops.",
             "homepage": "https://www.drupal.org/project/crop",
             "support": {
-                "source": "http://git.drupalcode.org/crop",
+                "source": "https://git.drupalcode.org/project/crop",
                 "issues": "https://www.drupal.org/project/issues/crop"
             }
         },
@@ -4065,7 +4135,7 @@
             "description": "Provides a number of utility and helper APIs for Drupal developers and site builders.",
             "homepage": "https://www.drupal.org/project/ctools",
             "support": {
-                "source": "http://git.drupalcode.org/ctools",
+                "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
             }
         },
@@ -4146,7 +4216,7 @@
             "description": "Various blocks, pages, and functions for developers.",
             "homepage": "http://drupal.org/project/devel",
             "support": {
-                "source": "http://git.drupalcode.org/devel",
+                "source": "https://git.drupalcode.org/project/devel",
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -4214,7 +4284,7 @@
                 "Drupal"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/disable_language",
+                "source": "https://git.drupalcode.org/project/disable_language",
                 "issues": "http://drupal.org/project/issues/disable_language"
             }
         },
@@ -4323,7 +4393,7 @@
                 "Drupal"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/dropsolid_purge",
+                "source": "https://git.drupalcode.org/project/dropsolid_purge",
                 "issues": "http://drupal.org/project/issues/dropsolid_purge"
             }
         },
@@ -4693,7 +4763,7 @@
             "description": "Add title, target etc. attributes to Text Editor's link dialog if the text format allows them.",
             "homepage": "https://www.drupal.org/project/editor_advanced_link",
             "support": {
-                "source": "http://git.drupalcode.org/editor_advanced_link"
+                "source": "https://git.drupalcode.org/project/editor_advanced_link"
             }
         },
         {
@@ -4798,7 +4868,7 @@
             "description": "Adds a Entity Reference field type with revision support.",
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
-                "source": "http://git.drupalcode.org/entity_reference_revisions"
+                "source": "https://git.drupalcode.org/project/entity_reference_revisions"
             }
         },
         {
@@ -4849,7 +4919,7 @@
             "description": "Adds a color indicator for the different environments.",
             "homepage": "https://www.drupal.org/project/environment_indicator",
             "support": {
-                "source": "http://git.drupalcode.org/environment_indicator"
+                "source": "https://git.drupalcode.org/project/environment_indicator"
             }
         },
         {
@@ -4967,7 +5037,7 @@
             "description": "Simple module that provides a configurable block with Facebook Likebox's plugin",
             "homepage": "http://drupal.org/project/fb_likebox",
             "support": {
-                "source": "http://git.drupalcode.org/fb_likebox"
+                "source": "https://git.drupalcode.org/project/fb_likebox"
             }
         },
         {
@@ -5084,7 +5154,7 @@
             "description": "Defines hidden element widgets for number and (plain)text field types.",
             "homepage": "https://www.drupal.org/project/field_hidden",
             "support": {
-                "source": "http://git.drupalcode.org/field_hidden"
+                "source": "https://git.drupalcode.org/project/field_hidden"
             }
         },
         {
@@ -5137,7 +5207,7 @@
             "description": "Provides a service to manage file metadata.",
             "homepage": "https://www.drupal.org/project/file_mdm",
             "support": {
-                "source": "http://git.drupalcode.org/file_mdm"
+                "source": "https://git.drupalcode.org/project/file_mdm"
             }
         },
         {
@@ -5177,7 +5247,7 @@
             "description": "Provides a file metadata plugin for EXIF image information.",
             "homepage": "https://www.drupal.org/project/file_mdm",
             "support": {
-                "source": "http://git.drupalcode.org/file_mdm"
+                "source": "https://git.drupalcode.org/project/file_mdm"
             }
         },
         {
@@ -5217,7 +5287,7 @@
             "description": "Provides a file metadata plugin for TTF/OTF/WOFF font information.",
             "homepage": "https://www.drupal.org/project/file_mdm",
             "support": {
-                "source": "http://git.drupalcode.org/file_mdm"
+                "source": "https://git.drupalcode.org/project/file_mdm"
             }
         },
         {
@@ -5268,7 +5338,7 @@
             "description": "Allows users to specify the focal point of an image for use during cropping.",
             "homepage": "https://www.drupal.org/project/focal_point",
             "support": {
-                "source": "http://git.drupalcode.org/focal_point"
+                "source": "https://git.drupalcode.org/project/focal_point"
             }
         },
         {
@@ -5608,7 +5678,7 @@
             "description": "Provides effects and operations for the Image API.",
             "homepage": "https://www.drupal.org/project/image_effects",
             "support": {
-                "source": "http://git.drupalcode.org/image_effects"
+                "source": "https://git.drupalcode.org/project/image_effects"
             }
         },
         {
@@ -5828,7 +5898,7 @@
             "description": "Provides a widget for inline management (creation, modification, removal) of referenced entities.",
             "homepage": "https://www.drupal.org/project/inline_entity_form",
             "support": {
-                "source": "http://git.drupalcode.org/inline_entity_form"
+                "source": "https://git.drupalcode.org/project/inline_entity_form"
             }
         },
         {
@@ -5883,7 +5953,7 @@
             "description": "Linkit - Enriched linking experience",
             "homepage": "http://drupal.org/project/linkit",
             "support": {
-                "source": "http://git.drupalcode.org/linkit",
+                "source": "https://git.drupalcode.org/project/linkit",
                 "issues": "http://drupal.org/project/linkit"
             }
         },
@@ -6039,7 +6109,7 @@
             "description": "Mail System",
             "homepage": "https://www.drupal.org/project/mailsystem",
             "support": {
-                "source": "http://git.drupalcode.org/mailsystem"
+                "source": "https://git.drupalcode.org/project/mailsystem"
             }
         },
         {
@@ -6220,7 +6290,7 @@
             "description": "Limit the number of characters in textfields and textareas and shows the amount of characters left.",
             "homepage": "https://www.drupal.org/project/maxlength",
             "support": {
-                "source": "http://git.drupalcode.org/maxlength"
+                "source": "https://git.drupalcode.org/project/maxlength"
             }
         },
         {
@@ -6291,7 +6361,7 @@
             "description": "High performance integration with memcache.",
             "homepage": "http://drupal.org/project/memcache",
             "support": {
-                "source": "http://git.drupalcode.org/memcache",
+                "source": "https://git.drupalcode.org/projectmemcache",
                 "issues": "https://www.drupal.org/project/issues/memcache"
             }
         },
@@ -6343,7 +6413,7 @@
             "description": "Allows to give roles per menu admin permissions without giving them full administer menu permission.",
             "homepage": "https://www.drupal.org/project/menu_admin_per_menu",
             "support": {
-                "source": "http://git.drupalcode.org/menu_admin_per_menu"
+                "source": "https://git.drupalcode.org/projectmenu_admin_per_menu"
             }
         },
         {
@@ -6443,7 +6513,7 @@
             "description": "Expand menus and set active-trail according to the current path.",
             "homepage": "https://www.drupal.org/project/menu_trail_by_path",
             "support": {
-                "source": "http://git.drupalcode.org/menu_trail_by_path"
+                "source": "https://git.drupalcode.org/projectmenu_trail_by_path"
             }
         },
         {
@@ -6513,7 +6583,7 @@
                 "seo"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/metatag",
+                "source": "https://git.drupalcode.org/projectmetatag",
                 "issues": "http://drupal.org/project/issues/metatag"
             }
         },
@@ -6704,7 +6774,7 @@
             "description": "Tools to assist in developing and running migrations.",
             "homepage": "http://drupal.org/project/migrate_tools",
             "support": {
-                "source": "http://git.drupalcode.org/migrate_tools",
+                "source": "https://git.drupalcode.org/projectmigrate_tools",
                 "issues": "http://drupal.org/project/migrate_tools",
                 "irc": "irc://irc.freenode.org/drupal-migrate"
             }
@@ -6876,7 +6946,7 @@
             "description": "Defines a 'weekly office hours' field type, allowing you to specify when an Entity is open or closed.",
             "homepage": "http://drupal.org/project/office_hours",
             "support": {
-                "source": "http://git.drupalcode.org/office_hours",
+                "source": "https://git.drupalcode.org/projectoffice_hours",
                 "issues": "http://drupal.org/project/office_hours",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -6925,7 +6995,7 @@
             "description": "Creates a overview field",
             "homepage": "https://www.drupal.org/project/overview_field",
             "support": {
-                "source": "http://git.drupalcode.org/overview_field"
+                "source": "https://git.drupalcode.org/projectoverview_field"
             }
         },
         {
@@ -7202,7 +7272,7 @@
             "description": "Enables the creation of Paragraphs entities.",
             "homepage": "https://www.drupal.org/project/paragraphs",
             "support": {
-                "source": "http://git.drupalcode.org/paragraphs"
+                "source": "https://git.drupalcode.org/projectparagraphs"
             }
         },
         {
@@ -7544,7 +7614,7 @@
             "description": "Administrative Drush commands for Purge.",
             "homepage": "https://www.drupal.org/project/purge",
             "support": {
-                "source": "http://git.drupalcode.org/purge"
+                "source": "https://git.drupalcode.org/projectpurge"
             }
         },
         {
@@ -7589,7 +7659,7 @@
             "description": "Processes the queue every time cron runs, recommended for most configurations.",
             "homepage": "https://www.drupal.org/project/purge",
             "support": {
-                "source": "http://git.drupalcode.org/purge"
+                "source": "https://git.drupalcode.org/projectpurge"
             }
         },
         {
@@ -7634,7 +7704,7 @@
             "description": "Process the queue on every request, this is only recommended on high latency configurations.",
             "homepage": "https://www.drupal.org/project/purge",
             "support": {
-                "source": "http://git.drupalcode.org/purge"
+                "source": "https://git.drupalcode.org/projectpurge"
             }
         },
         {
@@ -7679,7 +7749,7 @@
             "description": "Queues every tag that Drupal invalidates internally.",
             "homepage": "https://www.drupal.org/project/purge",
             "support": {
-                "source": "http://git.drupalcode.org/purge"
+                "source": "https://git.drupalcode.org/projectpurge"
             }
         },
         {
@@ -8029,7 +8099,7 @@
             "description": "Reroutes emails send from the site to a predefined email. Useful for test sites.",
             "homepage": "https://www.drupal.org/project/reroute_email",
             "support": {
-                "source": "http://git.drupalcode.org/reroute_email"
+                "source": "https://git.drupalcode.org/projectreroute_email"
             }
         },
         {
@@ -8336,7 +8406,7 @@
             "description": "Allows site administrators to further delegate the task of managing user's roles.",
             "homepage": "https://www.drupal.org/project/roleassign",
             "support": {
-                "source": "http://git.drupalcode.org/roleassign"
+                "source": "https://git.drupalcode.org/projectroleassign"
             }
         },
         {
@@ -8403,7 +8473,7 @@
             "description": "Automatically publish and unpublish content at specified dates and times.",
             "homepage": "https://drupal.org/project/scheduler",
             "support": {
-                "source": "http://git.drupalcode.org/scheduler",
+                "source": "https://git.drupalcode.org/projectscheduler",
                 "issues": "https://www.drupal.org/project/issues/scheduler"
             }
         },
@@ -8460,7 +8530,7 @@
                 "Drupal"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/schema_metatag",
+                "source": "https://git.drupalcode.org/projectschema_metatag",
                 "issues": "https://www.drupal.org/project/issues/schema_metatag"
             }
         },
@@ -8742,7 +8812,7 @@
             "description": "Create sort options for search queries executed via the Search API.",
             "homepage": "https://www.drupal.org/project/search_api_sorts",
             "support": {
-                "source": "http://git.drupalcode.org/search_api_sorts"
+                "source": "https://git.drupalcode.org/projectsearch_api_sorts"
             }
         },
         {
@@ -8860,7 +8930,7 @@
                 "slideshow"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/slick",
+                "source": "https://git.drupalcode.org/projectslick",
                 "issues": "https://drupal.org/project/issues/slick"
             }
         },
@@ -9005,7 +9075,7 @@
             "description": "Provides stage_file_proxy module.",
             "homepage": "https://www.drupal.org/project/stage_file_proxy",
             "support": {
-                "source": "http://git.drupalcode.org/stage_file_proxy"
+                "source": "https://git.drupalcode.org/projectstage_file_proxy"
             }
         },
         {
@@ -9088,7 +9158,7 @@
             "description": "Generates a theme style guide for proofing common elements.",
             "homepage": "https://www.drupal.org/project/styleguide",
             "support": {
-                "source": "http://git.drupalcode.org/styleguide"
+                "source": "https://git.drupalcode.org/projectstyleguide"
             }
         },
         {
@@ -9146,7 +9216,7 @@
             "description": "Swiftmailer",
             "homepage": "https://www.drupal.org/project/swiftmailer",
             "support": {
-                "source": "http://git.drupalcode.org/swiftmailer"
+                "source": "https://git.drupalcode.org/projectswiftmailer"
             }
         },
         {
@@ -9197,7 +9267,7 @@
             "description": "Fixes the crooked access checks for Taxonomy pages.",
             "homepage": "https://www.drupal.org/project/taxonomy_access_fix",
             "support": {
-                "source": "http://git.drupalcode.org/taxonomy_access_fix"
+                "source": "https://git.drupalcode.org/projecttaxonomy_access_fix"
             }
         },
         {
@@ -9264,7 +9334,7 @@
             "description": "Provides a user interface for the Token API and some missing core tokens.",
             "homepage": "https://www.drupal.org/project/token",
             "support": {
-                "source": "http://git.drupalcode.org/token"
+                "source": "https://git.drupalcode.org/projecttoken"
             }
         },
         {
@@ -9367,7 +9437,7 @@
                 "User Management"
             ],
             "support": {
-                "source": "http://git.drupalcode.org/userprotect",
+                "source": "https://git.drupalcode.org/projectuserprotect",
                 "issues": "https://www.drupal.org/project/issues/userprotect"
             }
         },
@@ -9488,7 +9558,7 @@
             "description": "Select which roles should be able to see unpublished nodes.",
             "homepage": "https://www.drupal.org/project/view_unpublished",
             "support": {
-                "source": "http://git.drupalcode.org/view_unpublished"
+                "source": "https://git.drupalcode.org/projectview_unpublished"
             }
         },
         {
@@ -9539,7 +9609,7 @@
             "description": "Provides separate exposed filter blocks for views which are not page views.",
             "homepage": "https://www.drupal.org/project/views_exposed_filter_blocks",
             "support": {
-                "source": "https://git.drupalcode.org/project/views_exposed_filter_blocks"
+                "source": "https://git.drupalcode.org/projectviews_exposed_filter_blocks"
             }
         },
         {
@@ -9644,7 +9714,7 @@
             "description": "Enables the creation of webforms and questionnaires.",
             "homepage": "https://drupal.org/project/webform",
             "support": {
-                "source": "http://git.drupalcode.org/webform",
+                "source": "https://git.drupalcode.org/projectwebform",
                 "error": "Invalid dependency: \"telephone_validation/telephone_validation\" is an unknown drupal 8 package name",
                 "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
@@ -9729,7 +9799,7 @@
             "description": "Allows to send Webform submissions to MailChimp lists.",
             "homepage": "https://www.drupal.org/project/webform_mailchimp",
             "support": {
-                "source": "http://git.drupalcode.org/webform_mailchimp"
+                "source": "https://git.drupalcode.org/projectwebform_mailchimp"
             }
         },
         {
