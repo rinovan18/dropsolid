@@ -1693,7 +1693,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.27",
-                    "datestamp": "1558552081",
+                    "datestamp": "1558553350",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1746,7 +1746,7 @@
                 "Toolbar"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/admin_toolbar",
+                "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
         },
@@ -1764,7 +1764,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.27",
-                    "datestamp": "1558552081",
+                    "datestamp": "1558553350",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1817,7 +1817,7 @@
                 "Toolbar"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/admin_toolbar",
+                "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
         },
@@ -1835,7 +1835,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.27",
-                    "datestamp": "1558552081",
+                    "datestamp": "1558553350",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1888,7 +1888,7 @@
                 "Toolbar"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/admin_toolbar",
+                "source": "http://cgit.drupalcode.org/admin_toolbar",
                 "issues": "https://www.drupal.org/project/issues/admin_toolbar"
             }
         },
@@ -1963,12 +1963,16 @@
                 {
                     "name": "rupl",
                     "homepage": "https://www.drupal.org/user/411999"
+                },
+                {
+                    "name": "thalles",
+                    "homepage": "https://www.drupal.org/user/3589086"
                 }
             ],
             "description": "Improved aggregation of CSS/JS files to speed up page load times.",
             "homepage": "https://drupal.org/project/advagg",
             "support": {
-                "source": "https://git.drupalcode.org/project/advagg",
+                "source": "https://cgit.drupalcode.org/advagg",
                 "issues": "https://drupal.org/project/issues/advagg",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -2109,7 +2113,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.0-alpha5",
-                    "datestamp": "1540513084",
+                    "datestamp": "1550449381",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -2122,6 +2126,10 @@
             ],
             "authors": [
                 {
+                    "name": "Etroid",
+                    "homepage": "https://www.drupal.org/user/3048985"
+                },
+                {
                     "name": "chr.fritsch",
                     "homepage": "https://www.drupal.org/user/2103716"
                 },
@@ -2132,10 +2140,6 @@
                 {
                     "name": "mikeker",
                     "homepage": "https://www.drupal.org/user/192273"
-                },
-                {
-                    "name": "mortona2k",
-                    "homepage": "https://www.drupal.org/user/1029484"
                 },
                 {
                     "name": "rlhawk",
@@ -2647,9 +2651,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "Allow media entity reference fields to be displayed as a gallery in a colorbox - https://www.drupal.org/project/colorbox/issues/2957030": "https://www.drupal.org/files/issues/2019-07-15/colorbox.2957030-13.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2681,7 +2682,7 @@
             "description": "A light-weight, customizable lightbox plugin for jQuery.",
             "homepage": "https://www.drupal.org/project/colorbox",
             "support": {
-                "source": "https://git.drupalcode.org/project/colorbox",
+                "source": "https://cgit.drupalcode.org/colorbox",
                 "issues": "https://www.drupal.org/project/colorbox"
             }
         },
@@ -2806,7 +2807,7 @@
             "description": "Framework for managing configuration updates from distributions.",
             "homepage": "https://www.drupal.org/project/config_distro",
             "support": {
-                "source": "https://git.drupalcode.org/project/config_distro",
+                "source": "https://cgit.drupalcode.org/config_distro",
                 "issues": "https://drupal.org/project/issues/config_distro",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -2875,7 +2876,7 @@
                 "configuration management"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/config_filter",
+                "source": "http://cgit.drupalcode.org/config_filter",
                 "issues": "https://www.drupal.org/project/issues/config_filter",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -2935,7 +2936,7 @@
             "description": "Ignore certain configuration during import.",
             "homepage": "http://drupal.org/project/config_ignore",
             "support": {
-                "source": "https://git.drupalcode.org/project/config_ignore",
+                "source": "http://cgit.drupalcode.org/config_ignore",
                 "issues": "http://drupal.org/project/config_ignore",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -3031,7 +3032,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha2",
-                    "datestamp": "1528237080",
+                    "datestamp": "1550188080",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3138,7 +3139,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.0-alpha6",
-                    "datestamp": "1537468380",
+                    "datestamp": "1550290687",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3346,7 +3347,7 @@
                 "configuration management"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/config_split",
+                "source": "http://cgit.drupalcode.org/config_split",
                 "issues": "https://www.drupal.org/project/issues/config_split",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -3384,7 +3385,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.0-beta4",
-                    "datestamp": "1541177884",
+                    "datestamp": "1550290984",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -3426,7 +3427,7 @@
             "description": "Synchronize your site with updated configuration provided by modules and themes.",
             "homepage": "https://www.drupal.org/project/config_sync",
             "support": {
-                "source": "https://git.drupalcode.org/project/config_sync",
+                "source": "https://cgit.drupalcode.org/config_sync",
                 "issues": "https://drupal.org/project/issues/config_sync",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -3967,8 +3968,7 @@
                     "Allow Views pages to be marked as admin page": "https://www.drupal.org/files/issues/2018-09-01/2719797-69.patch",
                     "Fix datetime widget descriptions": "https://www.drupal.org/files/issues/2019-03-16/2791693-38.patch",
                     "PECL YAML errors at valid YAML file which only contains comments": "https://www.drupal.org/files/issues/2018-09-30/pecl_yaml_only_comments_error-3003300-4.patch",
-                    "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch",
-                    "Media entities should not have path alias by default - https://www.drupal.org/project/drupal/issues/3067944": "https://www.drupal.org/files/issues/2019-07-15/drupal.3067944.2.patch"
+                    "Incorrect translation status for duplicated entities. -- https://www.drupal.org/project/drupal/issues/3009016#comment-12828375": "https://www.drupal.org/files/issues/2018-10-25/3009016-6.patch"
                 }
             },
             "autoload": {
@@ -4139,7 +4139,7 @@
             "description": "Provides a number of utility and helper APIs for Drupal developers and site builders.",
             "homepage": "https://www.drupal.org/project/ctools",
             "support": {
-                "source": "https://git.drupalcode.org/project/ctools",
+                "source": "http://cgit.drupalcode.org/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
             }
         },
@@ -4220,7 +4220,7 @@
             "description": "Various blocks, pages, and functions for developers.",
             "homepage": "http://drupal.org/project/devel",
             "support": {
-                "source": "https://git.drupalcode.org/project/devel",
+                "source": "http://cgit.drupalcode.org/devel",
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -4288,7 +4288,7 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/disable_language",
+                "source": "http://cgit.drupalcode.org/disable_language",
                 "issues": "http://drupal.org/project/issues/disable_language"
             }
         },
@@ -4397,7 +4397,7 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/dropsolid_purge",
+                "source": "http://cgit.drupalcode.org/dropsolid_purge",
                 "issues": "http://drupal.org/project/issues/dropsolid_purge"
             }
         },
@@ -4852,6 +4852,10 @@
                 "GPL-2.0-or-later"
             ],
             "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
                 {
                     "name": "Frans",
                     "homepage": "https://www.drupal.org/user/514222"
@@ -5318,7 +5322,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-beta6",
-                    "datestamp": "1519932484",
+                    "datestamp": "1553270584",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -5867,9 +5871,6 @@
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "Remove revision log messages from other entites than nodes": "https://www.drupal.org/files/issues/2019-07-16/inline_entity_form-remove_log_message-2927884-6.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -5964,7 +5965,7 @@
             "description": "Linkit - Enriched linking experience",
             "homepage": "http://drupal.org/project/linkit",
             "support": {
-                "source": "https://git.drupalcode.org/project/linkit",
+                "source": "http://cgit.drupalcode.org/linkit",
                 "issues": "http://drupal.org/project/linkit"
             }
         },
@@ -6103,6 +6104,10 @@
                 {
                     "name": "Les Lim",
                     "homepage": "https://www.drupal.org/user/84263"
+                },
+                {
+                    "name": "Manuel Garcia",
+                    "homepage": "https://www.drupal.org/user/213194"
                 },
                 {
                     "name": "Nafes",
@@ -6567,6 +6572,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Allow metatags to be disabled -- https://www.drupal.org/project/metatag/issues/2981793": "https://www.drupal.org/files/issues/2019-02-27/allow-metatags-to-be-disabled.2981793.11_0.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6655,7 +6663,7 @@
             "description": "Enhancements to core migration support.",
             "homepage": "https://www.drupal.org/project/migrate_plus",
             "support": {
-                "source": "https://git.drupalcode.org/project/migrate_plus",
+                "source": "https://cgit.drupalcode.org/migrate_plus",
                 "issues": "https://www.drupal.org/project/issues/migrate_plus",
                 "irc": "irc://irc.freenode.org/drupal-migrate"
             }
@@ -6714,7 +6722,7 @@
             "description": "CSV source migration.",
             "homepage": "https://www.drupal.org/project/migrate_source_csv",
             "support": {
-                "source": "https://git.drupalcode.org/project/migrate_source_csv",
+                "source": "https://cgit.drupalcode.org/migrate_source_csv",
                 "issues": "https://www.drupal.org/project/issues/migrate_source_csv",
                 "irc": "irc://irc.freenode.org/drupal-migrate"
             }
@@ -6868,10 +6876,6 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
-                },
-                "patches_applied": {
-                    "Fix missing variable": "https://www.drupal.org/files/issues/2019-07-02/node_title_help_text-undefined_variable_description-3065429-2.patch",
-                    "Only nodes": "https://www.drupal.org/files/issues/2019-07-25/ief-only-nodes.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6896,7 +6900,7 @@
             "description": "Allows you to add help text to node title.",
             "homepage": "https://www.drupal.org/project/node_title_help_text",
             "support": {
-                "source": "https://git.drupalcode.org/project/node_title_help_text",
+                "source": "https://cgit.drupalcode.org/node_title_help_text",
                 "issues": "https://drupal.org/project/issues/node_title_help_text",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -6958,7 +6962,7 @@
             "description": "Defines a 'weekly office hours' field type, allowing you to specify when an Entity is open or closed.",
             "homepage": "http://drupal.org/project/office_hours",
             "support": {
-                "source": "https://git.drupalcode.org/project/office_hours",
+                "source": "http://cgit.drupalcode.org/office_hours",
                 "issues": "http://drupal.org/project/office_hours",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -7091,7 +7095,7 @@
                 },
                 "drupal": {
                     "version": "8.x-4.0-beta3",
-                    "datestamp": "1523670484",
+                    "datestamp": "1559135889",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7114,6 +7118,10 @@
                 {
                     "name": "japerry",
                     "homepage": "https://www.drupal.org/user/45640"
+                },
+                {
+                    "name": "manuel.adan",
+                    "homepage": "https://www.drupal.org/user/516420"
                 }
             ],
             "description": "Provides a simple UI for Page Manager.",
@@ -7179,6 +7187,10 @@
                     "homepage": "https://www.drupal.org/user/45640"
                 },
                 {
+                    "name": "joelpittet",
+                    "homepage": "https://www.drupal.org/user/160302"
+                },
+                {
                     "name": "merlinofchaos",
                     "homepage": "https://www.drupal.org/user/26979"
                 },
@@ -7189,10 +7201,6 @@
                 {
                     "name": "samuel.mortenson",
                     "homepage": "https://www.drupal.org/user/2582268"
-                },
-                {
-                    "name": "sdboyer",
-                    "homepage": "https://www.drupal.org/user/146719"
                 },
                 {
                     "name": "tim.plunkett",
@@ -7915,7 +7923,7 @@
             "description": "Change what happens when viewing entities, e.g. redirect node types that users shouldn't see",
             "homepage": "https://www.drupal.org/project/rabbit_hole",
             "support": {
-                "source": "https://git.drupalcode.org/project/rabbit_hole",
+                "source": "https://cgit.drupalcode.org/rabbit_hole",
                 "issues": "https://www.drupal.org/project/issues/rabbit_hole"
             }
         },
@@ -8485,7 +8493,7 @@
             "description": "Automatically publish and unpublish content at specified dates and times.",
             "homepage": "https://drupal.org/project/scheduler",
             "support": {
-                "source": "https://git.drupalcode.org/project/scheduler",
+                "source": "http://cgit.drupalcode.org/scheduler",
                 "issues": "https://www.drupal.org/project/issues/scheduler"
             }
         },
@@ -8542,7 +8550,7 @@
                 "Drupal"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/schema_metatag",
+                "source": "http://cgit.drupalcode.org/schema_metatag",
                 "issues": "https://www.drupal.org/project/issues/schema_metatag"
             }
         },
@@ -8879,7 +8887,7 @@
             "description": "Creates a standard conform hreflang XML sitemap of the site content and provides a framework for developing other sitemap types.",
             "homepage": "https://drupal.org/project/simple_sitemap",
             "support": {
-                "source": "https://git.drupalcode.org/project/simple_sitemap",
+                "source": "https://cgit.drupalcode.org/simple_sitemap",
                 "issues": "https://drupal.org/project/issues/simple_sitemap",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
             }
@@ -9011,7 +9019,7 @@
             "description": "Provides a more robust alternative to 'summary or trimmed' textfield format.",
             "homepage": "https://drupal.org/project/smart_trim",
             "support": {
-                "source": "https://git.drupalcode.org/project/smart_trim",
+                "source": "https://cgit.drupalcode.org/smart_trim",
                 "issues": "https://drupal.org/project/issues/smart_trim"
             }
         },
@@ -9449,7 +9457,7 @@
                 "User Management"
             ],
             "support": {
-                "source": "https://git.drupalcode.org/project/userprotect",
+                "source": "http://cgit.drupalcode.org/userprotect",
                 "issues": "https://www.drupal.org/project/issues/userprotect"
             }
         },
@@ -9731,7 +9739,7 @@
             "description": "Enables the creation of webforms and questionnaires.",
             "homepage": "https://drupal.org/project/webform",
             "support": {
-                "source": "https://git.drupalcode.org/project/webform",
+                "source": "http://cgit.drupalcode.org/webform",
                 "error": "Invalid dependency: \"telephone_validation/telephone_validation\" is an unknown drupal 8 package name",
                 "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
                 "docs": "https://www.drupal.org/docs/8/modules/webform",
@@ -10101,14 +10109,14 @@
             "authors": [
                 {
                     "name": "Nicholas Humfrey",
+                    "role": "Developer",
                     "email": "njh@aelius.com",
-                    "homepage": "http://www.aelius.com/njh/",
-                    "role": "Developer"
+                    "homepage": "http://www.aelius.com/njh/"
                 },
                 {
                     "name": "Alexey Zakhlestin",
-                    "email": "indeyets@gmail.com",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "indeyets@gmail.com"
                 }
             ],
             "description": "EasyRdf is a PHP library designed to make it easy to consume and produce RDF.",
@@ -10452,9 +10460,7 @@
             "version": "1.8.2",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip"
             },
             "type": "drupal-library"
         },
@@ -10545,9 +10551,7 @@
             "version": "4.0.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/imakewebthings/waypoints/archive/master.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/imakewebthings/waypoints/archive/master.zip"
             },
             "type": "drupal-library"
         },
@@ -10556,9 +10560,7 @@
             "version": "1.6.4",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/jackmoore/colorbox/archive/1.x.zip"
             },
             "type": "drupal-library"
         },
@@ -10655,9 +10657,7 @@
             "version": "1.8.1",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip",
-                "reference": null,
-                "shasum": null
+                "url": "https://github.com/kenwheeler/slick/archive/v1.8.1.zip"
             },
             "type": "drupal-library"
         },
@@ -10697,15 +10697,15 @@
             "authors": [
                 {
                     "name": "Lars Olesen",
+                    "role": "Developer",
                     "email": "lars@intraface.dk",
-                    "homepage": "http://intraface.dk",
-                    "role": "Developer"
+                    "homepage": "http://intraface.dk"
                 },
                 {
                     "name": "Martin Geisler",
+                    "role": "Developer",
                     "email": "martin@geisler.net",
-                    "homepage": "http://geisler.net",
-                    "role": "Developer"
+                    "homepage": "http://geisler.net"
                 }
             ],
             "description": "PHP Exif Library. A library for reading and writing Exif headers in JPEG and TIFF images using PHP.",
@@ -15662,8 +15662,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "lead"
+                    "role": "lead",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "The PHP Unit Testing framework.",
