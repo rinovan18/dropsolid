@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31b65a3b0a8093b52e6b7e01be62be85",
+    "content-hash": "51d3b2d92a53656141656791692b0a1c",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -4412,7 +4412,7 @@
         },
         {
             "name": "drupal/dropsolid_rocketship_drush",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta18",
             "require": {
                 "drupal/config_split": "*",
                 "drupal/core": "~8.0",
@@ -4424,11 +4424,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta15+1-dev",
-                    "datestamp": "1564752187",
+                    "version": "8.x-1.0-beta18",
+                    "datestamp": "1568378286",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -4458,11 +4458,17 @@
         },
         {
             "name": "drupal/dropsolid_rocketship_profile",
-            "version": "dev-1.x",
+            "version": "1.0.0-beta18",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dropsolid_rocketship_profile.git",
-                "reference": "bf18c20e7c546e361de32dcf05b2123c995f3798"
+                "reference": "8.x-1.0-beta18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/dropsolid_rocketship_profile-8.x-1.0-beta18.zip",
+                "reference": "8.x-1.0-beta18",
+                "shasum": "e361110ec99fd3841eefb236b79e5a915b792876"
             },
             "require": {
                 "drupal/address": "^1.4",
@@ -4518,11 +4524,11 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta16+12-dev",
-                    "datestamp": "1567763885",
+                    "version": "8.x-1.0-beta18",
+                    "datestamp": "1568378286",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 },
                 "patches": {
@@ -4578,8 +4584,7 @@
                 "source": "https://git.drupalcode.org/project/dropsolid_rocketship_profile",
                 "error": "Invalid dependency: \"dropsolid_blocks\" is an unknown drupal 8 package name",
                 "docs": "https://drupal.org/project/dropsolid_rocketship_profile"
-            },
-            "time": "2019-09-10T14:29:04+00:00"
+            }
         },
         {
             "name": "drupal/ds",
@@ -4887,17 +4892,17 @@
         },
         {
             "name": "drupal/environment_indicator",
-            "version": "3.6.0",
+            "version": "3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/environment_indicator.git",
-                "reference": "8.x-3.6"
+                "reference": "8.x-3.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/environment_indicator-8.x-3.6.zip",
-                "reference": "8.x-3.6",
-                "shasum": "a27e3ab20273cda039610156ab9b9267b5c46b9f"
+                "url": "https://ftp.drupal.org/files/projects/environment_indicator-8.x-3.7.zip",
+                "reference": "8.x-3.7",
+                "shasum": "c5e27581a10f446f7c88568279454f20f5910dc9"
             },
             "require": {
                 "drupal/core": "*"
@@ -4908,8 +4913,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.6",
-                    "datestamp": "1553405885",
+                    "version": "8.x-3.7",
+                    "datestamp": "1568149685",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -16631,7 +16636,6 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/dropsolid_rocketship_profile": 20,
         "behat/mink-selenium2-driver": 20
     },
     "prefer-stable": true,
