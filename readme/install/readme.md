@@ -150,6 +150,8 @@ section**
 
 ## Via drush
 
+**Note:** The command below needs to be updated to account for demo content. 
+
 This can all be reduced to one drush command:
 
 For example:
@@ -159,7 +161,7 @@ For example:
   - theme: Starter
   - module: dropsolid block
   - module: cookie policy (with demo content in it)
-  - module: demo content (404, 403, homepage, …)
+  - module: core demo (404, 403, homepage, …)
   - feature module: blog basic
 
 `../vendor/bin/drush site-install dropsolid_rocketship_profile --locale=en 
