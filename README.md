@@ -111,6 +111,10 @@ so that you can mix and match with the normal Facets.
 
 - [After the installation](readme/after-install) [markdown]
 
+### Demo Content
+
+- [Demo Content](readme/democontent) [markdown]
+
 ### Development & Site-building
 
 - [Development](readme/development) [markdown]

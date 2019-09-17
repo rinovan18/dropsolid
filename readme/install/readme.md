@@ -26,16 +26,12 @@ afterwards, go back to the install page.
 
 ### step 1: Choose language
 
-By default, it takes English. Even if you're building a single language site 
+By default, we use English. Even if you're building a single language site 
 in Dutch, it is best to set everything up in English and add Dutch as an 
-additional language. If nothing else, your non-Dutch speaking colleagues will 
-thank you for it!
-
-_(DO NOT SWITCH THE DEFAULT LANGUAGE LATER ON! After the site is developed 
-and ready for the client, you will need to hide the English language **but for
-the love of all that is holy**, do not try to change the default language. Use 
-the disable_language module to simply disable English, WITHOUT CHANGING ITS
-DEFAULT STATUS)_
+additional language. This prevents several bugs with multilingual + makes it easier on your non-dutch-speaking coworkers.  
+If you don't want to use English as a language, you can disable the English language after your site development is finished, using the `disable_language` module, WITHOUT CHANGING ITS DEFAULT STATUS.
+ 
+To reiterate: **NEVER SWITCH THE DEFAULT LANGUAGE IN DRUPAL LANGUAGE CONFIGURATION!**
 
 ![Drupal language](images/install-choose-lang.png "Choose language")
 
@@ -61,8 +57,8 @@ Fill in the form where needed:
 ![Drupal configuration](images/install-configure-01.png "Fill in the form")
 ![Drupal configuration](images/install-configure-02.png "Fill in the form")
 
-Important note (this is mentioned during the step as well): User 1 will receive
-a random password. Our preferred flow is to only log in as User 1 using drush.
+**Important note:**
+User 1 (admin) does not get a password in rocketship projects. This is for security reasons. Our preferred flow is to have developers log in as user 1 using drush or users on the Platform to get a login using the project's "login" button.
 
 ### step 6: Multilingual configuration
 
@@ -75,14 +71,18 @@ This will place the language switcher block in the correct region.
 
 ![Multilingual](images/install-multilingual-01.png "Multilingual config")
 
+If your project requires you to use 'disable language' to remove the English language, the editor still needs to be able to find the content that was originally created in English during site installation. Eg. the 404 and 403 page or any default generated content (more on that later).  
+For this reason, there is an option to set a 'default content language', which will set the original language for those migrated bits of content into your chosen language (eg. Dutch). Otherwise, if the content remains set as 'English', the editor won't have access to it and won't be able to translate them.
+
+
 ![Multilingual](images/install-multilingual-02.png "Multilingual config")
 
 ### step 7: Extra components
 
-Here you can select any extra components. This includes our pre-made features,
+Here you can select any extra components + generate dummy content. This includes our pre-made features,
 and the option to select what theme to use.
 
-For Dropsolid internal use:
+**For Dropsolid internal use:**
 
 At the very least, you can add these settings to get started:
 
@@ -93,16 +93,24 @@ cookie warning and this will generate a dummy page with the policy
 to start from
 - **Page**: Every site needs to be able to use pages
 - **SEO**: Every site needs a way to manage SEO stuff like metatags
-- **Theme**: Flex or Starter, depending on if it's a 'flex' project or custom.
-
+- **Theme**: Flex, Starter or Minimal for development. Or Demo for a demo site (NOT FOR DEVELOPMENT!!!)
 
 Additionally, you need to check what **Features** are sold (eg. Blog) and
 enable their 'Basic' or 'Advanced' (aka. Complex) versions.
 'Basic' installs all the core feature stuff + makes an overview page.
+See the Functional analysis links for general info on what these features have by default.
 _Note: For **Flex** sites, every site needs overview pages, so you will never
 only install the 'Core' of a feature. It will always be 'Basic' or 'Advanced'_
 
-![Extra components](images/install-extra.png "Extra components")
+Every item has an option **'Demo content'**. This needs to be enabled if you need to produce a Demo site BUT can also be handy for development. That way you have some example content to style. At the very least, you should enable **'Paragraph Demo Content'**.  
+HOWEVER, don't forget to remove that content afterwards by simply **uninstalling** the various demo content submodules.
+
+**[See the separate 'Demo Content' readme for more info.](readme/democontent)**
+
+
+![Extra components](images/install-extra-01.png "Extra components")
+![Extra components](images/install-extra-02.png "Extra components")
+![Extra components](images/install-extra-03.png "Extra components")
 
 ### step 8: Assemble extra components
 
