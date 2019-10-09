@@ -10,7 +10,7 @@
         "drupal-composer/drupal-scaffold": "~2.2",
         "drupal/core": "~8.7.0",
         "drupal/dropsolid_rocketship_profile": "1.0-beta18",
-        "drupal/claro": "1.0.0-alpha3",
+        "drupal/claro": "1.0.0-alpha5",
         "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal-pattern-lab/unified-twig-extensions": "~0.1.0",
         "harvesthq/chosen": "~1.8",
@@ -59,9 +59,8 @@
                 "don't set $_SESSION unless needed - https://www.drupal.org/project/captcha/issues/2996495": "https://www.drupal.org/files/issues/2018-08-31/captcha.no-needless-sessions-2.patch"
             },
             "drupal/claro": {
-                "Add a font-size toggle -- https://www.drupal.org/project/claro/issues/3067208": "https://www.drupal.org/files/issues/2019-07-11/alpha3.size-switcher.patch",
-                "More compact overview pages -- https://www.drupal.org/project/claro/issues/3055598": "https://www.drupal.org/files/issues/2019-07-11/3055598-46-alpha3.Exposed-filters-eat-up-too-much-vertical-space-on-admincontent-view.patch.patch",
-                "Dropbutton list resizes table cells -- https://www.drupal.org/project/claro/issues/3067262": "https://www.drupal.org/files/issues/2019-07-11/alpha3.dropbutton-sizing.patch"
+                "Add a font-size toggle -- https://www.drupal.org/project/claro/issues/3067208": "https://www.drupal.org/files/issues/2019-10-08/alpha5.size-switcher-7.patch",
+                "Dropbutton list resizes table cells -- https://www.drupal.org/project/claro/issues/3067262": "https://www.drupal.org/files/issues/2019-10-08/alpha5.dropbutton-sizing-11.patch"
             }
         },
         "installer-paths": {
