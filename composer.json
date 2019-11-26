@@ -61,6 +61,9 @@
             "drupal/claro": {
                 "Add a font-size toggle -- https://www.drupal.org/project/claro/issues/3067208": "https://www.drupal.org/files/issues/2019-10-08/alpha5.size-switcher-7.patch",
                 "Dropbutton list resizes table cells -- https://www.drupal.org/project/claro/issues/3067262": "https://www.drupal.org/files/issues/2019-10-08/alpha5.dropbutton-sizing-11.patch"
+            },
+            "drupal/ds": {
+                "https://www.drupal.org/files/issues/2019-11-26/3096815-revert-early-deprecation.patch": "https://www.drupal.org/files/issues/2019-11-26/3096815-revert-early-deprecation.patch"
             }
         },
         "installer-paths": {
