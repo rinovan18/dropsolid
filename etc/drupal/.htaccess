@@ -3,7 +3,7 @@
 #
 
 # Protect files and directories from prying eyes.
-<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock))$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
+<FilesMatch "\.(engine|inc|install|make|module|profile|po|sh|.*sql|theme|twig|tpl(\.php)?|xtmpl|yml)(~|\.sw[op]|\.bak|\.orig|\.save)?$|^(\.(?!well-known).*|Entries.*|Repository|Root|Tag|Template|composer\.(json|lock)|web\.config)$|^#.*#$|\.php(~|\.sw[op]|\.bak|\.orig|\.save)$">
   <IfModule mod_authz_core.c>
     Require all denied
   </IfModule>
@@ -27,16 +27,9 @@ AddEncoding gzip svgz
 # Drupal\Core\DrupalKernel::bootEnvironment() for settings that can be
 # changed at runtime.
 
-# PHP 5, Apache 1 and 2.
-<IfModule mod_php5.c>
+# PHP 7, Apache 1 and 2.
+<IfModule mod_php7.c>
   php_value assert.active                   0
-  php_flag session.auto_start               off
-  php_value mbstring.http_input             pass
-  php_value mbstring.http_output            pass
-  php_flag mbstring.encoding_translation    off
-  # PHP 5.6 has deprecated $HTTP_RAW_POST_DATA and produces warnings if this is
-  # not set.
-  php_value always_populate_raw_post_data   -1
 </IfModule>
 
 # Requires mod_expires to be enabled.
@@ -65,6 +58,9 @@ AddEncoding gzip svgz
   FallbackResource /index.php
 </IfModule>
 
+# Uncomment the line below as part of enabling https redirects.
+# SetEnvIf X-Forwarded-Proto https HTTPS=on
+
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
   RewriteEngine on
@@ -75,6 +71,10 @@ AddEncoding gzip svgz
   RewriteRule ^ - [E=protossl]
   RewriteCond %{HTTPS} on
   RewriteRule ^ - [E=protossl:s]
+
+  # Uncomment the next two lines to redirect to HTTPS. Don't forget X-Forwarded-Proto on line 62.
+  #  RewriteCond %{ENV:HTTPS} !on
+  #  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=307]
 
   # Make sure Authorization HTTP header is available to PHP
   # even when running as CGI or FastCGI.
@@ -167,9 +167,9 @@ AddEncoding gzip svgz
     RewriteCond %{REQUEST_FILENAME}\.gz -s
     RewriteRule ^(.*)\.js $1\.js\.gz [QSA]
 
-    # Serve correct content types, and prevent mod_deflate double gzip.
-    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
-    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1]
+    # Serve correct content types, and prevent double compression.
+    RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1,E=no-brotli:1]
+    RewriteRule \.js\.gz$ - [T=text/javascript,E=no-gzip:1,E=no-brotli:1]
 
     <FilesMatch "(\.js\.gz|\.css\.gz)$">
       # Serve correct encoding type.
@@ -183,6 +183,7 @@ AddEncoding gzip svgz
 # Various header fixes.
 <IfModule mod_headers.c>
   # Disable content sniffing, since it's an attack vector.
+  Header unset X-Content-Type-Options
   Header always set X-Content-Type-Options nosniff
   # Disable Proxy header, since it's an attack vector.
   RequestHeader unset Proxy
