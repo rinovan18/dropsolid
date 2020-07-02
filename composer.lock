@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c55cf037e5587d8dee9a987e77e43bc3",
+    "content-hash": "812142e3460ed4298ce4a59dfa9afdcf",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -3151,7 +3151,7 @@
                     }
                 },
                 "patches_applied": {
-                    "allow drop db during install": "etc/patches/drop_tables_on_site_reinstall.patch",
+                    "Allow dropping the database when restarting the installer": "etc/patches/drop_tables_on_site_reinstall.patch",
                     "Support priority for needs_destruction service tag": "https://www.drupal.org/files/issues/2019-03-06/support-priority-for-need_destruction-tag.patch",
                     "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2020-04-24/2949457-53.patch",
                     "Exposed term filter is not updated when terms are added, deleted, or rearranged  https://www.drupal.org/project/drupal/issues/2900248": "https://www.drupal.org/files/issues/2019-05-07/2900248-16.patch",
@@ -3823,7 +3823,7 @@
         },
         {
             "name": "drupal/dropsolid_rocketship_drush",
-            "version": "5.0.0-alpha14",
+            "version": "5.0.0-alpha15",
             "require": {
                 "drupal/config_split": "*",
                 "drupal/core": "^8.8 || ^9",
@@ -3832,8 +3832,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "5.0.0-alpha14",
-                    "datestamp": "1593620251",
+                    "version": "5.0.0-alpha15",
+                    "datestamp": "1593697881",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -3870,17 +3870,17 @@
         },
         {
             "name": "drupal/dropsolid_rocketship_profile",
-            "version": "5.0.0-alpha14",
+            "version": "5.0.0-alpha15",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/dropsolid_rocketship_profile.git",
-                "reference": "5.0.0-alpha14"
+                "reference": "5.0.0-alpha15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/dropsolid_rocketship_profile-5.0.0-alpha14.zip",
-                "reference": "5.0.0-alpha14",
-                "shasum": "b6e2415e422afe028fb383c0bde054ef4ea704b4"
+                "url": "https://ftp.drupal.org/files/projects/dropsolid_rocketship_profile-5.0.0-alpha15.zip",
+                "reference": "5.0.0-alpha15",
+                "shasum": "09ffe0921d11c0adad2a8266e1ce306ec075545e"
             },
             "require": {
                 "drupal/address": "^1.4",
@@ -3909,6 +3909,7 @@
                 "drupal/memcache": "^2.1",
                 "drupal/menu_link_attributes": "^1.0",
                 "drupal/office_hours": "^1.3",
+                "drupal/path_redirect_import": "^1.0",
                 "drupal/purge": "^3.0",
                 "drupal/r4032login": "^1.0",
                 "drupal/rabbit_hole": "^1.0",
@@ -3938,8 +3939,8 @@
             "type": "drupal-profile",
             "extra": {
                 "drupal": {
-                    "version": "5.0.0-alpha14",
-                    "datestamp": "1593620251",
+                    "version": "5.0.0-alpha15",
+                    "datestamp": "1593697881",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -5792,6 +5793,52 @@
             }
         },
         {
+            "name": "drupal/menu_clickthrough",
+            "version": "5.0.0-alpha7",
+            "require": {
+                "drupal/core": "^8.8 || ^9",
+                "drupal/rocketship_paragraphs": "self.version"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "5.0.0-alpha7",
+                    "datestamp": "1593697994",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Grayle",
+                    "homepage": "https://www.drupal.org/user/3145497"
+                },
+                {
+                    "name": "Nick_vh",
+                    "homepage": "https://www.drupal.org/user/122682"
+                },
+                {
+                    "name": "brentmeuleman",
+                    "homepage": "https://www.drupal.org/user/3558817"
+                },
+                {
+                    "name": "rembrandx",
+                    "homepage": "https://www.drupal.org/user/465048"
+                }
+            ],
+            "description": "Provides description to menu items and show menu's in a overview.",
+            "homepage": "https://www.drupal.org/project/rocketship_paragraphs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/rocketship_paragraphs"
+            }
+        },
+        {
             "name": "drupal/menu_link_attributes",
             "version": "1.1.0",
             "source": {
@@ -6493,6 +6540,121 @@
             "homepage": "https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets",
             "support": {
                 "source": "https://git.drupalcode.org/project/paragraphs_asymmetric_translation_widgets"
+            }
+        },
+        {
+            "name": "drupal/paragraphs_type_permissions",
+            "version": "1.12.0",
+            "require": {
+                "drupal/core": "^8.7.7 || ^9",
+                "drupal/paragraphs": "self.version"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.12",
+                    "datestamp": "1590140081",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Frans",
+                    "homepage": "https://www.drupal.org/user/514222"
+                },
+                {
+                    "name": "Primsi",
+                    "homepage": "https://www.drupal.org/user/282629"
+                },
+                {
+                    "name": "jeroen.b",
+                    "homepage": "https://www.drupal.org/user/1853532"
+                },
+                {
+                    "name": "jstoller",
+                    "homepage": "https://www.drupal.org/user/99012"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                }
+            ],
+            "description": "Allows users to configure permissions for individual Paragraphs types.",
+            "homepage": "https://www.drupal.org/project/paragraphs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/paragraphs"
+            }
+        },
+        {
+            "name": "drupal/path_redirect_import",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/path_redirect_import.git",
+                "reference": "8.x-1.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/path_redirect_import-8.x-1.0-beta3.zip",
+                "reference": "8.x-1.0-beta3",
+                "shasum": "544314e320c9c711ea00710a2e684f293e111fd8"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/redirect": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta3",
+                    "datestamp": "1591413396",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "gabrielu",
+                    "homepage": "https://www.drupal.org/user/279352"
+                },
+                {
+                    "name": "kporras07",
+                    "homepage": "https://www.drupal.org/user/1349780"
+                },
+                {
+                    "name": "otrolopezmas",
+                    "homepage": "https://www.drupal.org/user/3516204"
+                },
+                {
+                    "name": "plopesc",
+                    "homepage": "https://www.drupal.org/user/282415"
+                },
+                {
+                    "name": "tjwelde",
+                    "homepage": "https://www.drupal.org/user/3411453"
+                }
+            ],
+            "description": "Provides the ability to import redirects for the Redirect module",
+            "homepage": "https://www.drupal.org/project/path_redirect_import",
+            "support": {
+                "source": "https://git.drupalcode.org/project/path_redirect_import"
             }
         },
         {
@@ -7222,17 +7384,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "5.0.0-alpha13",
+            "version": "5.0.0-alpha14",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "5.0.0-alpha13"
+                "reference": "5.0.0-alpha14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-5.0.0-alpha13.zip",
-                "reference": "5.0.0-alpha13",
-                "shasum": "ab8c1aa046a0d6e894f8c45aeeca70bee98cad12"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-5.0.0-alpha14.zip",
+                "reference": "5.0.0-alpha14",
+                "shasum": "aac2e525ffb76f047479cc6fc3c669ff90b7ec15"
             },
             "require": {
                 "drupal/admin_toolbar": "^2.3",
@@ -7243,7 +7405,6 @@
                 "drupal/better_exposed_filters": "^4.0",
                 "drupal/blazy": "^2.1",
                 "drupal/block_content_permissions": "*",
-                "drupal/block_field": "^1.0",
                 "drupal/colorbox": "^1.6",
                 "drupal/components": "~1.0",
                 "drupal/config_filter": "~1.2",
@@ -7279,12 +7440,12 @@
                 "drupal/migrate_tools": "^5.0",
                 "drupal/node_keep": "^2.0",
                 "drupal/node_title_help_text": "^1.1",
-                "drupal/overview_field": "^1.1",
                 "drupal/paragraphs": "^1.12",
                 "drupal/paragraphs_asymmetric_translation_widgets": "^1.0",
                 "drupal/pathauto": "^1.8",
                 "drupal/plugin": "^2.7",
                 "drupal/redirect": "*",
+                "drupal/rocketship_paragraphs": "^5.0",
                 "drupal/roleassign": "^1.0",
                 "drupal/scheduler": "^1.3",
                 "drupal/schema_metatag": "^1.5",
@@ -7308,7 +7469,6 @@
                 "drupal/address": "*",
                 "drupal/blazy": "*",
                 "drupal/block_content_permissions": "*",
-                "drupal/block_field": "*",
                 "drupal/captcha": "*",
                 "drupal/colorbox": "*",
                 "drupal/config_rewrite": "*",
@@ -7324,12 +7484,10 @@
                 "drupal/geofield": "*",
                 "drupal/geofield_map": "*",
                 "drupal/google_tag": "*",
-                "drupal/image_effects": "*",
                 "drupal/inline_entity_form": "*",
                 "drupal/manage_display": "*",
                 "drupal/maxlength": "*",
                 "drupal/media": "*",
-                "drupal/menu_clickthrough": "*",
                 "drupal/menu_link_attributes": "*",
                 "drupal/metatag": "*",
                 "drupal/metatag_facebook": "*",
@@ -7343,10 +7501,8 @@
                 "drupal/node_keep": "*",
                 "drupal/node_title_help_text": "*",
                 "drupal/office_hours": "*",
-                "drupal/overview_field": "*",
                 "drupal/paragraphs": "*",
                 "drupal/paragraphs_asymmetric_translation_widgets": "*",
-                "drupal/paragraphs_type_permissions": "*",
                 "drupal/pathauto": "*",
                 "drupal/rabbit_hole": "*",
                 "drupal/recaptcha": "*",
@@ -7359,7 +7515,6 @@
                 "drupal/rocketship_blog_core": "*",
                 "drupal/rocketship_content": "*",
                 "drupal/rocketship_cookie_policy": "*",
-                "drupal/rocketship_core-rocketship_paragraphs": "*",
                 "drupal/rocketship_event-rocketship_event_core": "*",
                 "drupal/rocketship_event_core": "*",
                 "drupal/rocketship_job-rocketship_job_advanced": "*",
@@ -7399,15 +7554,14 @@
                 "drupal/smart_trim": "*",
                 "drupal/styleguide": "*",
                 "drupal/token": "*",
-                "drupal/video_embed_field": "*",
                 "drupal/webform": "*",
                 "drupal/webform_views": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.0.0-alpha13",
-                    "datestamp": "1593620280",
+                    "version": "5.0.0-alpha14",
+                    "datestamp": "1593697903",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -7495,18 +7649,95 @@
             }
         },
         {
-            "name": "drupal/rocketship_theme_demo",
-            "version": "1.0.0-alpha4",
+            "name": "drupal/rocketship_paragraphs",
+            "version": "5.0.0-alpha7",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/rocketship_theme_demo.git",
-                "reference": "1.0.0-alpha4"
+                "url": "https://git.drupalcode.org/project/rocketship_paragraphs.git",
+                "reference": "5.0.0-alpha7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_demo-1.0.0-alpha4.zip",
-                "reference": "1.0.0-alpha4",
-                "shasum": "8a630d649768f92042ece50f75b05eee24d41640"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-5.0.0-alpha7.zip",
+                "reference": "5.0.0-alpha7",
+                "shasum": "7d222001463d3933cf41fe9b0032f5b83f43762c"
+            },
+            "require": {
+                "drupal/blazy": "*",
+                "drupal/block_field": "^1.0",
+                "drupal/colorbox": "*",
+                "drupal/core": "^8.8 || ^9",
+                "drupal/entity_reference_revisions": "*",
+                "drupal/field_group": "*",
+                "drupal/focal_point": "*",
+                "drupal/image_effects": "*",
+                "drupal/maxlength": "*",
+                "drupal/menu_clickthrough": "*",
+                "drupal/overview_field": "^1.1",
+                "drupal/paragraphs": "*",
+                "drupal/paragraphs_asymmetric_translation_widgets": "*",
+                "drupal/paragraphs_type_permissions": "*",
+                "drupal/rocketship_core": "^5.0",
+                "drupal/slick": "*",
+                "drupal/smart_trim": "*",
+                "drupal/video_embed_field": "*",
+                "drupal/webform": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "5.0.0-alpha7",
+                    "datestamp": "1593697994",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Nick Vanpraet",
+                    "homepage": "https://www.drupal.org/user/3145497",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Rembrand Le Compte",
+                    "homepage": "https://www.drupal.org/user/122682",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "brentmeuleman",
+                    "homepage": "https://www.drupal.org/user/3558817"
+                },
+                {
+                    "name": "rembrandx",
+                    "homepage": "https://www.drupal.org/user/465048"
+                }
+            ],
+            "description": "Contains predefined paragraph types.",
+            "homepage": "https://drupal.org/project/rocketship_paragraphs",
+            "support": {
+                "source": "https://git.drupalcode.org/project/rocketship_paragraphs",
+                "docs": "https://drupal.org/project/rocketship_paragraphs"
+            }
+        },
+        {
+            "name": "drupal/rocketship_theme_demo",
+            "version": "1.0.0-alpha7",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rocketship_theme_demo.git",
+                "reference": "1.0.0-alpha7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_demo-1.0.0-alpha7.zip",
+                "reference": "1.0.0-alpha7",
+                "shasum": "d0ed35766df8f9b5d328cd3f0d2bb68190c166ab"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -7514,8 +7745,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha4",
-                    "datestamp": "1593523061",
+                    "version": "1.0.0-alpha7",
+                    "datestamp": "1593696447",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7544,17 +7775,17 @@
         },
         {
             "name": "drupal/rocketship_theme_flex",
-            "version": "1.0.0-alpha4",
+            "version": "1.0.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_flex.git",
-                "reference": "1.0.0-alpha4"
+                "reference": "1.0.0-alpha7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_flex-1.0.0-alpha4.zip",
-                "reference": "1.0.0-alpha4",
-                "shasum": "64f06563b072889ffd6cf4ec41efed270132eaea"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_flex-1.0.0-alpha7.zip",
+                "reference": "1.0.0-alpha7",
+                "shasum": "c3acd7a5c7eddbfdef74a54d04e90ec3c39fbacf"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -7562,8 +7793,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha4",
-                    "datestamp": "1593523096",
+                    "version": "1.0.0-alpha7",
+                    "datestamp": "1593696466",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7592,17 +7823,17 @@
         },
         {
             "name": "drupal/rocketship_theme_minimal",
-            "version": "1.0.0-alpha4",
+            "version": "1.0.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_minimal.git",
-                "reference": "1.0.0-alpha4"
+                "reference": "1.0.0-alpha7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_minimal-1.0.0-alpha4.zip",
-                "reference": "1.0.0-alpha4",
-                "shasum": "8a8f9237f8e084cc2911d5c561bcb4cf199527ec"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_minimal-1.0.0-alpha7.zip",
+                "reference": "1.0.0-alpha7",
+                "shasum": "9ed860170e5cf78b91a891680fc8749cfffa2fab"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -7610,8 +7841,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha4",
-                    "datestamp": "1593523131",
+                    "version": "1.0.0-alpha7",
+                    "datestamp": "1593696504",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7640,17 +7871,17 @@
         },
         {
             "name": "drupal/rocketship_theme_starter",
-            "version": "1.0.0-alpha4",
+            "version": "1.0.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_starter.git",
-                "reference": "1.0.0-alpha4"
+                "reference": "1.0.0-alpha7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_starter-1.0.0-alpha4.zip",
-                "reference": "1.0.0-alpha4",
-                "shasum": "a45d08a911366948acd5dadf5a6ec65e3e0a73a5"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_starter-1.0.0-alpha7.zip",
+                "reference": "1.0.0-alpha7",
+                "shasum": "3ba968c60139806ea6fb80621bb029f1531299b4"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -7658,8 +7889,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-alpha4",
-                    "datestamp": "1593523112",
+                    "version": "1.0.0-alpha7",
+                    "datestamp": "1593696487",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -8774,26 +9005,26 @@
         },
         {
             "name": "drupal/view_unpublished",
-            "version": "1.0.0-rc1",
+            "version": "1.0.0-rc2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/view_unpublished.git",
-                "reference": "8.x-1.0-rc1"
+                "reference": "8.x-1.0-rc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/view_unpublished-8.x-1.0-rc1.zip",
-                "reference": "8.x-1.0-rc1",
-                "shasum": "de254b6e7863a5badf365fb953bd676b2b2d23a5"
+                "url": "https://ftp.drupal.org/files/projects/view_unpublished-8.x-1.0-rc2.zip",
+                "reference": "8.x-1.0-rc2",
+                "shasum": "673b2a76176b68b5f27affd4c2a718c2eaa45764"
             },
             "require": {
-                "drupal/core": "^8"
+                "drupal/core": "^8 || ^9"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-rc1",
-                    "datestamp": "1592594405",
+                    "version": "8.x-1.0-rc2",
+                    "datestamp": "1593633641",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -8879,17 +9110,17 @@
         },
         {
             "name": "drupal/webform",
-            "version": "5.18.0",
+            "version": "5.19.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/webform.git",
-                "reference": "8.x-5.18"
+                "reference": "8.x-5.19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.18.zip",
-                "reference": "8.x-5.18",
-                "shasum": "539d0ba5bacc402cf6ea2a3419ae164703a09aa0"
+                "url": "https://ftp.drupal.org/files/projects/webform-8.x-5.19.zip",
+                "reference": "8.x-5.19",
+                "shasum": "90a2084c2647bca791cc8b18a7e2a3b49f3da7ea"
             },
             "require": {
                 "drupal/core": "^8.8"
@@ -8928,8 +9159,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.18",
-                    "datestamp": "1593034084",
+                    "version": "8.x-5.19",
+                    "datestamp": "1593681136",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9082,7 +9313,7 @@
         },
         {
             "name": "drupal/webform_ui",
-            "version": "5.18.0",
+            "version": "5.19.0",
             "require": {
                 "drupal/core": "^8.8",
                 "drupal/webform": "self.version"
@@ -9090,8 +9321,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.18",
-                    "datestamp": "1593034084",
+                    "version": "8.x-5.19",
+                    "datestamp": "1593681136",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"

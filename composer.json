@@ -11,17 +11,17 @@
         "drupal/core-recommended": "^8.9",
         "drupal/core-vendor-hardening": "^8.9",
         "drupal/dropsolid_rocketship_profile": "^5.0",
-        "drupal/rocketship_theme_demo": "^1.0",
-        "drupal/rocketship_theme_minimal": "^1.0",
-        "drupal/rocketship_theme_starter": "^1.0",
-        "drupal/rocketship_theme_flex": "^1.0",
         "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal-pattern-lab/unified-twig-extensions": "~0.1.0",
         "harvesthq/chosen": "~1.8",
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
-        "imakewebthings/waypoints": "~4.0.1"
+        "imakewebthings/waypoints": "~4.0.1",
+        "drupal/rocketship_theme_demo": "1.0.0-alpha7",
+        "drupal/rocketship_theme_minimal": "1.0.0-alpha7",
+        "drupal/rocketship_theme_starter": "1.0.0-alpha7",
+        "drupal/rocketship_theme_flex": "1.0.0-alpha7"
     },
     "authors": [
         {
@@ -54,11 +54,7 @@
             "drupal/core": "-p2"
         },
         "enable-patching": true,
-        "patches": {
-            "drupal/core": {
-                "allow drop db during install": "etc/patches/drop_tables_on_site_reinstall.patch"
-            }
-        },
+        "patches": [],
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
