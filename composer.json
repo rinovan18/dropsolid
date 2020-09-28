@@ -18,10 +18,10 @@
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
         "imakewebthings/waypoints": "~4.0.1",
-        "drupal/rocketship_theme_demo": "1.0.0-alpha7",
-        "drupal/rocketship_theme_minimal": "1.0.0-alpha7",
-        "drupal/rocketship_theme_starter": "1.0.0-alpha7",
-        "drupal/rocketship_theme_flex": "1.0.0-alpha7"
+        "drupal/rocketship_theme_demo": "1.0.0-alpha10",
+        "drupal/rocketship_theme_minimal": "1.0.0-alpha10",
+        "drupal/rocketship_theme_starter": "1.0.0-alpha10",
+        "drupal/rocketship_theme_flex": "1.0.0-alpha10"
     },
     "authors": [
         {
