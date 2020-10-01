@@ -6,22 +6,20 @@
     "require": {
         "composer/installers": "~1.7",
         "cweagans/composer-patches": "^1.6.5",
-        "drush/drush": "8.3.5",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal/core-composer-scaffold": "^8.9",
         "drupal/core-recommended": "^8.9",
         "drupal/core-vendor-hardening": "^8.9",
         "drupal/dropsolid_rocketship_profile": "^5.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0",
-        "drupal-pattern-lab/unified-twig-extensions": "~0.1.0",
-        "harvesthq/chosen": "~1.8",
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
         "imakewebthings/waypoints": "~4.0.1",
-        "drupal/rocketship_theme_demo": "1.0.0-alpha10",
-        "drupal/rocketship_theme_minimal": "1.0.0-alpha10",
-        "drupal/rocketship_theme_starter": "1.0.0-alpha10",
-        "drupal/rocketship_theme_flex": "1.0.0-alpha10"
+        "drupal/rocketship_theme_demo": "1.0.0-alpha12",
+        "drupal/rocketship_theme_minimal": "1.0.0-alpha12",
+        "drupal/rocketship_theme_starter": "1.0.0-alpha12",
+        "drupal/rocketship_theme_flex": "1.0.0-alpha12"
     },
     "authors": [
         {
@@ -45,6 +43,11 @@
         }
     },
     "extra": {
+        "patches": {
+            "drupal/webform": {
+                "Fix for tippyjs fatal error. Will be fixed in next webform release, so just drop this once that happens.": "https://www.drupal.org/files/issues/2020-09-30/3173864-11.patch"
+            }
+        },
         "_readme": [
             "By default Drupal loads the autoloader from ./vendor/autoload.php.",
             "To change the autoloader you can edit ./autoload.php."
@@ -54,7 +57,6 @@
             "drupal/core": "-p2"
         },
         "enable-patching": true,
-        "patches": [],
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
@@ -75,7 +77,8 @@
                 "type:drupal-custom-theme"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "harvesthq/chosen"
             ]
         },
         "drupal-scaffold": {
@@ -118,18 +121,6 @@
         {
             "type": "package",
             "package": {
-                "name": "harvesthq/chosen",
-                "version": "1.8.2",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://github.com/harvesthq/chosen/releases/download/v1.8.2/chosen_v1.8.2.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        {
-            "type": "package",
-            "package": {
                 "name": "kenwheeler/slick",
                 "version": "1.8.1",
                 "type": "drupal-library",
@@ -169,7 +160,6 @@
         }
     ],
     "require-dev": {
-        "drupal/core-dev-pinned": "^8.9",
-        "drupal/upgrade_status": "^2.9"
+        "drupal/core-dev-pinned": "^8.9"
     }
 }
