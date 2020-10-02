@@ -6,7 +6,7 @@
     "require": {
         "composer/installers": "~1.7",
         "cweagans/composer-patches": "^1.6.5",
-        "oomphinc/composer-installers-extender": "^2.0",
+        "oomphinc/composer-installers-extender": "^1.0",
         "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal/core-composer-scaffold": "^8.9",
         "drupal/core-recommended": "^8.9",
@@ -56,6 +56,9 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
+        "installer-types": [
+            "library"
+        ],
         "enable-patching": true,
         "installer-paths": {
             "docroot/core": [
