@@ -31,6 +31,8 @@ docroot/sites/default/**
 /docroot/sites/default/files/*
 # Except this one file
 !/docroot/sites/default/files/.gitkeep
+# Don't ignore the styleguide folder
+!/docroot/styleguide
 
 config/**
 !config/sync
