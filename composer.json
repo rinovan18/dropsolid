@@ -8,9 +8,9 @@
         "cweagans/composer-patches": "^1.6.5",
         "oomphinc/composer-installers-extender": "^1.0",
         "zaporylie/composer-drupal-optimizations": "^1.0",
-        "drupal/core-composer-scaffold": "^8.9",
-        "drupal/core-recommended": "^8.9",
-        "drupal/core-vendor-hardening": "^8.9",
+        "drupal/core-composer-scaffold": "^9.0",
+        "drupal/core-recommended": "^9.0",
+        "drupal/core-vendor-hardening": "^9.0",
         "drupal/dropsolid_rocketship_profile": "^5.0",
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
@@ -44,8 +44,18 @@
     },
     "extra": {
         "patches": {
+            "drupal/core": {
+                "Allow synced Layout default Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-09-25/3044993-30_plus_2946333-202.patch"
+            },
             "drupal/webform": {
                 "Fix for tippyjs fatal error. Will be fixed in next webform release, so just drop this once that happens.": "https://www.drupal.org/files/issues/2020-09-30/3173864-11.patch"
+            }
+        },
+        "patches-ignore": {
+            "drupal/rocketship_core": {
+                "drupal/core": {
+                    "Allow synced Layout default Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-06-25/3044993-12_plus_2946333-164-rerolled89x-29.patch"
+                }
             }
         },
         "_readme": [
@@ -163,6 +173,8 @@
         }
     ],
     "require-dev": {
-        "drupal/core-dev-pinned": "^8.9"
+        "drupal/core-dev-pinned": "^9.0",
+        "drupal/twig_xdebug": "^1.2",
+        "drupal/twig_vardumper": "^3.0"
     }
 }
