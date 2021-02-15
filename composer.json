@@ -16,10 +16,10 @@
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
         "imakewebthings/waypoints": "~4.0.1",
-        "drupal/rocketship_theme_demo": "~2.0.1",
-        "drupal/rocketship_theme_minimal": "~2.0.1",
-        "drupal/rocketship_theme_starter": "~2.0.1",
-        "drupal/rocketship_theme_flex": "~2.0.1"
+        "drupal/rocketship_theme_demo": "~2.1.0",
+        "drupal/rocketship_theme_minimal": "~2.1.0",
+        "drupal/rocketship_theme_starter": "~2.1.0",
+        "drupal/rocketship_theme_flex": "~2.1.0"
     },
     "authors": [
         {

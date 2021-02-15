@@ -2,26 +2,26 @@
 
 _curated by Dropsolid_
 
-The intent of Dropsolid Rocketship is to make **digital business easy** by 
-providing a framework and best practice examples based on real life situations 
+The intent of Dropsolid Rocketship is to make **digital business easy** by
+providing a framework and best practice examples based on real life situations
 from a company that has built and managed over 500 Drupal sites.
 
-Dropsolid Rocketship is a distribution that enables small to mid-market 
-business to profit from an optimal start when getting your feet wet in Drupal. 
-It provides best practices from deployment, configuration and ways to extend 
+Dropsolid Rocketship is a distribution that enables small to mid-market
+business to profit from an optimal start when getting your feet wet in Drupal.
+It provides best practices from deployment, configuration and ways to extend
 it, proven by many cases that have implemented and resulted in this learning.
 
-All Drupal 8 sites at Dropsolid have Rocketship at its core. Junior developers 
-learn the basics with Rocketship, while senior developers have had their say 
+All Drupal 8 sites at Dropsolid have Rocketship at its core. Junior developers
+learn the basics with Rocketship, while senior developers have had their say
 in how an optimal development codebase looks like.
 
-As it is our goal to make digital business easy, there is no better way than 
-being transparent in how we achieve that. 
+As it is our goal to make digital business easy, there is no better way than
+being transparent in how we achieve that.
 
 Note that the current READMEs are straight from the old private version of this
 distribution, and were written with our own devs in mind. So some things may
-not make sense. Feel free to create issues on 
-[drupal.org](https://drupal.org/project/dropsolid_rocketship) when you find 
+not make sense. Feel free to create issues on
+[drupal.org](https://drupal.org/project/dropsolid_rocketship) when you find
 something that should be made clearer.
 
 
@@ -39,57 +39,62 @@ composer create-project dropsolid/rocketship:8.6.x-dev PROJECTNAME --stability d
 
 ------------------
 
-- [Rocketship IP](#rocketship-ip)  
-    - [Basics](#basics)  
-    - [Features](#features)  
-    - [Search API](#search-api)  
-- [Before you start](#before-you-start)  
-- [Installing a site](#installing-a-site)  
-- [After the installation](#after-the-installation)  
-- [Development & Site-building](#development--site-building)  
-- [Theming](#theming)  
-- [Deployment](#deployment)  
-- [Infra Roadmap](#infra-roadmap)  
+- [Dropsolid Rocketship Distribution](#dropsolid-rocketship-distribution)
+  - [Best installed with Composer:](#best-installed-with-composer)
+  - [Rocketship IP](#rocketship-ip)
+      - [Basics](#basics)
+      - [Features](#features)
+      - [Search API](#search-api)
+  - [Before you start](#before-you-start)
+  - [Installing a site](#installing-a-site)
+  - [After the installation](#after-the-installation)
+  - [Demo Content](#demo-content)
+  - [Development & Site-building](#development--site-building)
+  - [Theming](#theming)
+  - [Deployment](#deployment)
+  - [Optimization](#optimization)
 
 ### Rocketship IP
 
 ##### Basics
 This is the company-wide install profile for Dropsolid. It is based
-around Paragraphs and the Page content type. With just those two you should 
+around Paragraphs and the Page content type. With just those two you should
 be able to build a large array of various pages.
 
-Even overview pages, or landingspages, are built using the Page content type. 
-Thanks to the Overview paragraph, and the Overview field, any type of View, 
-or custom render array can be exposed as an option to be selected. Note, 
+Even overview pages, or landingspages, are built using the Page content type.
+Thanks to the Overview paragraph, and the Overview field, any type of View,
+or custom render array can be exposed as an option to be selected. Note,
 however, that by default the Webadmin role does not have access to that field.
 
 ##### Features
-On top of that, we also have premade "Features" (not to be confused with the 
+On top of that, we also have premade "Features" (not to be confused with the
 contrib module Features).
 
 These can have up to three levels of complexity.
 
-* [feature]_core is the simplest implementation, with no or almost no custom 
-logic and is not much more than a content type, already set up for you. SEO, 
+* [feature]_core is the simplest implementation, with no or almost no custom
+logic and is not much more than a content type, already set up for you. SEO,
 translation capability, permissions, view modes. Everything is ready to go.
 
-* [feature]_basic adds some extras, specific to their FAs. For most, this 
+* [feature]_basic adds some extras, specific to their FAs. For most, this
 simply means migrating an overview page with a view already set up.
 
-* [feature]_advanced adds even more functionaly, and is the highest level of 
+* [feature]_advanced adds even more functionaly, and is the highest level of
 premade features we have. It can add forms, facet filters, alterations to view modes, etc.
 
-Always read the project's FA properly, and if the additions on top of the 
-feature's standard FA diverge too much, it is best to start from a lower 
-feature level than it is to try and delete and alter the things the higher 
+Always read the project's FA properly, and if the additions on top of the
+feature's standard FA diverge too much, it is best to start from a lower
+feature level than it is to try and delete and alter the things the higher
 levels have already set up. It will be faster in the long run.
 
+Don't uninstall Seven theme, eventhough installing another theme as Admin theme due to it being a dependency in the Features.
+
 ##### Search API
-Every "Feature", every content type, implements a "Search Index" view mode. 
-This view mode is added to the default Content Index (by default a database 
-backend) and contains every field that should be searchable. In addition to 
-that, some general Content fields are added to the index upon site 
-installation; published, title, etc. Some features add their own unique fields 
+Every "Feature", every content type, implements a "Search Index" view mode.
+This view mode is added to the default Content Index (by default a database
+backend) and contains every field that should be searchable. In addition to
+that, some general Content fields are added to the index upon site
+installation; published, title, etc. Some features add their own unique fields
 to this index. We expect the same to be done for any custom Content Types
 you create during development.
 
