@@ -19,7 +19,8 @@
         "drupal/rocketship_theme_demo": "~2.1.0",
         "drupal/rocketship_theme_minimal": "~2.1.0",
         "drupal/rocketship_theme_starter": "~2.1.0",
-        "drupal/rocketship_theme_flex": "~2.1.0"
+        "drupal/rocketship_theme_flex": "~2.1.0",
+        "drupal/search_api": "1.18"
     },
     "authors": [
         {
