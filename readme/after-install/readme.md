@@ -22,10 +22,10 @@ requires additional_settings.local.php, also present in etc/drupal. It's in that
 file you'll be checking some things.
 
 #### Memcache
-IF you have Memcache installed locally (the module), uncomment the block
-referencing Memcache and enter your project name in prefix. eg myproject_local.
-Also go to sites/environments/local.services.yml and uncomment the Memcache 
-block there.
+IF you have Memcache installed locally (the module), set the variable
+`ROCKETSHIP_MEMCACHE_READY_FOR_USE` to `TRUE` in your local additional settings file.
+Also go to sites/environments/local.services.yml and see if there is a Memcache
+block there. If so, uncomment it.
 
 It is important to only do this AFTER Memcache is enabled, else it will break 
 your site until you comment it out again. It'll try to load classes and 

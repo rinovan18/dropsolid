@@ -16,10 +16,10 @@
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
         "imakewebthings/waypoints": "~4.0.1",
-        "drupal/rocketship_theme_demo": "~2.0.1",
-        "drupal/rocketship_theme_minimal": "~2.0.1",
-        "drupal/rocketship_theme_starter": "~2.0.1",
-        "drupal/rocketship_theme_flex": "~2.0.1"
+        "drupal/rocketship_theme_demo": "~2.1.0",
+        "drupal/rocketship_theme_minimal": "~2.1.0",
+        "drupal/rocketship_theme_starter": "~2.1.0",
+        "drupal/rocketship_theme_flex": "~2.1.0"
     },
     "authors": [
         {
@@ -45,7 +45,9 @@
     "extra": {
         "patches": {
             "drupal/core": {
-                "Allow synced Layout default Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-09-25/3044993-30_plus_2946333-202.patch"
+                "Allow synced Layout override Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-12-17/2946333-224.patch",
+                "Allow synced Layout default Translations: translating labels and inline blocks (depends on override patch above)": "https://www.drupal.org/files/issues/2021-01-29/allow-synced-default-lb-translations.3044993.48.patch",
+                "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2020-12-17/2949457-60.patch"
             },
             "drupal/webform": {
                 "Fix for tippyjs fatal error. Will be fixed in next webform release, so just drop this once that happens.": "https://www.drupal.org/files/issues/2020-09-30/3173864-11.patch"
@@ -54,7 +56,9 @@
         "patches-ignore": {
             "drupal/rocketship_core": {
                 "drupal/core": {
-                    "Allow synced Layout default Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-06-25/3044993-12_plus_2946333-164-rerolled89x-29.patch"
+                    "Allow synced Layout default Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-06-25/3044993-12_plus_2946333-164-rerolled89x-29.patch",
+                    "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2020-04-24/2949457-53.patch",
+                    "Problematic hreflang on frontpage entity": "https://www.drupal.org/files/issues/2020-07-22/problematic_hreflang_links-2796399-34.patch"
                 }
             }
         },

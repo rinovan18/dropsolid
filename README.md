@@ -84,6 +84,8 @@ feature's standard FA diverge too much, it is best to start from a lower
 feature level than it is to try and delete and alter the things the higher 
 levels have already set up. It will be faster in the long run.
 
+Don't uninstall Seven theme, eventhough installing another theme as Admin theme due to it being a dependency in the Features.
+
 ##### Search API
 Every "Feature", every content type, implements a "Search Index" view mode. 
 This view mode is added to the default Content Index (by default a database 
