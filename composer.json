@@ -16,10 +16,7 @@
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
         "imakewebthings/waypoints": "~4.0.1",
-        "drupal/rocketship_theme_demo": "~2.1.0",
-        "drupal/rocketship_theme_minimal": "~2.1.0",
-        "drupal/rocketship_theme_starter": "~2.1.0",
-        "drupal/rocketship_theme_flex": "~2.1.0",
+        "drupal/rocketship_theme_generator": "~2.0",
         "drupal/search_api": "1.18"
     },
     "authors": [
@@ -44,11 +41,7 @@
         }
     },
     "extra": {
-        "patches": {
-            "drupal/webform": {
-                "Fix for tippyjs fatal error. Will be fixed in next webform release, so just drop this once that happens.": "https://www.drupal.org/files/issues/2020-09-30/3173864-11.patch"
-            }
-        },
+        "patches": [],
         "_readme": [
             "By default Drupal loads the autoloader from ./vendor/autoload.php.",
             "To change the autoloader you can edit ./autoload.php."
@@ -112,10 +105,18 @@
         "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
         "post-install-cmd": [
             "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/contrib'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/contrib'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/contrib'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Demo' --machine-name='rocketship_theme_demo' --preset=demo --theme-path='docroot/themes/contrib'",
             "cp etc/.gitignore .gitignore"
         ],
         "post-update-cmd": [
-            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd .."
+            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/contrib'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/contrib'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/contrib'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Demo' --machine-name='rocketship_theme_demo' --preset=demo --theme-path='docroot/themes/contrib'"
         ],
         "post-drupal-scaffold-cmd": [
             "patch -p1 < ./etc/scaffold-modifications/htaccess.patch"
