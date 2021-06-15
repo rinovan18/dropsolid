@@ -5137,6 +5137,9 @@
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "https://www.drupal.org/files/issues/2021-01-27/extralayoutthemesuggestions.patch": "https://www.drupal.org/files/issues/2021-01-27/extralayoutthemesuggestions.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7454,17 +7457,17 @@
         },
         {
             "name": "drupal/rocketship_theme_generator",
-            "version": "2.0.4",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_generator.git",
-                "reference": "2.0.4"
+                "reference": "2.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-2.0.4.zip",
-                "reference": "2.0.4",
-                "shasum": "b0d2cafa1e1bc3fcf5550b3651cfb7fe801cfadb"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-2.0.6.zip",
+                "reference": "2.0.6",
+                "shasum": "7b0760547ab46953ee3f4cae96f18e6dd9197c44"
             },
             "require": {
                 "drupal/components": "*",
@@ -7474,8 +7477,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.4",
-                    "datestamp": "1621928284",
+                    "version": "2.0.6",
+                    "datestamp": "1623755381",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7491,6 +7494,10 @@
                     "name": "Rembrand Le Compte",
                     "homepage": "https://www.drupal.org/u/rembrandx",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "rembrandx",
+                    "homepage": "https://www.drupal.org/user/465048"
                 }
             ],
             "description": "A module to generate component-based themes for use with Dropsolid Rocketship ecosystem",
@@ -13719,6 +13726,9 @@
                 "ext-zip": "Enabling the zip extension allows you to unzip archives",
                 "ext-zlib": "Allow gzip compression of HTTP requests"
             },
+            "bin": [
+                "bin/composer"
+            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
