@@ -1,8 +1,19 @@
 diff --git a/docroot/.htaccess b/docroot/.htaccess
-index 9a73a3d3a..d7006c7b7 100644
+index b1ee36bf4c..087db030ef 100644
 --- a/docroot/.htaccess
 +++ b/docroot/.htaccess
-@@ -187,3 +187,16 @@ AddEncoding gzip svgz
+@@ -37,8 +37,8 @@ AddEncoding gzip svgz
+   # Enable expirations.
+   ExpiresActive On
+ 
+-  # Cache all files for 2 weeks after access (A).
+-  ExpiresDefault A1209600
++  # Cache all files for 1 year after access (A).
++  ExpiresDefault "access plus 1 year"
+ 
+   <FilesMatch \.php$>
+     # Do not allow PHP scripts to be cached unless they explicitly send cache
+@@ -180,3 +180,16 @@ AddEncoding gzip svgz
    # Disable Proxy header, since it's an attack vector.
    RequestHeader unset Proxy
  </IfModule>

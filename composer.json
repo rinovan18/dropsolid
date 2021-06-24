@@ -6,18 +6,18 @@
     "require": {
         "composer/installers": "~1.7",
         "cweagans/composer-patches": "^1.6.5",
-        "oomphinc/composer-installers-extender": "^1.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0",
-        "drupal/core-composer-scaffold": "^8.9",
-        "drupal/core-recommended": "^8.9",
-        "drupal/core-vendor-hardening": "^8.9",
-        "drupal/dropsolid_rocketship_profile": "^5.0",
-        "kenwheeler/slick": "1.8.1",
-        "vardot/blazy": "~1.8",
-        "jackmoore/colorbox": "^1.0",
+        "drupal/core-composer-scaffold": "9.1.9",
+        "drupal/core-recommended": "9.1.9",
+        "drupal/core-vendor-hardening": "9.1.9",
+        "drupal/dropsolid_rocketship_profile": "^6.0",
+        "drupal/rocketship_florista_demo_profile": "^1.0",
+        "drupal/rocketship_theme_generator": "^3.1.0",
         "imakewebthings/waypoints": "~4.0.1",
-        "drupal/rocketship_theme_generator": "~2.0",
-        "drupal/search_api": "1.18"
+        "jackmoore/colorbox": "^1.0",
+        "kenwheeler/slick": "1.8.1",
+        "oomphinc/composer-installers-extender": "^1.0",
+        "vardot/blazy": "~1.8",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "authors": [
         {
@@ -42,7 +42,15 @@
         "sort-packages": true
     },
     "extra": {
-        "patches": [],
+        "patches": {
+            "drupal/core": {
+                "Change title to label for inline blocks and other UX improvements": "etc/patches/inlineblocklabelux.patch",
+                "Block fallback preview change": "etc/patches/layout_builder.ui.patch",
+                "Hide profiles": "etc/patches/hide-install-profiles.patch",
+                "Fix undefined errors in dialog when saving a modal in Layout Builder": "etc/patches/dialog-position.patch"
+            }
+        },
+        "patches-ignore": [],
         "_readme": [
             "By default Drupal loads the autoloader from ./vendor/autoload.php.",
             "To change the autoloader you can edit ./autoload.php."
@@ -106,18 +114,18 @@
         "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
         "post-install-cmd": [
             "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
-            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/contrib'",
-            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/contrib'",
-            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/contrib'",
-            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Demo' --machine-name='rocketship_theme_demo' --preset=demo --theme-path='docroot/themes/contrib'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/custom'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/custom'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/custom'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Demo' --machine-name='rocketship_theme_demo' --preset=demo --theme-path='docroot/themes/custom'",
             "cp etc/.gitignore .gitignore"
         ],
         "post-update-cmd": [
             "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
-            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/contrib'",
-            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/contrib'",
-            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/contrib'",
-            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Demo' --machine-name='rocketship_theme_demo' --preset=demo --theme-path='docroot/themes/contrib'"
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/custom'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/custom'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/custom'",
+            "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Demo' --machine-name='rocketship_theme_demo' --preset=demo --theme-path='docroot/themes/custom'"
         ],
         "post-drupal-scaffold-cmd": [
             "patch -p1 < ./etc/scaffold-modifications/htaccess.patch"
@@ -166,6 +174,8 @@
         }
     ],
     "require-dev": {
-        "drupal/core-dev-pinned": "^8.9"
+        "drupal/core-dev-pinned": "9.1.9",
+        "drupal/twig_xdebug": "^1.2",
+        "drupal/twig_vardumper": "^3.0"
     }
 }
