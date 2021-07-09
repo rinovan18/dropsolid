@@ -16,6 +16,7 @@
         "imakewebthings/waypoints": "~4.0.1",
         "jackmoore/colorbox": "^1.0",
         "kenwheeler/slick": "1.8.1",
+        "topfloor/composer-cleanup-vcs-dirs": "dev-composer-2",
         "vardot/blazy": "~1.8"
     },
     "authors": [
@@ -36,7 +37,7 @@
         "preferred-install": "dist",
         "autoloader-suffix": "Drupal8",
         "platform": {
-            "php": "7.3"
+            "php": "7.4"
         },
         "sort-packages": true
     },
@@ -105,7 +106,6 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/custom'",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/custom'",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/custom'",
@@ -113,7 +113,6 @@
             "cp etc/.gitignore .gitignore"
         ],
         "post-update-cmd": [
-            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/custom'",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/custom'",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/custom'",

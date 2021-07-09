@@ -58,7 +58,11 @@ AddEncoding gzip svgz
   FallbackResource /index.php
 </IfModule>
 
+# Let Apache / Drupal know whether the site is being accessed over HTTPS.
 SetEnvIf X-Forwarded-Proto https HTTPS=on
+
+# Uncomment the next line to force redirect to https.
+# SetEnvIf HOST .* FORCESSL=on
 
 # Various rewrite rules.
 <IfModule mod_rewrite.c>
@@ -70,15 +74,9 @@ SetEnvIf X-Forwarded-Proto https HTTPS=on
   # if you enable "www." stripping or enforcement, in order to ensure that
   # you don't bounce between http and https.
   RewriteRule ^ - [E=protossl]
-  RewriteCond %{HTTPS} on
+  RewriteCond %{ENV:HTTPS} on [OR]
+  RewriteCond %{ENV:FORCESSL} on
   RewriteRule ^ - [E=protossl:s]
-
-  RewriteRule ^ - [E=redirectssl]
-  # Uncomment the next line to redirect to HTTPS. Don't forget X-Forwarded-Proto on line 62.
-  # RewriteRule ^ - [E=forcessl:s]
-  RewriteCond %{ENV:protossl} s [OR]
-  RewriteCond %{ENV:forcessl} s
-  RewriteRule ^ - [E=redirectssl:s]
 
   # Make sure Authorization HTTP header is available to PHP
   # even when running as CGI or FastCGI.
@@ -102,24 +100,24 @@ SetEnvIf X-Forwarded-Proto https HTTPS=on
   # If your site can be accessed both with and without the 'www.' prefix, you
   # can use one of the following settings to redirect users to your preferred
   # URL, either WITH or WITHOUT the 'www.' prefix. Choose ONLY one option:
-  #
+
   # To redirect all users to access the site WITH the 'www.' prefix,
   # (http://example.com/foo will be redirected to http://www.example.com/foo)
   # uncomment the following:
   # RewriteCond %{HTTP_HOST} .
   # RewriteCond %{HTTP_HOST} !^www\. [NC]
-  # RewriteRule ^ http%{ENV:redirectssl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  # RewriteRule ^ http%{ENV:protossl}://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # To redirect all users to access the site WITHOUT the 'www.' prefix,
   # (http://www.example.com/foo will be redirected to http://example.com/foo)
   # uncomment the following:
   # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  # RewriteRule ^ http%{ENV:redirectssl}://%1%{REQUEST_URI} [L,R=301]
+  # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
-  # This redirects only if the HTTPS enforcing was uncommented at line 77.
-  RewriteCond %{ENV:redirectssl} s
-  RewriteCond %{ENV:protossl} !s
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=307]
+  # Redirect to HTTPS if we expect it but are not accessed via HTTPS.
+  RewriteCond %{ENV:protossl} s
+  RewriteCond %{ENV:HTTPS} !on
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
   # Modify the RewriteBase if you are using Drupal in a subdirectory or in a
   # VirtualDocumentRoot and the rewrite rules are not working properly.
