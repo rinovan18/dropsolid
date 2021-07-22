@@ -3062,17 +3062,6 @@
         {
             "name": "drupal/core-recommended",
             "version": "8.9.16",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core-recommended.git",
-                "reference": "ec38f5cb75ca1848f2247a645d4a4dee4abe4c28"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-recommended/zipball/ec38f5cb75ca1848f2247a645d4a4dee4abe4c28",
-                "reference": "ec38f5cb75ca1848f2247a645d4a4dee4abe4c28",
-                "shasum": ""
-            },
             "require": {
                 "asm89/stack-cors": "1.3.0",
                 "composer/semver": "1.5.1",
@@ -3311,7 +3300,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.6",
-                    "datestamp": "1620838181",
+                    "datestamp": "1623860918",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5148,9 +5137,6 @@
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
                     }
-                },
-                "patches_applied": {
-                    "https://www.drupal.org/files/issues/2021-01-27/extralayoutthemesuggestions.patch": "https://www.drupal.org/files/issues/2021-01-27/extralayoutthemesuggestions.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -7468,17 +7454,17 @@
         },
         {
             "name": "drupal/rocketship_theme_generator",
-            "version": "2.0.7",
+            "version": "2.2.8",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_generator.git",
-                "reference": "2.0.7"
+                "reference": "2.2.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-2.0.7.zip",
-                "reference": "2.0.7",
-                "shasum": "299bf9517c1277b59c3c6b571f42696a94b9af2b"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-2.2.8.zip",
+                "reference": "2.2.8",
+                "shasum": "f398c308e2b3d973514d7f69be8d586bdf2c0eb2"
             },
             "require": {
                 "drupal/components": "*",
@@ -7488,8 +7474,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.7",
-                    "datestamp": "1623758880",
+                    "version": "2.2.8",
+                    "datestamp": "1626955605",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -8458,10 +8444,6 @@
                 {
                     "name": "evanmwillhite",
                     "homepage": "https://www.drupal.org/user/562168"
-                },
-                {
-                    "name": "rembrandx",
-                    "homepage": "https://www.drupal.org/user/465048"
                 },
                 {
                     "name": "sghoweri",
@@ -14042,17 +14024,6 @@
         {
             "name": "drupal/core-dev-pinned",
             "version": "8.9.16",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal/core-dev-pinned.git",
-                "reference": "858811186daafbc18701e1a17f3766737e3d0936"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core-dev-pinned/zipball/858811186daafbc18701e1a17f3766737e3d0936",
-                "reference": "858811186daafbc18701e1a17f3766737e3d0936",
-                "shasum": ""
-            },
             "require": {
                 "behat/mink": "v1.8.1",
                 "behat/mink-browserkit-driver": "v1.3.4",
