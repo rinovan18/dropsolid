@@ -38,6 +38,26 @@ If, due to updates, you no longer need a patch but it is required by a contrib
 module such as Rocketship Core you can ignore it by using the ignore-patches
 functionality of the [composer-patches package](https://github.com/cweagans/composer-patches).
 
+### Patching contributed modules
+
+Due to the switch to gitlab on drupal.org, finding and applying patches to
+contrib modules is no longer as straightforward as it once was.
+Because patchfiles change along with updates to their merge requests, we need
+to download them to the project repo as explained below.
+
+* Find or create the issue on drupal.org.
+* If there is no merge request, [create one](https://www.drupal.org/docs/develop/git/using-git-to-contribute-to-drupal/creating-issue-forks-and-merge-requests)
+* [Download the patch file](https://www.drupal.org/docs/develop/git/using-git-to-contribute-to-drupal/creating-issue-forks-and-merge-requests#s-downloading-a-patch-file-from-a-merge-request) to etc/patches/
+    * Make sure to include the issue number in the patch file
+* Add it to your composer.json **with the issue number** and a short description like so:
+```
+"patches": {
+  "drupal/module_name": {
+    "12345678 - This is a short description": "etc/patches/12345678.patch"
+  }
+}
+```
+
 ## Features
 
 ### Config
