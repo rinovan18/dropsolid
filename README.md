@@ -29,12 +29,12 @@ something that should be made clearer.
 
 To install the most recent beta release:
 ```
-composer create-project dropsolid/rocketship:^8.6@beta PROJECTNAME --no-dev --no-interaction
+composer create-project dropsolid/rocketship:^10@beta PROJECTNAME --no-dev --no-interaction
 ```
 
 To install the dev version:
 ```
-composer create-project dropsolid/rocketship:8.6.x-dev PROJECTNAME --stability dev --no-interaction
+composer create-project dropsolid/rocketship:10.0.x-dev PROJECTNAME --stability dev --no-interaction
 ```
 
 ------------------
@@ -55,49 +55,19 @@ composer create-project dropsolid/rocketship:8.6.x-dev PROJECTNAME --stability d
 
 ##### Basics
 This is the company-wide install profile for Dropsolid. It is based
-around Paragraphs and the Page content type. With just those two you should 
+around Layout Builder and the Page content type. With just those two you should 
 be able to build a large array of various pages.
 
-Even overview pages, or landingspages, are built using the Page content type. 
-Thanks to the Overview paragraph, and the Overview field, any type of View, 
-or custom render array can be exposed as an option to be selected. Note, 
-however, that by default the Webadmin role does not have access to that field.
-
-##### Features
-On top of that, we also have premade "Features" (not to be confused with the 
-contrib module Features).
-
-These can have up to three levels of complexity.
-
-* [feature]_core is the simplest implementation, with no or almost no custom 
-logic and is not much more than a content type, already set up for you. SEO, 
-translation capability, permissions, view modes. Everything is ready to go.
-
-* [feature]_basic adds some extras, specific to their FAs. For most, this 
-simply means migrating an overview page with a view already set up.
-
-* [feature]_advanced adds even more functionaly, and is the highest level of 
-premade features we have. It can add forms, facet filters, alterations to view modes, etc.
-
-Always read the project's FA properly, and if the additions on top of the 
-feature's standard FA diverge too much, it is best to start from a lower 
-feature level than it is to try and delete and alter the things the higher 
-levels have already set up. It will be faster in the long run.
-
-Don't uninstall Seven theme, eventhough installing another theme as Admin theme due to it being a dependency in the Features.
-
 ##### Search API
-Every "Feature", every content type, implements a "Search Index" view mode. 
-This view mode is added to the default Content Index (by default a database 
-backend) and contains every field that should be searchable. In addition to 
-that, some general Content fields are added to the index upon site 
-installation; published, title, etc. Some features add their own unique fields 
-to this index. We expect the same to be done for any custom Content Types
-you create during development.
+The Page content type includes a premade setup for Search API. It will index the full view mode
+so as to index everything set up with Layout Builder. If you create other content types, add the 
+appropriate view mode to the index as well as any other fields that may be useful to index.
 
-Every View created by the Features also uses this index, so all Views in Rocketship are
-by default "Search API Views". We expect the same, *within reason*, for any new Views you
-create during development. And if you must implement some strange filter or even sort, think
+When creating a View, eg. an overview of a content type, use this index if at all possible. Having every
+view fed by the same Search index makes life easier, and makes setting up Facets, the preferred way of filtering
+views, a breeze.
+
+And if you must implement some strange filter or even sort, think
 "Can't I just make this a Facet instead?" and then do that so others can reuse it later and
 so that you can mix and match with the normal Facets.
 

@@ -21,6 +21,9 @@ your settings_local.php file present in etc/drupal. That file in turn
 requires additional_settings.local.php, also present in etc/drupal. It's in that
 file you'll be checking some things.
 
+If you're using the open source version, simply directly require additional_settings.local.php
+from your settings.php
+
 #### Memcache
 IF you have Memcache installed locally (the module), set the variable
 `ROCKETSHIP_MEMCACHE_READY_FOR_USE` to `TRUE` in your local additional settings file.
@@ -45,7 +48,8 @@ The skeleton is set up to use configuration management. Be sure to read
 this article (all parts) before continuing:
 https://dropsolid.com/en/blog/drupal-8-config-management-part-1
 
-After installing your site, if you haven't done so already, run the
+After installing your site, if you installed it using the standard Rocketship Profile,
+if you haven't done so already, run the
 command `drush d-set` which will set up all the splits for you. Make sure the
 following folders are writable:
 

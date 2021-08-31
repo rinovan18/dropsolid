@@ -56,8 +56,8 @@ any changes in these files. For example, enabling `drush cre -y` on live
 environments has consequences for performance. Discuss any changes here with 
 your teamlead.
 
-## Feature migrations
-The "Basic" features contain migrations which automatically run when you install
+## Migrations
+Some modules, such as Rocketship Content, contain migrations which automatically run when you install
 the module. However, if you enable them locally and allow CMI to enable them on 
 other environments the migrate can't run because it won't have the correct 
 configuration due to the way CMI handles its import. So, in those cases it is 
@@ -86,10 +86,3 @@ upsync to staging and cause a big loss of data.
 
 *Translations are Content*. Even when they're not. Treat staging as if you 
 would live and everything will be fine.
-
-## Deploying content
-WIP. We're looking into the best, most streamlined way of being able to deploy 
-content. Easiest is to agree within your team not to upsync to dev, create your 
-content blocks on dev, downsync and add them to page manager or whatever config 
-needs it. Otherwise you'll naturally end up with the "This block is missing 
-content" error. It's either that, or create your content in a hook_update.

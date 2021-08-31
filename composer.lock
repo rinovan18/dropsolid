@@ -6484,64 +6484,24 @@
                     "homepage": "https://www.drupal.org/user/61864"
                 },
                 {
-                    "name": "Schnitzel",
-                    "homepage": "https://www.drupal.org/user/643820"
-                },
-                {
-                    "name": "a_c_m",
-                    "homepage": "https://www.drupal.org/user/195063"
-                },
-                {
-                    "name": "barneytech",
-                    "homepage": "https://www.drupal.org/user/669922"
-                },
-                {
-                    "name": "claudiu_cristea",
-                    "homepage": "https://www.drupal.org/user/2623935"
+                    "name": "cedewey",
+                    "homepage": "https://www.drupal.org/user/38694"
                 },
                 {
                     "name": "dawehner",
                     "homepage": "https://www.drupal.org/user/99340"
                 },
                 {
-                    "name": "derhasi",
-                    "homepage": "https://www.drupal.org/user/83474"
-                },
-                {
-                    "name": "frjo",
-                    "homepage": "https://www.drupal.org/user/5546"
-                },
-                {
-                    "name": "hefox",
-                    "homepage": "https://www.drupal.org/user/426416"
-                },
-                {
-                    "name": "jm.federico",
-                    "homepage": "https://www.drupal.org/user/509892"
-                },
-                {
-                    "name": "k4v",
-                    "homepage": "https://www.drupal.org/user/744246"
-                },
-                {
-                    "name": "mariano73",
-                    "homepage": "https://www.drupal.org/user/1324866"
+                    "name": "hipp2bsquare",
+                    "homepage": "https://www.drupal.org/user/2473076"
                 },
                 {
                     "name": "mariuss",
                     "homepage": "https://www.drupal.org/user/28539"
                 },
                 {
-                    "name": "sanduhrs",
-                    "homepage": "https://www.drupal.org/user/28074"
-                },
-                {
-                    "name": "vasi1186",
-                    "homepage": "https://www.drupal.org/user/342104"
-                },
-                {
-                    "name": "webiator GmbH",
-                    "homepage": "https://www.drupal.org/user/2390554"
+                    "name": "srdtwc",
+                    "homepage": "https://www.drupal.org/user/3422763"
                 }
             ],
             "description": "Limit the number of characters in textfields and textareas and shows the amount of characters left.",
@@ -7273,148 +7233,6 @@
             }
         },
         {
-            "name": "drupal/paragraphs",
-            "version": "1.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/paragraphs.git",
-                "reference": "8.x-1.12"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.12.zip",
-                "reference": "8.x-1.12",
-                "shasum": "3b67d8af1160af42d93a4610be1e02869e428965"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9",
-                "drupal/entity_reference_revisions": "~1.3"
-            },
-            "require-dev": {
-                "drupal/block_field": "~1.0",
-                "drupal/ctools": "3.x-dev",
-                "drupal/diff": "~1.0",
-                "drupal/entity_browser": "2.x-dev",
-                "drupal/entity_usage": "2.x-dev",
-                "drupal/field_group": "3.x-dev",
-                "drupal/inline_entity_form": "~1.0",
-                "drupal/paragraphs-paragraphs_library": "*",
-                "drupal/replicate": "~1.0",
-                "drupal/search_api": "~1.0",
-                "drupal/search_api_db": "*"
-            },
-            "suggest": {
-                "drupal/entity_browser": "Recommended for an improved user experience when using the Paragraphs library module"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.12",
-                    "datestamp": "1590140081",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Berdir",
-                    "homepage": "https://www.drupal.org/user/214652"
-                },
-                {
-                    "name": "Frans",
-                    "homepage": "https://www.drupal.org/user/514222"
-                },
-                {
-                    "name": "Primsi",
-                    "homepage": "https://www.drupal.org/user/282629"
-                },
-                {
-                    "name": "jeroen.b",
-                    "homepage": "https://www.drupal.org/user/1853532"
-                },
-                {
-                    "name": "jstoller",
-                    "homepage": "https://www.drupal.org/user/99012"
-                },
-                {
-                    "name": "miro_dietiker",
-                    "homepage": "https://www.drupal.org/user/227761"
-                }
-            ],
-            "description": "Enables the creation of Paragraphs entities.",
-            "homepage": "https://www.drupal.org/project/paragraphs",
-            "support": {
-                "source": "https://git.drupalcode.org/project/paragraphs"
-            }
-        },
-        {
-            "name": "drupal/paragraphs_asymmetric_translation_widgets",
-            "version": "1.0.0-beta4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/paragraphs_asymmetric_translation_widgets.git",
-                "reference": "8.x-1.0-beta4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs_asymmetric_translation_widgets-8.x-1.0-beta4.zip",
-                "reference": "8.x-1.0-beta4",
-                "shasum": "6c524f787a25654b5d2c43afd92e3766ff1ba532"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/paragraphs": "~1.3"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-beta4",
-                    "datestamp": "1594979926",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Grayle",
-                    "homepage": "https://www.drupal.org/user/3145497"
-                },
-                {
-                    "name": "efpapado",
-                    "homepage": "https://www.drupal.org/user/1009348"
-                },
-                {
-                    "name": "esolitos",
-                    "homepage": "https://www.drupal.org/user/1567500"
-                },
-                {
-                    "name": "penyaskito",
-                    "homepage": "https://www.drupal.org/user/959536"
-                },
-                {
-                    "name": "weseze",
-                    "homepage": "https://www.drupal.org/user/417521"
-                }
-            ],
-            "description": "Extends the paragraphs field widgets to support asymmetric translations.",
-            "homepage": "https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets",
-            "support": {
-                "source": "https://git.drupalcode.org/project/paragraphs_asymmetric_translation_widgets"
-            }
-        },
-        {
             "name": "drupal/path_redirect_import",
             "version": "1.0.0-beta4",
             "source": {
@@ -8122,17 +7940,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "6.0.0-alpha15",
+            "version": "6.0.0-alpha17",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "6.0.0-alpha15"
+                "reference": "6.0.0-alpha17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-6.0.0-alpha15.zip",
-                "reference": "6.0.0-alpha15",
-                "shasum": "fb14b27174ce19f5d270c092a451bf9d4cc0cc97"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-6.0.0-alpha17.zip",
+                "reference": "6.0.0-alpha17",
+                "shasum": "8c0a7179e2777e91e7555371fbdf315f89bc9808"
             },
             "require": {
                 "drupal/admin_toolbar": "^2.3",
@@ -8187,8 +8005,6 @@
                 "drupal/migrate_tools": "^5.0",
                 "drupal/node_keep": "^2.0",
                 "drupal/node_title_help_text": "^1.1",
-                "drupal/paragraphs": "^1.12",
-                "drupal/paragraphs_asymmetric_translation_widgets": "^1.0",
                 "drupal/pathauto": "^1.8",
                 "drupal/plugin": "^2.7",
                 "drupal/redirect": "*",
@@ -8240,8 +8056,6 @@
                 "drupal/migrate_plus": "*",
                 "drupal/migrate_source_csv": "*",
                 "drupal/node_keep": "*",
-                "drupal/paragraphs": "*",
-                "drupal/paragraphs_asymmetric_translation_widgets": "*",
                 "drupal/redirect": "*",
                 "drupal/rocketship_blocks": "*",
                 "drupal/rocketship_core-menu_clickthrough": "*",
@@ -8264,8 +8078,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-alpha15",
-                    "datestamp": "1630055767",
+                    "version": "6.0.0-alpha17",
+                    "datestamp": "1630419653",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -8297,9 +8111,6 @@
                         "#states not affecting visibility/requirement of managed_file (https://www.drupal.org/project/drupal/issues/2847425)": "https://www.drupal.org/files/issues/2021-07-28/2847425-49.patch",
                         "TypeError: Argument 1 passed to _editor_get_file_uuids_by_field() must implement interface (https://www.drupal.org/project/drupal/issues/2974156)": "https://www.drupal.org/files/issues/2020-02-19/2974156-typerror-27.patch",
                         "Submit buttons themed as <button> element fail to trigger ajax in Views exposed forms": "https://www.drupal.org/files/issues/2021-06-30/1551534-80.patch"
-                    },
-                    "drupal/paragraphs_asymmetric_translation_widgets": {
-                        "Add support for experimental widget -- https://www.drupal.org/project/paragraphs_asymmetric_translation_widgets/issues/2959900": "https://www.drupal.org/files/issues/2020-09-25/paragraphs-assymetric.2959900.16.patch"
                     },
                     "drupal/linkit": {
                         "Add support for multilanguage - https://www.drupal.org/project/linkit/issues/2886455": "https://www.drupal.org/files/issues/2019-05-03/linkit-multilanguage_matching-2886455-19.patch"
@@ -8439,17 +8250,17 @@
         },
         {
             "name": "drupal/rocketship_theme_generator",
-            "version": "3.3.2",
+            "version": "3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_generator.git",
-                "reference": "3.3.2"
+                "reference": "3.3.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.3.2.zip",
-                "reference": "3.3.2",
-                "shasum": "e76fc615305a714b3fce093b672158100d77eb35"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.3.4.zip",
+                "reference": "3.3.4",
+                "shasum": "5878d004a316b5a5cc74567235bd2dc39b3ec81b"
             },
             "require": {
                 "drupal/components": "*",
@@ -8459,8 +8270,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.3.2",
-                    "datestamp": "1630051445",
+                    "version": "3.3.4",
+                    "datestamp": "1630419579",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"

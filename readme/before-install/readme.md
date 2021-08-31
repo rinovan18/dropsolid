@@ -10,37 +10,29 @@
 
 ## Composer
 
-This skeleton works with composer.json
-If you have gotten a project from Dropsolid (using the local installer, 
-launchpad or some other way), you won't have to do anything with composer.
+This distribution works best with Composer 2. 
 
-If you are making a site from scratch, you will need to run 
-`composer install --no-dev` to get all the modules, libraries, … needed to begin.
+Our own internal best practices are as follows:
 
-If you just want to update the dependencies of the project, you can run 
-`composer update --with-dependencies --no-dev`
-
-It is **VERY IMPORTANT** that you do not commit any dev dependencies to the 
-git repo. These pose a security risk if they wind up on live environments. If 
-you are unsure if there are dev dependencies in your repo, simply run 
-`composer install --no-dev`. If there are any, they will be removed.
+- Commit everything, including vendor
+- Always add --no-dev or --update-no-dev to all commands to avoid dev dependencies being downloaded and committed
 
 ## Drush
 
-Drush comes bundled with the skeleton, always use that version. You can use 
-the bundled drush by using its path: `../vendor/bin/drush [drush commands]` 
-will use the project specific version when you are just inside docroot.
+Drush comes bundled with the internal version of this distribution. There are plans to also include
+it with the open source version.
 
-Because this can get tiresome quickly, we recommend that you install [drush 
-launcher](https://github.com/drush-ops/drush-launcher). This will allow you to 
-call drush as you normally would, and the launcher will use the bundled drush 
-version if present, and if not you can set a fallback drush version to use.
-Set that fallback version to your global drush 8 installation (drush 8 is 
-fully compatible with drupal 7 _and_ 8).
+Minor changes have been made to Drupal to make Drupal 9 still compatible with drush 8.
+
+Both drush 8 and drush 10 are available in etc/drush. The deploy scripts have variables
+pointing to these drush versions out of the box.
+
+When developing, you can call either version by calling their full path: 
+`../etc/drush/drush[version]/vendor/bin/drush`
 
 ## Adding modules
 
-To add a new module to the skeleton you need to use the following command:
+To add a new module to your project you need to use the following command:
 
 ```
 composer require drupal/module-name --update-no-dev
@@ -69,9 +61,6 @@ e.g: Example patching admin_toolbar module
 
 Use `composer update --with-dependencies --no-dev` to update to the latest 
 drupal core.
-We use the drupal-scaffold plugin to update the drupal root files:
-
-- https://github.com/drupal-composer/drupal-scaffold
 
 The skeleton is configured to update within the same minor release. A manual
 action is required to update Drupal core from, eg, 8.5.x to 8.6.x
@@ -81,7 +70,5 @@ action is required to update Drupal core from, eg, 8.5.x to 8.6.x
 Certain modules are currently locked and should not be updated unless the 
 following criteria have been met.
 
-- Page Manager: v4.0.0-beta3
-  - see patches in composer.json
-- All beta, RC and alpha releases are locked. If you need to update them, do 
+- All alpha releases are locked. If you need to update them, do 
 so at your own risk and make sure to test thoroughly!

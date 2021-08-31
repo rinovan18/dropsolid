@@ -1,45 +1,20 @@
 # Demo Content
 
-### The Content
-During the "Assemble Extra Components" step there are extra options to
-set up demo and default content. If you're on the public version of Rocketship,
-please ignore the talk about "Features"; These aren't in (yet!).
+### Florista
 
+There is now an extra, separate installation profile you can use if you want to set up a demo
+site. This install profile has no extra steps, it just installs everything from Rocketship
+and runs migrates to set up a premade homepage, blogs, contact pages, etc.
 
-#### Default Content
-Rocketship Core can set up the homepage, 404 and 403 if you choose to enable
-the Rocketship Content module. There is no need to uninstall this module again
-as this type of content is classified as "default content". A small kickstart
-so you don't have to do it yourself.
+This profile should ONLY be used to showcase what a Rocketship site could look like with just some
+minimal theming and site building, it is not meant to be a base to start building a new site on.
 
-Most Features' Basic versions will also migrate and create a custom content
-block with an Overview Paragraph showing their frontpage Views. This block
-will automatically be placed on the frontpage (using Migrates, Layout Builder and other dark magic).
-Feel free to throw these away if not needed, or change their positions, or do whatever is
-required.
+Drush d-set won't work if the site is installed with this profile, nor should it.
 
+### Contents
 
-#### Demo Content
-Rocketship Core can also set up a demo page with all the types of Paragraphs.
-This module does need to be uninstalled before going live or showing a client,
-as this is specifically demo content. This can be used for estimations, to get
-some content in the site for styling purposes, or for Sales teams to show
-prospectives what Rocketship can do out of the box.
+This install profile sets up a homepage with a Hero image, USP, CTAs, and a fake Blog and Event view.
+The fake Blog and Events may be replaced with actual blogs and events once we reach that step, but for now
+they are simply all basic pages. We used Layout Builder to make some look more like a blog, others like events.
 
-Each Feature now also has Demo Content modules. Again, these are not meant to be
-put on live, so if you select one or more of these modules do not forget to also
-uninstall them when you no longer need the demo content. Uninstalling a demo
-content module will roll back the migrations.
-
-If a feature has both a Basic and Advanced version, they'll have two Demo
-modules. You can enable both at the same time with no issue if you'd like a
-larger amount of content, but generally speaking you'd only pick the one for
-the version of the Feature you're installing. Basic Demo Content if the client
-only requested the Core or Basic version of the Feature and the Advanced Demo
-Content if the client requested the Advanced version of the Feature.
-
-
-#### Demo Theme
-Rocketship now also has a Demo Theme. This is *only* meant for Demo purposes,
-it is pre-styled specifically for the Demo Content modules and is **NOT** to be
-used as a base theme for further development!
+The overview pages are simply the reference block with manually selected basic pages.

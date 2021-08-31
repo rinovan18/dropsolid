@@ -35,6 +35,13 @@ To reiterate: **NEVER SWITCH THE DEFAULT LANGUAGE IN DRUPAL LANGUAGE CONFIGURATI
 
 ![Drupal language](images/install-choose-lang.png "Choose language")
 
+### Step 1.5: Select profile
+There are two profiles to choose from, one that sets up a demo site and one that
+installs a site ready to develop/site build. Choose "Dropsolid Rocketship Profile" when
+starting a new project.
+
+![Select profile](images/install-select-profile.png "Select profile")
+
 ### step 2: Verify requirements
 
 Fix any errors or warnings that come up
@@ -86,31 +93,11 @@ and the option to select what theme to use.
 
 At the very least, you can add these settings to get started:
 
-- **Blocks**: Core, this will give you a custom block type to start with
-- **Cookie policy**: Core + Demo. If the client paid for it, you can install a
-cookie warning and this will generate a dummy page with the policy
+- **Blocks**: Core, this will give you a large amount of custom block types to use with layout builder
 - **Core**: Core + Content. That way you have a dummy homepage, 404 and 403 
 to start from
 - **Page**: Every site needs to be able to use pages
-- **SEO**: Every site needs a way to manage SEO stuff like metatags
-- **Theme**: Flex, Starter or Minimal for development. Or Demo for a demo site (NOT FOR DEVELOPMENT!!!)
-
-Additionally, you need to check what **Features** are sold (eg. Blog) and
-enable their 'Basic' or 'Advanced' (aka. Complex) versions.
-'Basic' installs all the core feature stuff + makes an overview page.
-See the Functional analysis links for general info on what these features have by default.
-_Note: For **Flex** sites, every site needs overview pages, so you will never
-only install the 'Core' of a feature. It will always be 'Basic' or 'Advanced'_
-
-Every item has an option **'Demo content'**. This needs to be enabled if you need to produce a Demo site BUT can also be handy for development. That way you have some example content to style. At the very least, you should enable **'Paragraph Demo Content'**.  
-HOWEVER, don't forget to remove that content afterwards by simply **uninstalling** the various demo content submodules.
-
-**[See the separate 'Demo Content' readme for more info.](readme/democontent)**
-
-
-![Extra components](images/install-extra-01.png "Extra components")
-![Extra components](images/install-extra-02.png "Extra components")
-![Extra components](images/install-extra-03.png "Extra components")
+- **Theme**: Rocketship Flex, Starter or Minimal for development.
 
 ### step 8: Assemble extra components
 
@@ -146,31 +133,3 @@ section**
 ![done](images/install-done.png "a message")
 
 ![done](images/install-done-message.png "a message")
-
-
-## Via drush
-
-**Note:** The command below needs to be updated to account for demo content. 
-
-This can all be reduced to one drush command:
-
-For example:
-- default language English
-- additional languages fr and nl
-- extra components (enable theme or module):
-  - theme: Starter
-  - module: dropsolid block
-  - module: cookie policy (with demo content in it)
-  - module: core demo (404, 403, homepage, …)
-  - feature module: blog basic
-
-`../vendor/bin/drush site-install dropsolid_rocketship_profile --locale=en 
---language=en --strict=0  
-dropsolid_rocketship_profile_multilingual_configuration.enable_multilingual=1 
-dropsolid_rocketship_profile_multilingual_configuration.multilingual_languages.nl=nl 
-dropsolid_rocketship_profile_multilingual_configuration.multilingual_languages.fr=fr 
-dropsolid_rocketship_profile_extra_components.theme=dropsolid_starter 
-dropsolid_rocketship_profile_extra_components.dropsolid_blocks=1 
-dropsolid_rocketship_profile_extra_components.dcp_demo=1 
-dropsolid_rocketship_profile_extra_components.rocketship_content=1 
-dropsolid_rocketship_profile_extra_components.dropsolid_blog_basic=1 -y`
