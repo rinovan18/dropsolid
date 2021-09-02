@@ -16,7 +16,7 @@
         "vardot/blazy": "~1.8",
         "jackmoore/colorbox": "^1.0",
         "imakewebthings/waypoints": "~4.0.1",
-        "drupal/rocketship_theme_generator": "~2.0",
+        "drupal/rocketship_theme_generator": "~2.2",
         "drupal/search_api": "1.18"
     },
     "authors": [
