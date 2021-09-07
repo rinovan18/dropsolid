@@ -5990,7 +5990,7 @@
         },
         {
             "name": "drupal/menu_clickthrough",
-            "version": "5.0.0-alpha12",
+            "version": "5.0.0-alpha13",
             "require": {
                 "drupal/core": "^8.8 || ^9",
                 "drupal/rocketship_paragraphs": "self.version"
@@ -5998,8 +5998,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "5.0.0-alpha12",
-                    "datestamp": "1630574646",
+                    "version": "5.0.0-alpha13",
+                    "datestamp": "1630658547",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -6558,17 +6558,17 @@
         },
         {
             "name": "drupal/overview_field",
-            "version": "1.2.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/overview_field.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/overview_field-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "d48f3e7947257ef3f20defb21ede38fd7de9e0dd"
+                "url": "https://ftp.drupal.org/files/projects/overview_field-8.x-1.4.zip",
+                "reference": "8.x-1.4",
+                "shasum": "f4fb4db4b82d9fe197f1efce180e587aa651a107"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6576,8 +6576,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1594812517",
+                    "version": "8.x-1.4",
+                    "datestamp": "1630955840",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -7779,17 +7779,17 @@
         },
         {
             "name": "drupal/rocketship_paragraphs",
-            "version": "5.0.0-alpha12",
+            "version": "5.0.0-alpha13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_paragraphs.git",
-                "reference": "5.0.0-alpha12"
+                "reference": "5.0.0-alpha13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-5.0.0-alpha12.zip",
-                "reference": "5.0.0-alpha12",
-                "shasum": "fb5ece49c72185f96155dc6e8d1c85ea88eeb889"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_paragraphs-5.0.0-alpha13.zip",
+                "reference": "5.0.0-alpha13",
+                "shasum": "4e2b2a0ad5f843164aea361b28265b465b1c7c74"
             },
             "require": {
                 "drupal/blazy": "*",
@@ -7815,8 +7815,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.0.0-alpha12",
-                    "datestamp": "1630574646",
+                    "version": "5.0.0-alpha13",
+                    "datestamp": "1630658547",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -14877,9 +14877,6 @@
                 "ext-zip": "Enabling the zip extension allows you to unzip archives",
                 "ext-zlib": "Allow gzip compression of HTTP requests"
             },
-            "bin": [
-                "bin/composer"
-            ],
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -16945,6 +16942,7 @@
             ],
             "description": "Provides a list of PHP built-in functions that operate on resources",
             "homepage": "https://www.github.com/sebastianbergmann/resource-operations",
+            "abandoned": true,
             "time": "2018-10-04T04:07:39+00:00"
         },
         {
