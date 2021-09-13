@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "094c60b1feb86f48030285c77f77cfcd",
+    "content-hash": "07f80d1a505a45016b813d18d90974bb",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -7897,17 +7897,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "6.0.0-alpha17",
+            "version": "6.0.0-alpha18",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "6.0.0-alpha17"
+                "reference": "6.0.0-alpha18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-6.0.0-alpha17.zip",
-                "reference": "6.0.0-alpha17",
-                "shasum": "8c0a7179e2777e91e7555371fbdf315f89bc9808"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-6.0.0-alpha18.zip",
+                "reference": "6.0.0-alpha18",
+                "shasum": "d774b4282ff9a979e1f119fc3ee949fef671370a"
             },
             "require": {
                 "drupal/admin_toolbar": "^2.3",
@@ -8035,8 +8035,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-alpha17",
-                    "datestamp": "1630419653",
+                    "version": "6.0.0-alpha18",
+                    "datestamp": "1631278112",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -8207,17 +8207,17 @@
         },
         {
             "name": "drupal/rocketship_theme_generator",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_generator.git",
-                "reference": "3.4.0"
+                "reference": "3.5.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.4.0.zip",
-                "reference": "3.4.0",
-                "shasum": "0faafa5238d4ff6d0a02aca1939373579d45b931"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.5.0.zip",
+                "reference": "3.5.0",
+                "shasum": "7af6cf42ff928a1b7930dac5f870d2c1528795d4"
             },
             "require": {
                 "drupal/components": "*",
@@ -8227,8 +8227,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.4.0",
-                    "datestamp": "1631027133",
+                    "version": "3.5.0",
+                    "datestamp": "1631541620",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
