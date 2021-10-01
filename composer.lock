@@ -1787,7 +1787,7 @@
         },
         {
             "name": "drupal/admin_toolbar_links_access_filter",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "require": {
                 "drupal/admin_toolbar": "*",
                 "drupal/core": "^8.8.0 || ^9.0"
@@ -1795,8 +1795,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.0.2",
-                    "datestamp": "1629907124",
+                    "version": "3.0.3",
+                    "datestamp": "1632322068",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1845,7 +1845,7 @@
         },
         {
             "name": "drupal/admin_toolbar_tools",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "require": {
                 "drupal/admin_toolbar": "*",
                 "drupal/core": "^8.8.0 || ^9.0"
@@ -1853,8 +1853,8 @@
             "type": "metapackage",
             "extra": {
                 "drupal": {
-                    "version": "3.0.2",
-                    "datestamp": "1629907124",
+                    "version": "3.0.3",
+                    "datestamp": "1632322068",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6257,17 +6257,17 @@
         },
         {
             "name": "drupal/linkit",
-            "version": "5.0.0-beta12",
+            "version": "5.0.0-beta13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/linkit.git",
-                "reference": "8.x-5.0-beta12"
+                "reference": "8.x-5.0-beta13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-5.0-beta12.zip",
-                "reference": "8.x-5.0-beta12",
-                "shasum": "9e03975b476f893112d8b12d8b8610926a4e7f2c"
+                "url": "https://ftp.drupal.org/files/projects/linkit-8.x-5.0-beta13.zip",
+                "reference": "8.x-5.0-beta13",
+                "shasum": "9215fbea84166cabc9b7a2d9a04dedaffb9fc1ed"
             },
             "require": {
                 "drupal/core": "^8.7.7 || ^9"
@@ -6278,8 +6278,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.0-beta12",
-                    "datestamp": "1608957625",
+                    "version": "8.x-5.0-beta13",
+                    "datestamp": "1632933670",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -7073,17 +7073,17 @@
         },
         {
             "name": "drupal/node_keep",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/node_keep.git",
-                "reference": "2.1.0"
+                "reference": "2.1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/node_keep-2.1.0.zip",
-                "reference": "2.1.0",
-                "shasum": "3a8eb88b7969680d479a9a8b7136fa929bf36a75"
+                "url": "https://ftp.drupal.org/files/projects/node_keep-2.1.1.zip",
+                "reference": "2.1.1",
+                "shasum": "d57baca43feb91913ff62ced636073db86c7a5ac"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -7094,8 +7094,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.1.0",
-                    "datestamp": "1604954124",
+                    "version": "2.1.1",
+                    "datestamp": "1633003438",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7114,6 +7114,10 @@
                 {
                     "name": "Nick Vanpraet",
                     "homepage": "https://www.drupal.org/u/grayle"
+                },
+                {
+                    "name": "sandboxpl",
+                    "homepage": "https://www.drupal.org/user/2187728"
                 }
             ],
             "description": "Adds a base field to all nodes to prevent accidental deletion by unauthorized users.",
@@ -7945,17 +7949,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "6.0.0-alpha19",
+            "version": "6.0.0-alpha20",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "6.0.0-alpha19"
+                "reference": "6.0.0-alpha20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-6.0.0-alpha19.zip",
-                "reference": "6.0.0-alpha19",
-                "shasum": "e1a331b29ee1bd394924f3ca08483b662bfefe42"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-6.0.0-alpha20.zip",
+                "reference": "6.0.0-alpha20",
+                "shasum": "c1bf134bfc86861cf7dc4acfc7b511fb3abc535a"
             },
             "require": {
                 "drupal/admin_toolbar": "^2.3",
@@ -8083,8 +8087,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-alpha19",
-                    "datestamp": "1632142378",
+                    "version": "6.0.0-alpha20",
+                    "datestamp": "1633002873",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -8115,7 +8119,8 @@
                         "Cannot save translated nodes after upgrading to 8.8 due to invalid path (https://www.drupal.org/project/drupal/issues/3101344)": "https://www.drupal.org/files/issues/2021-03-01/3101344-drupal-core-fix-permissions-checking-while-node-translating-64.patch",
                         "#states not affecting visibility/requirement of managed_file (https://www.drupal.org/project/drupal/issues/2847425)": "https://www.drupal.org/files/issues/2021-07-28/2847425-49.patch",
                         "TypeError: Argument 1 passed to _editor_get_file_uuids_by_field() must implement interface (https://www.drupal.org/project/drupal/issues/2974156)": "https://www.drupal.org/files/issues/2020-02-19/2974156-typerror-27.patch",
-                        "Submit buttons themed as <button> element fail to trigger ajax in Views exposed forms": "https://www.drupal.org/files/issues/2021-06-30/1551534-80.patch"
+                        "Submit buttons themed as <button> element fail to trigger ajax in Views exposed forms": "https://www.drupal.org/files/issues/2021-06-30/1551534-80.patch",
+                        "CKEditor table properties not clickable due to interaction with jQuery UI dialogs - 3065095": "https://www.drupal.org/files/issues/2021-09-30/3065095-31.patch"
                     },
                     "drupal/linkit": {
                         "Add support for multilanguage - https://www.drupal.org/project/linkit/issues/2886455": "https://www.drupal.org/files/issues/2019-05-03/linkit-multilanguage_matching-2886455-19.patch"
@@ -8258,17 +8263,17 @@
         },
         {
             "name": "drupal/rocketship_theme_generator",
-            "version": "3.5.0",
+            "version": "3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_generator.git",
-                "reference": "3.5.0"
+                "reference": "3.5.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.5.0.zip",
-                "reference": "3.5.0",
-                "shasum": "7af6cf42ff928a1b7930dac5f870d2c1528795d4"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.5.1.zip",
+                "reference": "3.5.1",
+                "shasum": "776e105e554fe9c4501dc5d51f881e72803c4beb"
             },
             "require": {
                 "drupal/components": "*",
@@ -8278,8 +8283,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.5.0",
-                    "datestamp": "1631541620",
+                    "version": "3.5.1",
+                    "datestamp": "1633071689",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
