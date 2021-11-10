@@ -112,6 +112,15 @@ SetEnvIf X-Forwarded-Proto https HTTPS=on
   # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
   # RewriteRule ^ http%{ENV:protossl}://%1%{REQUEST_URI} [L,R=301]
 
+  # Attempt to serve DrImage files directly
+  RewriteCond %{REQUEST_URI} \/drimage\/(\d+)\/(\d+)\/\d+.*sites\/(.*)\/files\/(.*)$
+  RewriteCond %{DOCUMENT_ROOT}/sites/$3/files/styles/drimage_focal_$1_$2/public/$4 -f
+  RewriteRule ^.*drimage\/(\d+)\/(\d+)\/\d+.*sites\/(.*)\/files\/(.*)$ http%{ENV:protossl}://%{HTTP_HOST}/sites/$3/files/styles/drimage_focal_$1_$2/public/$4 [L,R=301]
+
+  RewriteCond %{REQUEST_URI} \/drimage\/(\d+)\/(\d+)\/\d+.*sites\/(.*)\/files\/(.*)$
+  RewriteCond %{DOCUMENT_ROOT}/sites/$3/files/styles/drimage_$1_$2/public/$4 -f
+  RewriteRule ^.*drimage\/(\d+)\/(\d+)\/\d+.*sites\/(.*)\/files\/(.*)$ http%{ENV:protossl}://%{HTTP_HOST}/sites/$3/files/styles/drimage_$1_$2/public/$4 [L,R=301]
+
   # Redirect to HTTPS if we expect it but are not accessed via HTTPS.
   RewriteCond %{ENV:protossl} s
   RewriteCond %{ENV:HTTPS} !on
