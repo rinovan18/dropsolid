@@ -2,14 +2,6 @@
 
 define('ROCKETSHIP_PROJECT_NAME', FALSE);
 
-// Drupal 9 drush 8 "support"
-if (!defined('CONFIG_SYNC_DIRECTORY')) {
-  define('CONFIG_SYNC_DIRECTORY', 'sync');
-}
-if (!defined('CONFIG_ACTIVE_DIRECTORY')) {
-  define('CONFIG_ACTIVE_DIRECTORY', 'active');
-}
-
 // Ignore front-end folders.
 $settings['file_scan_ignore_directories'] = [
   'node_modules',
@@ -18,10 +10,6 @@ $settings['file_scan_ignore_directories'] = [
 
 // Setup config directory.
 $settings['config_sync_directory'] = '../config/sync';
-// Drupal 9 drush 8 "support"
-global $config_directories;
-$config_directories['sync'] = '../config/sync';
-
 // Setup private files folder.
 $settings['file_private_path'] = '../private/files';
 
@@ -64,16 +52,4 @@ if (ROCKETSHIP_PURGE_READY_FOR_USE && ROCKETSHIP_PROJECT_NAME && ROCKETSHIP_PROJ
       ],
     ],
   ];
-}
-
-// Set a different deployment identifier when using drush on CLI
-// This supports different drush versions in a non-standard location
-// Otherwise running drush commands from a non-standard location breaks
-// the container for apache or other drush commands.
-if ((defined('STDIN') || in_array(PHP_SAPI, [
-      'cli',
-      'cli-server',
-      'phpdbg',
-    ])) && defined('DRUSH_COMMAND')) {
-  $settings['deployment_identifier'] = DRUSH_COMMAND . \Drupal::VERSION;
 }

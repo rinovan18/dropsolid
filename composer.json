@@ -6,17 +6,18 @@
     "require": {
         "composer/installers": "~1.7",
         "cweagans/composer-patches": "^1.6.5",
-        "oomphinc/composer-installers-extender": "^1.0",
-        "zaporylie/composer-drupal-optimizations": "^1.0",
         "drupal/core-composer-scaffold": "9.1.9",
         "drupal/core-recommended": "9.1.9",
         "drupal/core-vendor-hardening": "9.1.9",
         "drupal/dropsolid_rocketship_profile": "^5.0",
+        "drupal/rocketship_theme_generator": "~2.2",
+        "drush/drush": "^10.6",
+        "harvesthq/chosen": "1.8.7",
+        "imakewebthings/waypoints": "~4.0.1",
+        "jackmoore/colorbox": "^1.0",
         "kenwheeler/slick": "1.8.1",
         "vardot/blazy": "~1.8",
-        "jackmoore/colorbox": "^1.0",
-        "imakewebthings/waypoints": "~4.0.1",
-        "drupal/rocketship_theme_generator": "~2.2"
+        "topfloor/composer-cleanup-vcs-dirs": "^1.1"
     },
     "authors": [
         {
@@ -46,6 +47,9 @@
                 "Allow synced Layout override Translations: translating labels and inline blocks": "https://www.drupal.org/files/issues/2020-12-17/2946333-224.patch",
                 "Allow synced Layout default Translations: translating labels and inline blocks (depends on override patch above)": "https://www.drupal.org/files/issues/2021-01-29/allow-synced-default-lb-translations.3044993.48.patch",
                 "Toolbar's renderPlain() is incompatible with dynamic page cache": "https://www.drupal.org/files/issues/2020-12-17/2949457-60.patch"
+            },
+            "topfloor/composer-cleanup-vcs-dirs": {
+                "Allow excludes": "https://patch-diff.githubusercontent.com/raw/VolantisDev/composer-cleanup-vcs-dirs/pull/4.diff"
             }
         },
         "patches-ignore": {
@@ -65,9 +69,6 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
-        "installer-types": [
-            "library"
-        ],
         "enable-patching": true,
         "installer-paths": {
             "docroot/core": [
@@ -89,8 +90,7 @@
                 "type:drupal-custom-theme"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library",
-                "harvesthq/chosen"
+                "type:drupal-library"
             ]
         },
         "drupal-scaffold": {
@@ -114,12 +114,7 @@
         }
     },
     "scripts": {
-        "pre-autoload-dump": "Drupal\\Core\\Composer\\Composer::preAutoloadDump",
-        "post-autoload-dump": "Drupal\\Core\\Composer\\Composer::ensureHtaccess",
-        "post-package-install": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
-        "post-package-update": "Drupal\\Core\\Composer\\Composer::vendorTestCodeCleanup",
         "post-install-cmd": [
-            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/contrib'",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/contrib'",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/contrib'",
@@ -127,7 +122,6 @@
             "cp etc/.gitignore .gitignore"
         ],
         "post-update-cmd": [
-            "cd vendor && find . -name \".git\" -type d -prune -exec rm -r \"{}\" \\; && cd ..",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Minimal' --machine-name='rocketship_theme_minimal' --preset=minimal --theme-path='docroot/themes/contrib'",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Starter' --machine-name='rocketship_theme_starter' --preset=starter --theme-path='docroot/themes/contrib'",
             "php docroot/modules/contrib/rocketship_theme_generator/scripts/generate-theme.php --name='Rocketship Flex' --machine-name='rocketship_theme_flex' --preset=flex --theme-path='docroot/themes/contrib'",
@@ -171,6 +165,19 @@
                 "dist": {
                     "url": "https://github.com/imakewebthings/waypoints/archive/master.zip",
                     "type": "zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "harvesthq/chosen",
+                "version": "1.8.7",
+                "type": "drupal-library",
+                "source": {
+                    "url": "https://github.com/harvesthq/chosen-package.git",
+                    "type": "git",
+                    "reference": "v1.8.7"
                 }
             }
         },
