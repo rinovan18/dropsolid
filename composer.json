@@ -10,7 +10,7 @@
         "drupal/core-recommended": "9.1.9",
         "drupal/core-vendor-hardening": "9.1.9",
         "drupal/dropsolid_rocketship_profile": "^5.0",
-        "drupal/rocketship_theme_generator": "~2.2",
+        "drupal/rocketship_theme_generator": "~2.2.0",
         "drush/drush": "^10.6",
         "harvesthq/chosen": "1.8.7",
         "imakewebthings/waypoints": "~4.0.1",
