@@ -5349,17 +5349,17 @@
         },
         {
             "name": "drupal/field_formatter",
-            "version": "3.0.0-alpha2",
+            "version": "3.0.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/field_formatter.git",
-                "reference": "3.0.0-alpha2"
+                "reference": "3.0.0-alpha3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/field_formatter-3.0.0-alpha2.zip",
-                "reference": "3.0.0-alpha2",
-                "shasum": "91206a2e33f49401fab9c602c6ab4cb03424b070"
+                "url": "https://ftp.drupal.org/files/projects/field_formatter-3.0.0-alpha3.zip",
+                "reference": "3.0.0-alpha3",
+                "shasum": "c11bb6ac0470ae870e454c01feea37dd19f3e3ec"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -5367,8 +5367,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.0-alpha2",
-                    "datestamp": "1591687938",
+                    "version": "3.0.0-alpha3",
+                    "datestamp": "1636820392",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -8635,17 +8635,17 @@
         },
         {
             "name": "drupal/rocketship_core",
-            "version": "6.0.0-alpha26",
+            "version": "6.0.0-alpha28",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_core.git",
-                "reference": "6.0.0-alpha26"
+                "reference": "6.0.0-alpha28"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_core-6.0.0-alpha26.zip",
-                "reference": "6.0.0-alpha26",
-                "shasum": "39dc24dff019ae94a5ecd9cc6404d8a31760c17c"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_core-6.0.0-alpha28.zip",
+                "reference": "6.0.0-alpha28",
+                "shasum": "b45373d4a68ae9da99191e1b56e954125e631b4d"
             },
             "require": {
                 "drupal/admin_toolbar": "^2.3",
@@ -8773,8 +8773,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "6.0.0-alpha26",
-                    "datestamp": "1636537340",
+                    "version": "6.0.0-alpha28",
+                    "datestamp": "1636990432",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -8840,7 +8840,8 @@
                         "incompatibility with layout_builder_st, contextual links broken (https://www.drupal.org/project/layout_builder_modal/issues/3133695#comment-13878470)": "https://www.drupal.org/files/issues/2020-10-21/3133695-7.patch"
                     },
                     "drupal/drimage": {
-                        "Allow apache to serve drimage styles from disk (https://www.drupal.org/project/drimage/issues/3248462)": "https://www.drupal.org/files/issues/2021-11-10/drimage.apache-serve.3248462.3.patch"
+                        "Allow apache to serve drimage styles from disk (https://www.drupal.org/project/drimage/issues/3248462)": "https://www.drupal.org/files/issues/2021-11-10/drimage.apache-serve.3248462.3.patch",
+                        "fix context issue with querySelectorAll (https://drupal.org/project/rocketship_core/issues/3249449)": "https://www.drupal.org/files/issues/2021-11-15/drimage-selector-fix-3.patch"
                     }
                 }
             },
