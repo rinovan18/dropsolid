@@ -8475,17 +8475,17 @@
         },
         {
             "name": "drupal/rocketship_theme_generator",
-            "version": "3.6.1",
+            "version": "3.6.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_generator.git",
-                "reference": "3.6.1"
+                "reference": "3.6.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.6.1.zip",
-                "reference": "3.6.1",
-                "shasum": "7feb73f5598d1d24ae43c961a859fd0322e296d1"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.6.3.zip",
+                "reference": "3.6.3",
+                "shasum": "bb7394bb8cb0ffefafde91e1f7ce191b457dd204"
             },
             "require": {
                 "drupal/components": "*",
@@ -8495,8 +8495,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.6.1",
-                    "datestamp": "1636707436",
+                    "version": "3.6.3",
+                    "datestamp": "1641285347",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
