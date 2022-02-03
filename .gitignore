@@ -73,14 +73,15 @@ private/files/**
 /.dlp.local.yml
 /.docker-data
 /.docker-sync
-/.env
+/.dlpenv
 /docker-compose.yml
 /docker-compose.override.yml
 /docker-sync.yml
 /mutagen.yml
 /mutagen.yml.lock
+*.unison.tmp
+
 /docroot/sites/default/*.local.php
 /docroot/sites/default/*.aliases.drushrc.php
-*.unison.tmp
 # Launchpad .gitignore end DO NOT REMOVE OR EDIT THIS LINE
 .dlp.yml

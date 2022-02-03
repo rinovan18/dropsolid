@@ -12,13 +12,18 @@
         "drupal/dropsolid_rocketship_profile": "^6.0",
         "drupal/rocketship_florista_demo_profile": "^1.0",
         "drupal/rocketship_theme_generator": "^3.6.0",
-        "drush/drush": "^10",
+        "drush/drush": "^11",
         "harvesthq/chosen": "1.8.7",
         "imakewebthings/waypoints": "~4.0.1",
         "jackmoore/colorbox": "^1.0",
         "kenwheeler/slick": "1.8.1",
         "topfloor/composer-cleanup-vcs-dirs": "^1.1",
         "vardot/blazy": "~1.8"
+    },
+    "require-dev": {
+        "drupal/core-dev-pinned": "^9.2",
+        "drupal/twig_xdebug": "^1.2",
+        "drupal/twig_vardumper": "^3.0"
     },
     "authors": [
         {
@@ -37,10 +42,14 @@
     "config": {
         "preferred-install": "dist",
         "autoloader-suffix": "Drupal8",
-        "platform": {
-            "php": "7.4"
-        },
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-vendor-hardening": true,
+            "topfloor/composer-cleanup-vcs-dirs": true
+        }
     },
     "extra": {
         "patches": {
@@ -53,6 +62,18 @@
             },
             "topfloor/composer-cleanup-vcs-dirs": {
                 "Allow excludes": "https://patch-diff.githubusercontent.com/raw/VolantisDev/composer-cleanup-vcs-dirs/pull/4.diff"
+            },
+            "drupal/crop": {
+                "PHP 8 compatibility": "https://www.drupal.org/files/issues/2022-01-24/3253220-7.patch"
+            },
+            "drupal/webform": {
+                "PHP 8 compatibility": "https://www.drupal.org/files/issues/2022-01-06/3257109-9.patch"
+            },
+            "drupal/environment_indicator": {
+                "PHP 8 compatibility": "https://www.drupal.org/files/issues/2022-01-25/3260279-deprecated_function_strlen-2.patch"
+            },
+            "drupal/easy_breadcrumb": {
+                "PHP 8 compatibility": "https://www.drupal.org/files/issues/2022-01-10/easy_breadcrumb-easy_breadcrumb_builder_deprecation-3257776-2.patch"
             }
         },
         "patches-ignore": [],
@@ -180,10 +201,5 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    ],
-    "require-dev": {
-        "drupal/core-dev-pinned": "^9.2",
-        "drupal/twig_xdebug": "^1.2",
-        "drupal/twig_vardumper": "^3.0"
-    }
+    ]
 }
