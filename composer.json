@@ -109,6 +109,12 @@
                 "type:drupal-library"
             ]
         },
+        "cleanup-vcs-dirs": {
+            "exclude": [
+                "docroot/profiles",
+                "docroot/modules/contrib"
+            ]
+        },
         "drupal-scaffold": {
             "locations": {
                 "web-root": "./docroot"
