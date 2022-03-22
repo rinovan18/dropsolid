@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4579a9cf952f8b45f2093838eb394b6a",
+    "content-hash": "fa1bfeba50ef3e0ac6a2325e8132d539",
     "packages": [
         {
             "name": "ajgl/breakpoint-twig-extension",
@@ -8502,17 +8502,17 @@
         },
         {
             "name": "drupal/rocketship_theme_generator",
-            "version": "3.6.5",
+            "version": "3.6.7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rocketship_theme_generator.git",
-                "reference": "3.6.5"
+                "reference": "3.6.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.6.5.zip",
-                "reference": "3.6.5",
-                "shasum": "c6a244ec8a0c489200a8b4ec250658c9a17e844a"
+                "url": "https://ftp.drupal.org/files/projects/rocketship_theme_generator-3.6.7.zip",
+                "reference": "3.6.7",
+                "shasum": "3480e423c5f1ca4dfbd38cd21b871b375089b6a7"
             },
             "require": {
                 "drupal/components": "*",
@@ -8522,8 +8522,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.6.5",
-                    "datestamp": "1641551625",
+                    "version": "3.6.7",
+                    "datestamp": "1647962442",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -19125,5 +19125,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.1.0"
 }
