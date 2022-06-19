@@ -1,0 +1,74 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: menu overview item
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+// ** extra classes to override color settings from _paragraph styling when bg color
+//    because our items have their own bg color that influences the foreground color we need
+//.paragraph--type-p-017,
+//.paragraph--type-p-017.has-bg {
+//
+//
+//
+//}
+
+.field-p-menu-overview__overview {
+  @include list-reset;
+}
+
+.field-p-menu-overview__item {
+  @include list-reset;
+}
+
+// space between items & the fields above it (teaser, title, subtitle)
+.field + .field--name-field-p-menu-overview {
+  margin-top: rem($p-gap-teaser-wide);
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: only xs wide
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-xs-wide-only {
+
+  .field-p-menu-overview__overview {
+    //
+  }
+
+  .field-p-menu-overview__item {
+    //
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  .field-p-menu-overview__overview {
+    //
+  }
+
+  .field-p-menu-overview__item {
+    //
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  .field-p-menu-overview__item {
+    //
+  }
+
+}

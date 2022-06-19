@@ -1,0 +1,31 @@
+
+.block--block-content78dd02b1-c1e2-4a8a-bc31-f4b8ad7672f3 {
+
+  .field--name-field-p-title {
+    h2 {
+      margin-bottom: rem(29);
+      @include font-size(35, 40);
+      text-transform: uppercase;
+      color: $color-spot-1;
+    }
+  }
+
+  .field--name-field-p-teaser {
+    margin-bottom: rem(29);
+    font-family: $font-fallback;
+    font-weight: $font-weight-bold;
+    @include font-size(28, 32);
+    color: $color-spot-2;
+  }
+
+  .field--buttons {
+    padding-top: rem(35);
+  }
+}
+
+// load font-family after font loaded
+.font-text-01-loaded .block--block-content78dd02b1-c1e2-4a8a-bc31-f4b8ad7672f3 {
+  .field--name-field-p-teaser {
+    font-family: $font-heading;
+  }
+}

@@ -1,0 +1,152 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: p010 logobar
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// * Slick slider
+// =============================================================================
+
+.paragraph--type-p-010 {
+  position: relative;
+  text-align: center;
+
+  .field--buttons {
+    text-align: center;
+
+    a {
+      margin-left: rem(5);
+      margin-right: rem(5);
+    }
+  }
+
+  // space between items & the fields above it (teaser, title, subtitle)
+  .field + .p-010-child-wrapper {
+    margin-top: rem($p-gap-teaser-wide);
+  }
+
+  // ** slider itself
+
+  .slick-slider {
+    //
+  }
+
+  // ** items list
+
+  .slick-list {
+    width: calc(100% - 60px);
+    height: auto !important; // Overwrite height added by script
+    margin-left: rem(30);
+    margin-right: rem(30);
+
+    *:focus {
+      outline: none;
+    }
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: auto;
+
+    > .paragraph {
+      padding: rem(10);
+    }
+  }
+
+  // ** navigation
+
+  .slick-arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: rem(30);
+    font-size: 0;
+    background: $color-black;
+    transition: all $duration $easing;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all $duration $easing;
+    }
+
+    &.slick-prev {
+      left: 0;
+      @include font-awesome((icon: $fa-var-angle-left, color: $color-link, size: 18, type: "light"));
+    }
+
+    &.slick-next {
+      right: 0;
+      @include font-awesome((icon: $fa-var-angle-right, color: $color-link, size: 18, type: "light"));
+    }
+
+    &:hover {
+
+      background: $color-link;
+
+      &::before {
+        color: $color-white;
+      }
+    }
+  }
+}
+
+
+// * Logobar elements
+// =============================================================================
+
+// ** logos wrappers
+
+.p-010-child-wrapper {
+  //
+}
+
+.field--name-field-p-010-children {
+  //
+}
+
+
+// * Logo itself
+// =============================================================================
+
+.paragraph--type-p-010-child {
+  position: relative;
+
+  .field--name-field-p-image,
+  .field--name-field-p-media-image {
+
+    img {
+      display: block;
+      margin: 0 auto;
+      border: 0 none;
+    }
+  }
+
+  .field--name-field-p-link {
+    a {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      border: 0 none;
+      overflow: hidden;
+      text-decoration: none;
+      text-indent: rem(-9999);
+    }
+  }
+}

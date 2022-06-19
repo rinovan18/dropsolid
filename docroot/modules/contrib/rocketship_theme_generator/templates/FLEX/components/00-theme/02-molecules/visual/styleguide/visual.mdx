@@ -1,0 +1,14 @@
+import { Story } from '@storybook/addon-docs/blocks';
+
+# Visual
+
+Show a big visual on the homepage, as is present in homepage demo content.
+
+This block should have a Blazy (responsive) image directly in it, instead of an image paragraph.<br />
+Otherwise (just like with the block type 'content'), you have too much nesting of wrappers and need to override default Paragraph styling.<br />
+Plus, you can't override the image style if you need a different image ratio for your Visual.
+
+So if you make your own Visual block, please replace the paragraph field (in site building) with the separate fields<br />
+and remove the group--paragraph wrapper and _paragraph_twig embed in this twig file (just keep the individual fields).<br />
+
+And don't forget to make a new responsive image style, named after your block.

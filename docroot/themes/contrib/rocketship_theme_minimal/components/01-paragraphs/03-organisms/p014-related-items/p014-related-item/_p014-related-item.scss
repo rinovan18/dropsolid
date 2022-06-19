@@ -1,0 +1,122 @@
+
+
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: Related Items - individual items
+// *
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+// * Related items
+// =============================================================================
+
+.paragraph--type-p-014 {
+
+  .field__item--name-field-p-related-items {
+
+    // ** image
+
+    .field--image,
+    .field--name-field-media-canonical-image {
+      //
+    }
+
+    // ** item title
+
+    h2,
+    h3,
+    h4 {
+      //
+
+      a {
+        &,
+        &:visited {
+          //
+        }
+
+        &:hover,
+        &:active {
+          //
+        }
+      }
+    }
+
+    // ** if there is a readmore link
+
+    .field--name-node-link {
+      //
+      a {
+        //
+      }
+    }
+
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: wide phone & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-xs-wide {
+
+  .paragraph--type-p-014 {
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  .paragraph--type-p-014 {
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  .paragraph--type-p-014 {
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: large
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  .paragraph--type-p-014 {
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}

@@ -1,0 +1,17 @@
+# Add some custom theme settings
+rocketship_theme_starter.settings:
+  type: theme_settings
+  label: 'Rocketship Starter theme settings'
+  mapping:
+    language_dropdown:
+      type: boolean
+      label: 'Language dropdown'
+    language_abbr:
+      type: boolean
+      label: 'Language abbreviations'
+    scroll_to:
+      type: boolean
+      label: 'Animated anchor scrolling'
+    scroll_to_exceptions:
+      type: textfield
+      label: 'Exceptions'

@@ -1,0 +1,129 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: menu overview item
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+// ** Our items ALWAYS have the same bg color
+//    so we need to make sure the text color can not be overwritten by the default paragraph colors
+//    when a background is set on the whole paragraph
+
+.group--paragraphs__item .paragraph--type-p-017 {
+
+  &.bg--spot-1,
+  &.bg--spot-2,
+  &.bg--spot-3 {
+
+    & a,
+    & .field-p-menu-overview__item__title a {
+
+      &,
+      &:visited {
+        //
+      }
+
+      &:hover,
+      &:active {
+        //
+      }
+    }
+
+  }
+}
+
+// ** item
+
+.field-p-menu-overview__item {
+  position: relative;
+  color: $color-base;
+  background-color: $color-off-white;
+}
+
+// -- title
+.field-p-menu-overview__item__title {
+
+  //
+
+  a {
+    &,
+    &:visited {
+      //
+    }
+
+    &:hover,
+    &:active {
+      //
+    }
+  }
+}
+
+// -- image
+
+.field-p-menu-overview__item__visual {
+
+  &,
+  .paragraph & {
+    img {
+      //
+    }
+  }
+}
+
+// -- content
+
+.field-p-menu-overview__item__content {
+  //
+}
+
+.field-p-menu-overview__item__description {
+  //
+}
+
+// ** Link
+// -- read more link
+//    make it go over everything as an overlay
+
+.field-p-menu-overview__item__link {
+
+  > a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+    @include hide-text;
+  }
+
+  // in case of <nolink>, this does not need to be seen
+  > span {
+    display: none;
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  .field-p-menu-overview__item {
+    //
+  }
+
+  // -- image
+
+  .field-p-menu-overview__item__visual {
+    &,
+    .paragraph & {
+      //
+    }
+  }
+
+  .field-p-menu-overview__item__content {
+    //
+  }
+
+}

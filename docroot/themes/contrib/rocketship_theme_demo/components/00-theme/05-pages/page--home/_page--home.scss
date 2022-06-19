@@ -1,0 +1,386 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Homepage styling
+// *
+// * Style the Sections and Regions specific for your homepage
+// *
+// * Tip: add classes to your sections, based on what is in it:
+// *      eg. 'home__section--usp-info' would be a section with an usp and an info block
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// *
+// =============================================================================
+
+
+// ** reset overview paragraph padding
+.home__section {
+  .group--paragraphs__item .paragraph--type-overview {
+    padding: 0;
+  }
+}
+
+// ** row with USP & Info
+
+.home__section--usp-info {
+
+  // USP
+  .block--block-contentf5d5bfc4-6a03-4756-b7a5-c3ad29da3095 {
+    padding: rem(40) 0;
+    @include full-bg($color-spot-1);
+
+    &::before {
+      left: auto;
+      margin-right: 0;
+    }
+  }
+
+  // Info
+  .block--block-content78dd02b1-c1e2-4a8a-bc31-f4b8ad7672f3 {
+    padding: rem(40) 0;
+  }
+
+  // reset paddings on paragraphs
+  .group--paragraphs__item .paragraph {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+// ** Services
+
+.home__section--services {
+
+  .block--block-content24561894-3f71-1f63-80c4-23054734defe {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    @include full-bg($color-off-white);
+  }
+
+}
+
+// ** Blog & Events
+
+.home__section--blog-events {
+
+  // Blog
+
+  .block--block-content23954704-3571-4f66-80c4-76240651ddde {
+    padding: rem(40) 0 rem(40) 0;
+  }
+
+  // Events
+
+  .block--block-content94356e36-7990-48d5-bff4-fc01b2b7a626 {
+    padding: 0 0 rem(40) 0;
+  }
+}
+
+// ** News & Realisations
+
+.home__section--news {
+
+  // News
+
+  .block--block-content23954704-3571-4f65-80c4-76240651dede {
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+    @include full-bg($color-off-white);
+
+    // if paragraphs follow, add space bc of bg color
+    & + .block--entity-viewnode {
+      margin-top: rem(40);
+    }
+  }
+
+  // Realisaties
+
+  .block--block-content23054734-3f71-1f63-80c4-76200651defe {
+    margin-top: rem(40);
+    margin-bottom: rem(40);
+  }
+}
+
+// ** paragraphs on frontpage, UNDER the rest
+//    no top space bc of space from row blog-events
+//    when not a bg or bg image
+
+.home__section--content {
+
+  .group--paragraphs__item {
+
+    &:first-child:not(.has-bg):not(.has-bg-image) > .paragraph {
+      padding-top: 0;
+    }
+  }
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: wide phone only
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-xs-wide-only {
+
+  //
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  // ** USP and info blocks
+
+  .home__section--usp-info {
+
+    padding-top: rem(40);
+    padding-bottom: rem(40);
+
+    .layout__cols {
+      display: flex; // to stretch nested divs
+      margin: 0; // override default grid
+    }
+
+    // USP
+    .layout__sidebar {
+      display: flex; // to stretch nested divs
+      flex: 0 0 auto;
+      width: 50%; // mainly for IE
+      margin: 0;
+
+      &::before {
+        left: auto;
+        right: 0;
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    .layout__sidebar__row--main {
+      display: flex; // to stretch nested divs
+    }
+
+    .block--block-contentf5d5bfc4-6a03-4756-b7a5-c3ad29da3095 {
+      padding: rem(40) rem(40) rem(40) rem(30);
+    }
+
+    // Info
+    .layout__content {
+      flex: 0 0 auto;
+      width: 50%; // mainly for IE
+      margin: 0;
+    }
+
+    .block--block-content78dd02b1-c1e2-4a8a-bc31-f4b8ad7672f3 {
+      padding: rem(40) rem(10) rem(40) rem(40);
+    }
+
+  }
+
+  // ** Blog & Events
+
+  .home__section--blog-events {
+
+    .layout__cols {
+      margin: 0; // override default grid
+    }
+
+    .layout__sidebar {
+      width: 100%;
+      margin: 0;
+    }
+
+    .layout__content {
+      width: 100%;
+      margin: 0;
+    }
+
+    // Events
+
+    .block--block-content94356e36-7990-48d5-bff4-fc01b2b7a626 {
+      padding: rem(40) 0 rem(40) 0;
+    }
+
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  // ** CTA and info blocks
+
+  .home__section--usp-info {
+
+    padding-top: rem(70);
+    padding-bottom: rem(70);
+
+    .block--block-contentf5d5bfc4-6a03-4756-b7a5-c3ad29da3095 {
+      padding: rem(62) rem(45) rem(62) rem(52);
+    }
+
+    .block--block-content78dd02b1-c1e2-4a8a-bc31-f4b8ad7672f3 {
+      padding: rem(45) rem(50) rem(62) rem(80);
+    }
+
+  }
+
+  // ** row with Blog & Events
+
+  .home__section--blog-events {
+
+    padding-top: rem(70);
+    padding-bottom: rem(70);
+
+    .layout__cols {
+      display: flex;
+    }
+
+    .layout__sidebar {
+      flex: 0 0 auto;
+      width: 50%; // mainly for IE
+    }
+
+    .block--block-content23954704-3571-4f66-80c4-76240651ddde {
+      padding: 0 rem(40) 0 0;
+      border-right: 1px solid rgba($color-spot-1, .24);
+    }
+
+    .layout__content {
+      flex: 0 0 auto;
+      width: 50%; // mainly for IE
+    }
+
+    .block--block-content94356e36-7990-48d5-bff4-fc01b2b7a626 {
+      padding: 0 0 0 rem(40);
+    }
+  }
+
+  .home__section--services {
+
+    // ** Services
+
+    .block--block-content24561894-3f71-1f63-80c4-23054734defe {
+      padding-top: rem(70);
+      padding-bottom: rem(70);
+    }
+  }
+
+  // // ** Services
+
+  // .layout__sidebar {
+  //   flex: 0 0 auto;
+  //   width: 50%; // mainly for IE
+  //   padding: 0 rem(40) 0 0;
+  //   margin: rem(70) 0 rem(70) 0;
+  //   border-right: 1px solid rgba($color-spot-1, .24);
+  // }
+
+  // .layout__content {
+  //   flex: 0 0 auto;
+  //   width: 50%; // mainly for IE
+  //   padding: 0 0 0 rem(40);
+  //   margin: rem(70) 0 rem(70) 0;
+  // }
+
+  // ** News, Realisations, …
+
+  .home__section--news {
+
+    .block--block-content23954704-3571-4f65-80c4-76240651dede {
+      padding-top: rem(70);
+      padding-bottom: rem(70);
+
+      // if paragraphs follow, add space bc of bg color
+      & + .block--entity-viewnode {
+        margin-top: rem(70);
+      }
+    }
+
+    // ** Realisaties
+
+    .block--block-content23054734-3f71-1f63-80c4-76200651defe {
+      margin-top: rem(70);
+      margin-bottom: rem(70);
+    }
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: large & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  .home__section--usp-info {
+
+    padding-top: rem(100);
+    padding-bottom: rem(93);
+
+    .block--block-contentf5d5bfc4-6a03-4756-b7a5-c3ad29da3095 {
+      padding: rem(74) rem(50) rem(77) rem(66);
+    }
+
+    .block--block-content78dd02b1-c1e2-4a8a-bc31-f4b8ad7672f3 {
+      padding: rem(50) rem(60) rem(77) rem(123);
+    }
+  }
+
+  .home__section--services {
+
+    // ** Services
+
+    .block--block-content24561894-3f71-1f63-80c4-23054734defe {
+      padding-top: rem(124);
+      padding-bottom: rem(147);
+    }
+  }
+
+  // ** Blog & Events
+
+  .home__section--blog-events {
+
+    .block--block-content23954704-3571-4f66-80c4-76240651ddde {
+      padding: 0 rem(50) 0 0;
+      margin: rem(110) 0 rem(115) 0;
+    }
+
+    .block--block-content94356e36-7990-48d5-bff4-fc01b2b7a626 {
+      padding: 0 0 0 rem(60);
+      margin: rem(110) 0 rem(115) 0;
+    }
+  }
+
+  // ** News
+
+  .home__section--news {
+
+    .block--block-content23954704-3571-4f65-80c4-76240651dede {
+      padding-top: rem(110);
+      padding-bottom: rem(115);
+
+      // if paragraphs follow, add space bc of bg color
+      & + .block--entity-viewnode {
+        margin-top: rem(115);
+      }
+    }
+
+    // ** Realisaties
+
+    .block--block-content23054734-3f71-1f63-80c4-76200651defe {
+      margin-top: rem(110);
+      margin-bottom: rem(115);
+    }
+
+  }
+
+}

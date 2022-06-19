@@ -1,0 +1,138 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: FAQ
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// *
+// =============================================================================
+
+.paragraph--type-p-004 {
+
+  .field--name-field-p-title,
+  .field--name-field-p-subtitle,
+  .field--name-field-p-teaser {
+    //
+  }
+
+  // space between items & the fields above it (teaser, title, subtitle)
+  .field + .field--type-tabbed-item {
+    margin-top: rem($p-gap-teaser-wide);
+  }
+
+}
+
+
+// * Accordion
+// =============================================================================
+
+.field__item--type-tabbed-item {
+
+  .paragraph & {
+    // override paddings if needed
+  }
+
+  // ** question title
+
+  .tab-item__title {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: rem($p-gap-vert) rem(25) rem($p-gap-vert) 0;
+    cursor: pointer;
+    transition: all $duration $easing;
+
+    // -- Icon
+
+    @include font-awesome((
+      icon: $fa-var-chevron-down,
+      color: $color-base,
+      size: 16,
+      element: "before"));
+
+    &::before {
+      position: absolute;
+      right: 0;
+      top: rem(6);
+      transition: all $duration $easing;
+    }
+
+    // *************************************************************************
+    //  Color change of the icon based on paragraph bg
+    // *************************************************************************
+
+    .bg--spot-1 &::before,
+    .bg--spot-2 &::before {
+      //color: $color-white;
+    }
+
+  }
+
+  // ** question body
+
+  .tab-item__content {
+    // use pos. or neg. margins to make the gap between title & content when open
+    // margin-top: rem($p-gap-vert-sm);
+    padding-bottom: rem($p-gap-vert); // same or more than space between paragraphs
+    display: none;
+
+    p,
+    ul,
+    ol,
+    table {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // ** states
+
+  &:hover,
+  &.js-open {
+
+    .tab-item__title {
+
+      color: $color-link;
+
+      &::before {
+        transform: rotate(90deg);
+        transform-origin: center center;
+      }
+
+      @if ($structuralOnly == false) {
+
+        // *************************************************************************
+        //  Color change of the icon based on paragraph bg
+        // *************************************************************************
+
+        .bg--spot-1 &,
+        .bg--spot-2 & {
+          //color: $color-white;
+
+          &:hover {
+            //color: $color-white;
+          }
+
+        }
+
+      }
+    }
+
+    .tab-item__content {
+      // slides open using JS
+    }
+  }
+
+  &.js-open {
+
+    .tab-item__title {
+
+      &::before {
+        transform: rotate(180deg);
+        transform-origin: center center;
+      }
+    }
+  }
+}

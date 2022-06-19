@@ -1,0 +1,112 @@
+{#
+/**
+ * This is strictly an example file to demonstrate markup in Storybook.
+ * It is not intended to be included in any other component.
+ */
+#}
+
+{% embed "@rocketship-theme-flex-molecules/00-block/_block.twig" with {
+    label: label,
+    configuration: configuration,
+    bem_block_modifiers: bem_block_modifiers,
+  } %}
+
+  {% block block_content %}
+
+    {# TO DO:
+      this block should be avoided and simply replaced by a new custom block type
+
+      which also replaces the paragraph reference field (in site building) with the separate fields
+      and thus not use the group--paragraph wrapper + _paragraph_twig embed in the component twig file (using the individual fields instead)
+    #}
+
+    <div class="group--paragraphs">
+
+      {# Paragraph: p003 text #}
+      {% embed "@rocketship-theme-flex-p-organisms/00-paragraphs/_paragraph.twig" with {
+        bem_p_block: paragraph.bem_p_block,
+        bem_p_element: paragraph.bem_p_element,
+        bem_p_modifiers: paragraph.bem_p_modifiers,
+        bem_p_extra: paragraph.bem_p_extra,
+      } %}
+
+      {% block paragraph_content %}
+        {# title field #}
+        {% include "@rocketship-theme-flex-atoms/02-text/00-headings/styleguide/heading-field.twig" with {
+            label: paragraph.fields.title.label,
+            label_hidden: paragraph.fields.title.label_hidden,
+            field_name: paragraph.fields.title.field_name,
+            field_type: paragraph.fields.title.field_type,
+            bem_field_modifiers: paragraph.fields.title.bem_field_modifiers,
+            bem_field_extra: paragraph.fields.title.bem_field_extra,
+            attributes: paragraph.fields.title.attributes,
+            heading_display: paragraph.fields.title.heading_display,
+            heading_level: paragraph.fields.title.heading_level,
+            heading: paragraph.fields.title.heading,
+            heading_id: paragraph.fields.title.heading_id,
+            heading_url: paragraph.fields.title.heading_url,
+            bem_heading_block : paragraph.fields.title.heading_block,
+            bem_heading_element : paragraph.fields.title.heading_element,
+          }
+        %}
+        {# /End title field #}
+
+        {# teaser field #}
+        {% embed "@rocketship-theme-flex-atoms/00-field/_field.twig" with {
+          label: paragraph.fields.teaser.label,
+          label_hidden: paragraph.fields.teaser.label_hidden,
+          field_name: paragraph.fields.teaser.field_name,
+          field_type: paragraph.fields.teaser.field_type,
+          bem_field_modifiers: paragraph.fields.teaser.bem_field_modifiers,
+          bem_field_extra: paragraph.fields.teaser.bem_field_extra,
+          attributes: paragraph.fields.teaser.attributes,
+        } %}
+
+          {% block field_content %}
+
+            {{ paragraph.fields.teaser.content }}
+
+          {% endblock %}
+
+        {% endembed %}
+        {# /End teaser field #}
+
+        {# text field #}
+        {% embed "@rocketship-theme-flex-atoms/00-field/_field.twig" with {
+          label: paragraph.fields.text.label,
+          label_hidden: paragraph.fields.text.label_hidden,
+          field_name: paragraph.fields.text.field_name,
+          field_type: paragraph.fields.text.field_type,
+          bem_field_modifiers: paragraph.fields.text.bem_field_modifiers,
+          bem_field_extra: paragraph.fields.text.bem_field_extra,
+          attributes: paragraph.fields.text.attributes,
+        } %}
+
+          {% block field_content %}
+
+            {{ paragraph.fields.text.content | raw }}
+
+          {% endblock %}
+
+        {% endembed %}
+        {# /End text field #}
+
+        {# button field #}
+        {% include "@rocketship-theme-flex-atoms/06-buttons/styleguide/buttons.twig" with {
+            field_name: paragraph.fields.button.field_name,
+            field_type: paragraph.fields.button.field_type,
+            label_hidden: paragraph.fields.button.label_hidden,
+            items: paragraph.fields.button.items
+          }
+        %}
+        {# /End button field #}
+      {% endblock %}
+
+      {% endembed %}
+      {# END Paragraph: p003 text #}
+
+    </div>
+
+  {% endblock %}
+
+{% endembed %}

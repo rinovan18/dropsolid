@@ -1,0 +1,131 @@
+{#
+/**
+ * This is strictly an example file to demonstrate markup in Storybook.
+ * It is not intended to be included in any other component.
+ */
+#}
+<form class="is--floating">
+
+  {# Fieldset: email and url #}
+
+  <fieldset class="fieldgroup form-fieldset js-form-item form-item js-form-wrapper form-wrapper">
+    <legend class="h2">Web and Email Address (fieldset example)</legend>
+
+    <div class="fieldset__error-message form-item--error-message">
+      <strong>This is a fieldgroup error message</strong>
+    </div>
+
+    <div class="form__element form-item js-form-item js-form-type-url form-type-url js-form-item-url form-item-textfield form-type--url form__element--url">
+      {% include "@rocketship-theme-demo-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Some url',
+        attributes: {'for': 'edit-url'},
+        styleguide: true,
+      } %}
+
+      {% include "@rocketship-theme-demo-atoms/05-forms/input/_input.twig" with {
+        attributes: {
+          class: [
+            'form-url'
+          ],
+          size: 60,
+          'max-length': 128,
+          name: 'my-url',
+          type: 'url',
+          id: 'edit-url',
+        },
+        styleguide: true,
+      } %}
+    </div>
+
+    <div class="form__element form-item js-form-item js-form-type-email form-type-email js-form-item-email-address form-item-email-address form-type--email form__element--email-address">
+      {% include "@rocketship-theme-demo-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Email address',
+        attributes: {'for': 'edit-email-address'},
+        required: "required",
+        styleguide: true,
+      } %}
+
+      {% include "@rocketship-theme-demo-atoms/05-forms/input/_input.twig" with {
+        attributes: {
+          class: [
+            'form-email'
+          ],
+          size: 60,
+          'max-length': 128,
+          name: 'email_address',
+          type: 'email',
+          id: 'edit-email-address',
+          placeholder: "name@email.com",
+          required: "required",
+        },
+        styleguide: true,
+      } %}
+    </div>
+  </fieldset>
+
+  {# Details: email and url #}
+
+  <details class="js-form-wrapper form-wrapper" open>
+    <summary class="js-form-required form-required" role="button" aria-controls="edit-details-example" aria-expanded="false" aria-pressed="false">
+      Web and Email Address (details example)
+    </summary>
+
+    <div class="details-wrapper">
+
+      <div class="details__error-message form-item--error-message">
+        <strong>This is a Details error message</strong>
+      </div>
+
+      <div class="details-description">Some descriptive text goes here.</div>
+
+      <div class="form__element form-item js-form-item js-form-type-url form-type-url js-form-item-url form-item-textfield form-type--url form__element--url">
+        {% include "@rocketship-theme-demo-atoms/05-forms/form-label/_form-label.twig" with {
+          title: 'Some url',
+          attributes: {'for': 'edit-url-2'},
+          styleguide: true,
+        } %}
+
+        {% include "@rocketship-theme-demo-atoms/05-forms/input/_input.twig" with {
+          attributes: {
+            class: [
+              'form-url'
+            ],
+            size: 60,
+            'max-length': 128,
+            name: 'my-url',
+            type: 'url',
+            id: 'edit-url-2',
+          },
+          styleguide: true,
+        } %}
+      </div>
+
+      <div class="form__element form-item js-form-item js-form-type-email form-type-email js-form-item-email-address form-item-email-address form-type--email form__element--email-address">
+        {% include "@rocketship-theme-demo-atoms/05-forms/form-label/_form-label.twig" with {
+          title: 'Email address',
+          attributes: {'for': 'edit-email-address-2'},
+          required: "required",
+          styleguide: true,
+        } %}
+
+        {% include "@rocketship-theme-demo-atoms/05-forms/input/_input.twig" with {
+          attributes: {
+            class: [
+              'form-email'
+            ],
+            size: 60,
+            'max-length': 128,
+            name: 'email_address',
+            type: 'email',
+            id: 'edit-email-address-2',
+            placeholder: "name@email.com",
+            required: "required",
+          },
+          styleguide: true,
+        } %}
+      </div>
+
+    </div>
+  </details>
+
+</form>

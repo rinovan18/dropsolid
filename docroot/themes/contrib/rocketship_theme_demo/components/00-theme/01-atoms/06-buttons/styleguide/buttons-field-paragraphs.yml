@@ -1,0 +1,46 @@
+paragraphs:
+  - normal:
+    content: true
+    bem_p_block:
+    bem_p_element:
+    bem_p_modifiers:
+      - view-mode-default
+      - type-p-003
+    bem_p_extra:
+      - has-bg-stretched
+      - p--view-mode--left
+      - p-003--view-mode--left
+    fields:
+      buttons:
+        field_name: 'field-p-button'
+        field_type: 'link'
+        label_hidden: true
+        items:
+          - content:
+              '#title': 'First field item'
+              '#type': "link"
+          - content:
+              '#type': 'link'
+              '#url': '#'
+              '#title': 'Second field item'
+  - bg_grey:
+    content: true
+    bem_p_extra:
+      - bg--grey
+      - has-bg-stretched
+      - p--view-mode--left
+      - p-003--view-mode--left
+  - bg_spot_1:
+    content: true
+    bem_p_extra:
+      - bg--spot-1
+      - has-bg-stretched
+      - p--view-mode--left
+      - p-003--view-mode--left
+  - bg_spot_2:
+    content: true
+    bem_p_extra:
+      - bg--spot-2
+      - has-bg-stretched
+      - p--view-mode--left
+      - p-003--view-mode--left

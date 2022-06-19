@@ -1,0 +1,135 @@
+{#
+/**
+ * This is strictly an example file to demonstrate markup in Storybook.
+ * It is not intended to be included in any other component.
+ */
+#}
+
+{% embed "@rocketship-theme-flex-molecules/00-block/_block.twig" with {
+    label: label,
+    configuration: configuration,
+    bem_block_modifiers: bem_block_modifiers,
+  } %}
+
+  {% block block_content %}
+
+    <div class="group--paragraphs">
+      {% for paragraph in paragraphs %}
+        <div class="group--paragraphs__item">
+
+          {#
+            Since all Paragraph variations have the same content, we can reuse the data of the first paragraph
+             and print it in each loop item like so: paragraphs[0].whatever
+            For the parts that have unique content per paragraph, we can print the individual paragraph content like so: paragraph.whatever
+            In this example, it is only the extra classes that differ, because they set the background color classes: paragraph.bem_p_extra
+          #}
+
+          {% embed "@rocketship-theme-flex-p-organisms/00-paragraphs/_paragraph.twig" with {
+            bem_p_block: paragraphs[0].bem_p_block,
+            bem_p_element: paragraphs[0].bem_p_element,
+            bem_p_modifiers: paragraphs[0].bem_p_modifiers,
+            bem_p_extra: paragraph.bem_p_extra,
+          } %}
+
+            {% block paragraph_content %}
+
+              {# title field #}
+              {% include "@rocketship-theme-flex-atoms/02-text/00-headings/styleguide/heading-field.twig" with {
+                  label: paragraphs[0].fields.title.label,
+                  label_hidden: paragraphs[0].fields.title.label_hidden,
+                  field_name: paragraphs[0].fields.title.field_name,
+                  field_type: paragraphs[0].fields.title.field_type,
+                  bem_field_modifiers: paragraphs[0].fields.title.bem_field_modifiers,
+                  bem_field_extra: paragraphs[0].fields.title.bem_field_extra,
+                  attributes: paragraphs[0].fields.title.attributes,
+                  heading_display: paragraphs[0].fields.title.heading_display,
+                  heading_level: paragraphs[0].fields.title.heading_level,
+                  heading: paragraphs[0].fields.title.heading,
+                  heading_id: paragraphs[0].fields.title.heading_id,
+                  heading_url: paragraphs[0].fields.title.heading_url,
+                  bem_heading_block : paragraphs[0].fields.title.heading_block,
+                  bem_heading_element : paragraphs[0].fields.title.heading_element,
+                }
+              %}
+              {# /End title field #}
+
+              {# subtitle field #}
+              {% include "@rocketship-theme-flex-atoms/02-text/00-headings/styleguide/heading-field.twig" with {
+                  label: paragraphs[0].fields.subtitle.label,
+                  label_hidden: paragraphs[0].fields.subtitle.label_hidden,
+                  field_name: paragraphs[0].fields.subtitle.field_name,
+                  field_type: paragraphs[0].fields.subtitle.field_type,
+                  bem_field_modifiers: paragraphs[0].fields.subtitle.bem_field_modifiers,
+                  bem_field_extra: paragraphs[0].fields.subtitle.bem_field_extra,
+                  attributes: paragraphs[0].fields.subtitle.attributes,
+                  heading_display: paragraphs[0].fields.subtitle.heading_display,
+                  heading_level: paragraphs[0].fields.subtitle.heading_level,
+                  heading: paragraphs[0].fields.subtitle.heading,
+                  heading_id: paragraphs[0].fields.subtitle.heading_id,
+                  heading_url: paragraphs[0].fields.subtitle.heading_url,
+                  bem_heading_block : paragraphs[0].fields.subtitle.heading_block,
+                  bem_heading_element : paragraphs[0].fields.subtitle.heading_element,
+                }
+              %}
+              {# /End subtitle field #}
+
+              {# teaser field #}
+              {% embed "@rocketship-theme-flex-atoms/00-field/_field.twig" with {
+                label: paragraphs[0].fields.teaser.label,
+                label_hidden: paragraphs[0].fields.teaser.label_hidden,
+                field_name: paragraphs[0].fields.teaser.field_name,
+                field_type: paragraphs[0].fields.teaser.field_type,
+                bem_field_modifiers: paragraphs[0].fields.teaser.bem_field_modifiers,
+                bem_field_extra: paragraphs[0].fields.teaser.bem_field_extra,
+                attributes: paragraphs[0].fields.teaser.attributes,
+              } %}
+
+                {% block field_content %}
+                  {{ paragraphs[0].fields.teaser.content }}
+                {% endblock %}
+
+              {% endembed %}
+              {# /End teaser field #}
+
+              {# text field (CKE) #}
+              {% embed "@rocketship-theme-flex-atoms/00-field/_field.twig" with {
+                label: paragraphs[0].fields.text.label,
+                label_hidden: paragraphs[0].fields.text.label_hidden,
+                field_name: paragraphs[0].fields.text.field_name,
+                field_type: paragraphs[0].fields.text.field_type,
+                bem_field_modifiers: paragraphs[0].fields.text.bem_field_modifiers,
+                bem_field_extra: paragraphs[0].fields.text.bem_field_extra,
+                attributes: paragraphs[0].fields.text.attributes,
+              } %}
+
+                {% block field_content %}
+                  {{ paragraphs[0].fields.text.content }}
+                {% endblock %}
+
+              {% endembed %}
+              {# /End text field #}
+
+              {# button field #}
+              {% include "@rocketship-theme-flex-atoms/06-buttons/styleguide/buttons.twig" with {
+                  label: paragraphs[0].fields.buttons.label,
+                  field_name: paragraphs[0].fields.buttons.field_name,
+                  field_type: paragraphs[0].fields.buttons.field_type,
+                  bem_field_modifiers: paragraphs[0].fields.buttons.bem_field_modifiers,
+                  bem_field_extra: paragraphs[0].fields.buttons.bem_field_extra,
+                  attributes: paragraphs[0].fields.buttons.attributes,
+                  items: paragraphs[0].fields.buttons.items
+                }
+              %}
+              {# /End button field #}
+
+            {% endblock %}
+
+          {% endembed %}
+        </div>
+      {% endfor %}
+
+    </div>
+
+  {% endblock %}
+
+{% endembed %}

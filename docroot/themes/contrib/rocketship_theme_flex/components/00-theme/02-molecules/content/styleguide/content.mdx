@@ -1,0 +1,15 @@
+import { Story } from '@storybook/addon-docs/blocks';
+
+# Content
+
+This is a generic block, that reuses the Paragraph reference field to show various Paragraphs instead of loose fields.<br />
+It is recommended to avoid using it, as it is handy to quickly produce demo content on the home page,<br />
+but is a pain to style and keep the content editor from breaking the layout<br />
+
+First of all, you need to style the block by ID instead of block type and context, which is bad practice,<br />
+and secondaly, you always need to override some default Paragraph styling (because it was originally meant for content in content types).
+
+So use at your own risk.
+
+Preferably, you would replace any 'content' blocks with a new custom block type that matches whatever functionality you are trying to add.<br />
+And replace the paragraph reference field with individual fields.

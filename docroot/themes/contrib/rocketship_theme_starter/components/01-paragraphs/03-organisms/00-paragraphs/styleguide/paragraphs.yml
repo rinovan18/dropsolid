@@ -1,0 +1,82 @@
+label: 'Paragraph base styles'
+configuration:
+  label_display: false
+bem_block_modifiers:
+  - provider-layout-builder
+bem_block_extra:
+  - block-layout_builder
+paragraphs:
+  - normal:
+    content: true
+    bem_p_block:
+    bem_p_element:
+    bem_p_modifiers:
+      - view-mode-default
+      - type-p-003
+    bem_p_extra:
+      - has-bg-stretched
+      - p--view-mode--left
+      - p-003--view-mode--left
+    fields:
+      title:
+        heading_display: true
+        heading_level: 2
+        heading: Paragraph title
+        field_name: field_p_title
+        field_type: string
+      subtitle:
+        heading_display: true
+        heading_level: 3
+        heading: Paragraph subtitle
+        field_name: field_p_subtitle
+        field_type: string
+      teaser:
+        label_hidden: true
+        field_name: field_p_teaser
+        field_type: string_long
+        bem_field_modifiers:
+          - 'label-hidden'
+        content: "Risus nec feugiat in fermentum posuere urna. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula."
+      text:
+        label_hidden: true
+        field_name: field_p_text
+        field_type: text_long
+        bem_field_modifiers:
+          - 'label-hidden'
+        bem_field_extra:
+        - 'text-long'
+        content: |
+          <p>Lorem ipsum dolor sit amet, <a href=\"#\" title=\"test link\">consectetur adipiscing</a> elit. Aliquam bibendum ultricies lobortis. Quisque aliquet ullamcorper eros. Nunc sit amet sagittis turpis, nec lacinia augue. Aliquam id nibh magna. Donec neque libero, condimentum vel purus a, faucibus egestas magna.</p>
+          <ul><li>Leo in vitae turpis massa</li> <li>Lobortis feugiat vivamus</li> <li>at augue eget arcu dictum varius</li></ul>
+          <p>Nulla at volutpat diam ut venenatis tellus. Vitae congue eu consequat ac felis donec et odio pellentesque.</p>
+      buttons:
+        field_name: 'field_p_button'
+        field_type: 'link'
+        label_hidden: true
+        items:
+          - content:
+              '#title': 'First field item'
+              '#type': "link"
+          - content:
+              '#type': 'link'
+              '#url': '#'
+              '#title': 'Second field item'
+  - bg_grey:
+    content: true
+    bem_p_extra:
+      - bg--grey
+      - has-bg-stretched
+      - p--view-mode--left
+      - p-003--view-mode--left
+  - bg_spot_1:
+    bem_p_extra:
+      - bg--spot-1
+      - has-bg-stretched
+      - p--view-mode--left
+      - p-003--view-mode--left
+  - bg_spot_2:
+    bem_p_extra:
+      - bg--spot-2
+      - has-bg-stretched
+      - p--view-mode--left
+      - p-003--view-mode--left

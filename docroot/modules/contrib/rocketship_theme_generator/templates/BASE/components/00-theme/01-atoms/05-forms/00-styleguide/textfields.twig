@@ -1,0 +1,540 @@
+{#
+/**
+ * This is strictly an example file to demonstrate markup in Storybook.
+ * It is not intended to be included in any other component.
+ */
+#}
+<form class="is--floating">
+
+  {# Textfield: normal #}
+
+  <div class="form__element form-item js-form-item js-form-type-textfield form-type-textfield js-form-item-textfield form-item-textfield form-type--textfield form__element--textfield">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'Some textfield',
+      attributes: {'for': 'edit-textfield'},
+      styleguide: true,
+    } %}
+
+    {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+      attributes: {
+        value: 'Some value',
+        class: [
+          'form-text'
+        ],
+        size: 60,
+        'max-length': 128,
+        name: 'textfield',
+        type: 'text',
+        id: 'edit-textfield',
+        'aria-describedby': "edit-textfield--description",
+      },
+      styleguide: true,
+    } %}
+
+    <div id="edit-textfield--description" class="form__element__description">
+      Brevitas commoveo distineo et eum ille metuo zelus.
+    </div>
+  </div>
+
+  {# Textfield: disabled #}
+
+  <div class="form__element form-item js-form-item js-form-type-textfield form-type-textfield js-form-item-textfield form-item-textfield form-type--textfield form__element--textfield">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'A disabled textfield',
+      attributes: {'for': 'edit-textfield-disabled'},
+      styleguide: true,
+    } %}
+
+    {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+      attributes: {
+        value: 'Some value',
+        class: [
+          'form-text'
+        ],
+        size: 60,
+        'max-length': 128,
+        name: 'textfield',
+        type: 'text',
+        id: 'edit-textfield-disabled',
+        disabled: 'disabled',
+      },
+      styleguide: true,
+    } %}
+  </div>
+
+  {# Textfield: normal, no value, required #}
+
+  <div class="form__element form-item js-form-item js-form-type-textfield form-type-textfield js-form-item-textfield form-item-textfield form-type--textfield form__element--textfield">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'Another textfield',
+      attributes: {'for': 'edit-textfield-2'},
+      required: "required",
+      styleguide: true,
+    } %}
+
+    {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+      attributes: {
+        class: [
+          'form-text'
+        ],
+        size: 60,
+        'max-length': 128,
+        name: 'textfield-2',
+        type: 'text',
+        id: 'edit-textfield-2',
+        required: "required",
+      },
+      styleguide: true,
+    } %}
+  </div>
+
+  {# Textfield: with prefix #}
+
+  <div class="form__element form-item js-form-item js-form-type-textfield form-type-textfield js-form-item-textfield-machine form-item-textfield-machine form-type--textfield form__element--textfield-machine form__element--suffix">
+
+    <span class="form__element__prefix field-prefix">
+      <small id="edit-textfield-machine--4-prefix">
+        <span class="prefix-value">€</span>
+      </small>
+    </span>
+
+    <div class="form__element__root field-root">
+      {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Textfield with a prefix',
+        attributes: {'for': 'edit-textfield-prefix'},
+        styleguide: true,
+      } %}
+
+      {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+        value: 'Photar sephicithag lofritrusl',
+        attributes: {
+          class: [
+            'form-text'
+          ],
+          size: 60,
+          'max-length': 128,
+          name: 'textfield-2',
+          type: 'text',
+          id: 'edit-textfield-prefix',
+          'aria-describedby': "edit-textfield-prefix--description"
+        },
+        styleguide: true,
+      } %}
+    </div>
+
+    <div id="edit-textfield-prefix--description" class="form__element__description">
+      Eum melior nunc occuro si torqueo ut utrum verto voco.
+    </div>
+  </div>
+
+  {# Textfield: with suffix #}
+
+  <div class="form__element form-item js-form-item js-form-type-textfield form-type-textfield js-form-item-textfield-machine form-item-textfield-machine form-type--textfield form__element--textfield-machine form__element--suffix">
+    <div class="form__element__root field-root">
+      {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Textfield with a suffix',
+        attributes: {'for': 'edit-textfield-machine'},
+        styleguide: true,
+      } %}
+
+      {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+        value: 'Photar sephicithag lofritrusl',
+        attributes: {
+          class: [
+            'form-text', 'machine-name-source'
+          ],
+          size: 60,
+          'max-length': 128,
+          name: 'textfield-2',
+          type: 'text',
+          id: 'edit-textfield-machine',
+          'aria-describedby': "edit-textfield-machine--description"
+        },
+        styleguide: true,
+      } %}
+    </div>
+    <span class="form__element__suffix field-suffix">
+      <small id="edit-textfield-machine--4-suffix"><span class="machine-name-label">Machine name: </span>
+        <span class="machine-name-value">sposhagis_coprarechehu_wrimeregutri</span>
+        <span class="admin-link"><button type="button" class="link">Edit</button></span>
+      </small>
+    </span>
+
+    <div id="edit-textfield-machine--description" class="form__element__description">
+      Eum melior nunc occuro si torqueo ut utrum verto voco.
+    </div>
+  </div>
+
+  {# Textfield: autocomplete (won't work bc no Drupal shizzle to make it work) #}
+
+  {# <div class="form__element form-item js-form-item js-form-type-entity-autocomplete form-type-entity-autocomplete js-form-item-entity-autocomplete form-item-entity-autocomplete form-type--entity-autocomplete form__element--entity-autocomplete">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'node entity autocomplete',
+      attributes: {'for': 'edit-autocomplete'},
+      required: "required",
+      styleguide: true,
+    } %}
+
+    {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+      attributes: {
+        class: [
+          'form-text', 'form__input--text', 'form-autocomplete', 'ui-autocomplete-input'
+        ],
+        size: 60,
+        'max-length': 128,
+        name: 'entity_autocomplete',
+        type: 'text',
+        id: 'edit-autocomplete',
+        required: "required",
+        'data-drupal-selector': "edit-entity-autocomplete",
+        'aria-describedby': "edit-entity-autocomplete--description",
+        'data-autocomplete-path': "/entity_reference_autocomplete/node/default/LIzQwXdpjfRcxo8KiHJGan1sHKT7buqIv94pDMHYI2k",
+      },
+      styleguide: true,
+    } %}
+
+    <div id="edit-entity-autocomplete--description" class="form__element__description">
+      Brevitas commoveo distineo et eum ille metuo zelus.
+    </div>
+  </div> #}
+
+  {# Date field #}
+
+  <div class="form__element form-item js-form-item js-form-type-date form-type-date js-form-item-date form-item-date form-type--date form__element--date">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'Date field',
+      attributes: {'for': 'edit-date'},
+      required: "required",
+      styleguide: true,
+    } %}
+
+    {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+      attributes: {
+        class: [
+          'form-date'
+        ],
+        size: 60,
+        'max-length': 128,
+        name: 'date',
+        type: 'date',
+        id: 'edit-date',
+        required: "required",
+        'data-drupal-date-format': 'Y-m-d',
+      },
+      styleguide: true,
+    } %}
+  </div>
+
+  {# Number #}
+
+  <div class="form__element form-item js-form-item js-form-type-number form-type-number js-form-item-number form-item-number form-type--number form__element--number">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'Some number',
+      attributes: {'for': 'edit-number'},
+      styleguide: true,
+    } %}
+
+    {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+      attributes: {
+        value: '5',
+        class: [
+          'form-number'
+        ],
+        size: 60,
+        pattern: '[0-9]*',
+        name: 'numberfield',
+        type: 'number',
+        id: 'edit-number',
+        placeholder: "Enter a Number",
+      },
+      styleguide: true,
+    } %}
+  </div>
+
+  {# File field #}
+
+  <div class="form__element form-item js-form-item js-form-type-file form-type-file js-form-item-files-file form-item-files-file form-type--file form__element--files-file">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'File',
+      attributes: {'for': 'edit-file'},
+      styleguide: true,
+    } %}
+
+      {% include "@%theme_prefix%-atoms/05-forms/upload/_upload-file.twig" with {
+        attributes: {
+          class: [
+            'js-form-file', 'form-file', 'form__file'
+          ],
+          size: 60,
+          'max-length': 128,
+          name: 'file',
+          type: 'file',
+          id: 'edit-file',
+        },
+        styleguide: true,
+      } %}
+  </div>
+
+  {# Managed file: file Upload #}
+  <div id="ajax-wrapper--1">
+
+    <div class="form__element form-item js-form-item js-form-type-managed-file form-type-managed-file js-form-item-managed-file form-item-managed-file form-type--managed-file form__element--managed-file">
+
+      {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Managed file',
+        attributes: {'for': 'edit-managed-file-upload--3zySFpgbh0Q', 'id': 'edit-managed-file--label'},
+        styleguide: true,
+      } %}
+
+      <div class="js-form-managed-file form-managed-file" id="edit-managed-file--1">
+
+        {% include "@%theme_prefix%-atoms/05-forms/upload/_upload-file.twig" with {
+          attributes: {
+            class: [
+              'js-form-file', 'form-file', 'form__file'
+            ],
+            size: 22,
+            name: 'files[managed_file]',
+            type: 'file',
+            id: 'edit-managed-file-upload--3zySFpgbh0Q',
+          },
+          styleguide: true,
+        } %}
+
+        {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+          attributes: {
+            class: [
+              'js-hide', 'js-form-submit', 'form-submit'
+            ],
+            name: 'managed_file_upload_button',
+            type: 'submit',
+            id: 'edit-managed-file-upload-button--ImU455IaMVg',
+            'data-drupal-selector': "edit-managed-file-upload-button",
+            value: 'Upload',
+          },
+          styleguide: true,
+        } %}
+
+        <input data-drupal-selector="edit-managed-file-fids"
+          type="hidden"
+          name="managed_file[fids]"
+          value=""
+          class="form__input--hidden"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="ajax-wrapper--2">
+
+    <div class="form__element form-item js-form-item js-form-type-managed-file form-type-managed-file js-form-item-managed-file form-item-managed-file form-type--managed-file form__element--managed-file">
+
+      {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Managed file loading',
+        attributes: {'for': 'edit-managed-file-upload--3zySFpgbh0Q2', 'id': 'edit-managed-file--label-2'},
+        styleguide: true,
+      } %}
+
+      <div class="js-form-managed-file form-managed-file" id="edit-managed-file--2">
+
+        {% include "@%theme_prefix%-atoms/05-forms/upload/_upload-file.twig" with {
+          attributes: {
+            class: [
+              'js-form-file', 'form-file', 'form__file'
+            ],
+            size: 22,
+            name: 'files[managed_file]',
+            type: 'file',
+            id: 'edit-managed-file-upload--3zySFpgbh0Q2',
+          },
+          styleguide: true,
+        } %}
+
+        {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+          attributes: {
+            class: [
+              'js-hide', 'js-form-submit', 'form-submit'
+            ],
+            name: 'managed_file_upload_button',
+            type: 'submit',
+            id: 'edit-managed-file-upload-button--ImU455IaMVg2',
+            'data-drupal-selector': "edit-managed-file-upload-button",
+            value: 'Upload',
+          },
+          styleguide: true,
+        } %}
+
+        <div class="ajax-progress ajax-progress-throbber"><div class="throbber">&nbsp;</div></div>
+
+        <input data-drupal-selector="edit-managed-file-fids"
+          type="hidden"
+          name="managed_file[fids]"
+          value=""
+          class="form__input--hidden"
+        />
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="ajax-wrapper--3">
+
+    <div class="form__element form-item js-form-item js-form-type-managed-file form-type-managed-file js-form-item-managed-file form-item-managed-file form-type--managed-file form__element--managed-file">
+
+      {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Managed file shown',
+        attributes: {'for': 'edit-managed-file-upload--3zySFpgbh0Q3', 'id': 'edit-managed-file--label-3'},
+        styleguide: true,
+      } %}
+
+      <div class="js-form-managed-file form-managed-file" id="edit-managed-file--3">
+
+        <input data-drupal-selector="edit-managed-file-fids"
+         data-drupal-selector="edit-managed-file-fids"
+          type="hidden"
+          name="managed_file[fids]"
+          value="44"
+          class="form__input--hidden"
+        />
+
+        {# <span data-drupal-selector="edit-managed-file-file-44-filename" class="file file--mime-image-jpeg file--image file--file file--mime-image-jpeg file--image">
+          <i class="icon icon--mime-image-jpeg icon--image icon--file file--mime-image-jpeg file--image icon--file"></i>
+          <a href="http://testfrontendrembrand.docker.localhost/system/temporary?file=oqmzwnd3thu-helloquence.jpg" type="image/jpeg; length=706455">oqmzwnd3thu-helloquence.jpg</a>
+        </span> #}
+
+        {% include "@%theme_prefix%-atoms/01-links/file/styleguide/file.twig" with {
+          'link_content': 'my-filename.jpg',
+          'link_url': '#',
+          'attributes': {
+            'class': [
+              'file--image',
+              'mime-image-jpeg',
+            ]
+          }
+        } %}
+
+        {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+          attributes: {
+            class: [
+              'js-hide', 'js-form-submit', 'form-submit'
+            ],
+            name: 'managed_file_remove_button',
+            type: 'submit',
+            id: 'edit-managed-file-remove-button--7B5LsAD0Rfo',
+            'data-drupal-selector': "edit-managed-file-upload-button",
+            value: 'Remove',
+          },
+          styleguide: true,
+        } %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+  {# Password fields #}
+
+  <div class="form__element form-item js-form-item js-form-type-password-confirm form-type-password-confirm js-form-item-password-confirm form-item-password-confirm form-type--password-confirm form__element--password-confirm">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'Password confirm',
+      attributes: {'for': 'edit-password-confirm-pass1'},
+      required: "required",
+      styleguide: true,
+    } %}
+
+    <div class="form__element form-item js-form-item js-form-type-password form-type-password js-form-item-password-confirm-pass1 form-item-password-confirm-pass1 form-type--password form__element--password-confirm-pass1 password-parent">
+      {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Password',
+        required: "required",
+        styleguide: true,
+      } %}
+
+      {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+        attributes: {
+          class: [
+            'password-field', 'js-password-field', 'form-text'
+          ],
+          size: 60,
+          'max-length': 128,
+          name: 'password',
+          type: 'password',
+          id: 'edit-password-confirm-pass1',
+          required: "required",
+        },
+        styleguide: true,
+      } %}
+
+      <div class="password-strength">
+        <div class="password-strength__meter">
+          <div class="password-strength__indicator js-password-strength__indicator is-good" style="width: 75%;"></div>
+        </div>
+        <div aria-live="polite" aria-atomic="true" class="password-strength__title">
+          Password strength: <span class="password-strength__text js-password-strength__text">Good</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form__element form-item js-form-item js-form-type-password form-type-password js-form-item-password form-item-password form-type--password form__element--password">
+      {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+        title: 'Confirm password',
+        attributes: {'for': 'edit-password-confirm-pass2'},
+        required: "required",
+        styleguide: true,
+      } %}
+
+      {% include "@%theme_prefix%-atoms/05-forms/input/_input.twig" with {
+        attributes: {
+          class: [
+            'password-confirm', 'js-password-confirm', 'form-text'
+          ],
+          size: 60,
+          'max-length': 128,
+          name: 'password',
+          type: 'password',
+          id: 'edit-password-confirm-pass2',
+          required: "required",
+        },
+        styleguide: true,
+      } %}
+
+      <div aria-live="polite" aria-atomic="true" class="password-confirm js-password-confirm js-password-confirm-message" style="visibility: visible;">Passwords match: <span class="error">no</span></div>
+    </div>
+
+    <div class="password-suggestions description" style="">Recommendations to make your password stronger:<ul><li>Make it at least 12 characters</li><li>Add uppercase letters</li><li>Add numbers</li><li>Add punctuation</li></ul></div>
+
+  </div>
+
+  {# textarea #}
+
+  <div class="form__element form-item js-form-item js-form-type-textarea form-type-textarea js-form-item-message form-item-message form-type--textarea form__element--message">
+    {% include "@%theme_prefix%-atoms/05-forms/form-label/_form-label.twig" with {
+      title: 'A message',
+      attributes: {'for': 'edit-message'},
+      required: "required",
+      styleguide: true,
+    } %}
+
+    {% include "@%theme_prefix%-atoms/05-forms/textarea/_textarea.twig" with {
+      attributes: {
+        class: [
+          'form-item__textfield',
+          'form-item__textarea'
+        ],
+        rows: 8,
+        cols: 48,
+        name: 'message',
+        type: 'email',
+        id: 'edit-message',
+        required: "required",
+      },
+      styleguide: true,
+    } %}
+  </div>
+
+</form>

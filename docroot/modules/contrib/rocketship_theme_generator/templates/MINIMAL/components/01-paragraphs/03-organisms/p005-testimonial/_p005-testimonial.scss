@@ -1,0 +1,220 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: testimonial
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// *
+// =============================================================================
+
+.paragraph--type-p-005 {
+  position: relative;
+
+  // extra space for image
+  .group--paragraphs__item &.has-image {
+    padding-top: rem($p-gap-vert + ($testimonial-image-size / 2));
+  }
+
+  // with 2 backgrounds of matching color
+  // add space for testimonial instead of reset to 0
+  .group--paragraphs__item.has-matching-bg + .group--paragraphs__item.has-matching-bg-last &.has-image {
+    padding-top: rem($testimonial-image-size / 2);
+  }
+
+  // ** user image
+
+  .field--name-field-p-image,
+  .field--name-field-p-media-image {
+    position: absolute;
+    left: 50%;
+    top: rem(-($testimonial-image-size / 2));
+    min-width: 0;
+    transform: translateX(-50%);
+
+    // need matching image style
+    img {
+      height: rem($testimonial-image-size);
+      width: rem($testimonial-image-size);
+      border-radius: 100%;
+    }
+  }
+
+  // ** description
+
+  .field--type-text-long,
+  .text-long {
+    position: relative;
+    max-width: rem(900);
+    margin: 0 auto;
+
+    // -- add quote icon
+
+    @include font-awesome((icon: $fa-var-quote-left, color: $color-base, size: 30));
+
+    &::before {
+      position: absolute;
+      top: rem(-30);
+      left: 0;
+    }
+
+  }
+
+  // ** grouping the info
+  .p-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  // ** name & title
+
+  .field--name-field-p-name,
+  .field--name-field-p-extra-rule {
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .field--name-field-p-extra-rule {
+    &::before {
+      content: " - ";
+      margin: 0 rem(5);
+    }
+  }
+
+  // ** url
+  .field--name-field-p-link {
+    //
+  }
+
+  // change quote & text color:
+  //   if content color 1 or 2
+  //   or bg color 1 or 2 in combination with transp or grey content bg
+
+  &.content-bg--spot-01,
+  &.content-bg--spot-02,
+  &.bg--spot-1,
+  &.bg--spot-2 {
+
+    //color: $color-white;
+    //
+    //a {
+    //  &,
+    //  &:visited {
+    //    color: $color-white;
+    //    border-bottom: 1px solid rgba($color-white, 1)
+    //  }
+    //
+    //  &:hover,
+    //  &:active {
+    //    color: $color-white;
+    //    border-bottom: 1px solid rgba($color-white, 0);
+    //  }
+    //}
+    //
+    //.field--type-text-long,
+    //.text-long {
+    //  &::before {
+    //    color: $color-white;
+    //  }
+    //}
+  }
+
+  &.bg--spot-1.content-bg--grey,
+  &.bg--spot-2.content-bg--grey {
+
+    //color: $color-base;
+    //
+    //a {
+    //  &,
+    //  &:visited {
+    //    color: $color-spot-2;
+    //    border-bottom: 1px solid rgba($color-spot-2, 0)
+    //  }
+    //
+    //  &:hover,
+    //  &:active {
+    //    color: $color-spot-2;
+    //    border-bottom: 1px solid rgba($color-spot-2, 1);
+    //  }
+    //}
+    //
+    //.field--type-text-long,
+    //.text-long {
+    //  &::before {
+    //    color: $color-base;
+    //  }
+    //}
+  }
+}
+
+
+// * Grouping the content
+// =============================================================================
+
+.p005-content {
+  position: relative; // hook for image
+  z-index: 1; // over the background-image, if any
+  padding-top: rem(40); // space for quote mark
+
+  // extra padding if image
+  .has-image & {
+    padding-top: rem(40 + ($testimonial-image-size / 2));
+  }
+}
+
+// if background of the content
+// need resizing
+
+.has-content-bg > .p005-content {
+  // max-width: rem(512);
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet and bigger
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  .paragraph--type-p-005 {
+    // extra space for image
+    .group--paragraphs__item &.has-image {
+      //
+    }
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & bigger
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  .paragraph--type-p-005 {
+    // extra space for image
+    .group--paragraphs__item &.has-image {
+      //
+    }
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: large
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+  .paragraph--type-p-005 {
+    // extra space for image
+    .group--paragraphs__item &.has-image {
+      //
+    }
+  }
+}

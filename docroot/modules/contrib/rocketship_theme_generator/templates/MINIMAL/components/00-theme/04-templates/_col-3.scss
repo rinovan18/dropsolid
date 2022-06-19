@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * 3 column layout
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// *
+// =============================================================================
+
+// .layout--3-col {
+//
+// }
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  // 3 columns wrapper
+
+  // content as column, with 2 sidebars
+  .layout__content--sidebars--center {
+    //
+  }
+
+  // the 2 sidebars
+  .layout__sidebar--sidebars--left,
+  .layout__sidebar--sidebars--right {
+    //
+  }
+
+  // to make sure second sidebar is on the right
+  .layout__sidebar--sidebars--right {
+    //
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  // for 2 sidebars
+  .layout__sidebar--sidebars--left,
+  .layout__sidebar--sidebars--right {
+    //
+  }
+
+}

@@ -1,0 +1,47 @@
+import { Story } from '@storybook/addon-docs/blocks';
+
+# Demo
+
+## Layout Builder Layout Templates
+
+Because our 'real' templates are part of the Rocketship Core module, and how complexly nested it is, it is very difficult to reuse them in Storybook. <br />
+For this reason, we opted to recreate them as static Styleguide components.<br />
+Since the templates from Core should not change in a project, it is fairly safe to use the static ones as an analog.<br />
+
+### Data structure
+
+As always, take a look at the yml files in these styleguide components for usage.
+
+Label, variant, modifier are all used to build BEM classes <br />
+`extra_classes` is used to print (you guessed it) extra classes<br />
+`settings` contain extra options, like reversing stuff in the html
+the regions inside `content` needs to be set to true if you want to output anything into those regions
+`region_type` is only useful on the full Page node, not for layouts used in nested stuff like teasers
+
+```
+label: 'Rocketship 2-col'
+variant: 'rs-two-col'
+region_type: 'content'
+modifier: null
+extra_classes: 'home__section home__section--usp-info'
+settings:
+  layout_reversed: false
+content:
+  first_main: true
+  second_main: true
+```
+
+
+## Notes
+
+- Some data in Storybook embedded templates doesn't reset the next time the template is used<br />
+  This means we need to reset it before usage or old and new data will merge (when the merge-filer is used to initialize those variables).<br />
+  The most annoying example so far, is the layout templates<br />
+  You can see the Styleguide component for blog teaser (Feature molecules) for an example on this.
+  ```
+  {% set bem_section_modifier = [] %}
+  {% set bem_section_extra = [] %}
+  {% set modifier = false %}
+  {% set bem_region_modifier = [] %}
+  {% set bem_region_extra = [] %}
+  ```

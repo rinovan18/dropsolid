@@ -1,0 +1,215 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: story
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+// *
+// =============================================================================
+
+.paragraph--type-p-001 {
+
+  // image/video aside
+  .paragraph__sidebar {
+    margin-bottom: rem($p-gap-vert);
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & larger
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+
+  .paragraph--type-p-001 {
+
+    // normal size image
+
+    &.p--layout--image_normal {
+
+      // ** image and text next to each other
+
+      .paragraph__cols {
+        @include flex-grid(12, $story-gap);
+        align-items: center;
+        margin-top: 0;
+      }
+
+      // image/video aside
+      .paragraph__sidebar {
+        @include flex-col(6, 12, $story-gap);
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      // content
+      .paragraph__content {
+        @include flex-col(6, 12, $story-gap);
+        margin-top: 0;
+      }
+
+      // ** STORY RIGHT
+
+      &.p-001--view-mode--right,
+      &.p-001--view-mode--image_right {
+
+        .paragraph__cols {
+          flex-direction: row-reverse;
+        }
+      }
+
+    }
+
+
+    // Some layout changes when stretched image
+
+    &.p--layout--image_stretched {
+
+      // override the top padding to add make space
+      // when 2 paragraphs with same bg follow each other
+
+      .group--paragraphs__item.has-matching-bg + .group--paragraphs__item.has-matching-bg & {
+        padding-top: rem($p-gap-vert);
+      }
+
+      // ** image and text next to each other
+
+      .paragraph__cols {
+        @include flex-grid(12, $story-gap);
+        position: static;
+        overflow: visible;
+        margin: 0;
+        padding-left: calc(50% + #{rem($story-gap)});
+      }
+
+      // image/video aside
+      .paragraph__sidebar {
+        @include flex-col(6, 12, $story-gap);
+        position: absolute;
+        left: 50%;
+        top: 0;
+        flex-basis: auto;
+        overflow: hidden; // avoid issues with a vertical scrollbar
+        height: 100%;
+        width: calc(50vw);
+        margin: 0;
+        transform: translateX(-50vw);
+
+        img {
+          position: absolute;
+          right: 0;
+          top: 0;
+          //height: auto;
+          //width: 50vw;
+          height: 100%;
+          width: auto;
+          min-width: 50vw;
+          max-width: none;
+          object-fit: cover; // keep image in ratio (not in IE)
+        }
+      }
+
+      // prevent blazy wrappers from breaking positioning
+      // so needs some styling to enable proper position and stretch of the img
+      // basically, match what the sidebar div is doing
+      .media,
+      .video-embed-field-responsive-video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      // content
+      .paragraph__content {
+        flex-basis: 100%;
+        width: 100%;
+        margin: 0;
+      }
+
+      // ** STORY RIGHT
+
+      &.p-001--view-mode--right,
+      &.p-001--view-mode--image_right {
+
+        .paragraph__cols {
+          flex-direction: row;
+          padding-left: 0;
+          padding-right: calc(50% + #{rem($story-gap)});
+        }
+
+        .paragraph__sidebar {
+          transform: none;
+
+          img {
+            right: auto;
+            left: 0;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & larger
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  .paragraph--type-p-001 {
+
+    &.p--layout--image_normal {
+
+      // image/video aside
+      .paragraph__sidebar {
+        @include flex-col(5, 12, $story-gap);
+        margin-top: 0;
+      }
+
+      // content
+      .paragraph__content {
+        @include flex-col(7, 12, $story-gap);
+        margin-top: 0;
+      }
+
+    }
+
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: large
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  .paragraph--type-p-001 {
+
+    &.p--layout--image_normal {
+
+      // image/video aside
+      .paragraph__sidebar {
+        @include flex-col(5, 12, $story-gap);
+        margin-top: 0;
+      }
+
+      // content
+      .paragraph__content {
+        @include flex-col(7, 12, $story-gap);
+        margin-top: 0;
+      }
+
+    }
+
+  }
+}

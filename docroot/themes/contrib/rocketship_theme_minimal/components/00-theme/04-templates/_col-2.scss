@@ -1,0 +1,79 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * 2 column layout
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// *
+// =============================================================================
+
+// .layout--2-col {
+//
+// }
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  // columns wrapper
+  .layout__cols {
+    //
+  }
+
+  // content as column
+  .layout__content--sidebar-secondary--left,
+  .layout__content--sidebar-primary--right {
+    //
+  }
+
+  // sidebar as column
+  .layout__sidebar--sidebar-primary--left,
+  .layout__sidebar--sidebar-secondary--right {
+    //
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  // content as column
+  .layout__content--sidebar-secondary--left,
+  .layout__content--sidebar-primary--right {
+    //
+  }
+
+  // sidebar as column
+  .layout__sidebar--sidebar-primary--left,
+  .layout__sidebar--sidebar-secondary--right {
+    //
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: large
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  // content as column
+  .layout__content--sidebar-secondary--left,
+  .layout__content--sidebar-primary--right {
+    //
+  }
+
+  // sidebar as column
+  .layout__sidebar--sidebar-primary--left,
+  .layout__sidebar--sidebar-secondary--right {
+    //
+  }
+
+}

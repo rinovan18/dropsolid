@@ -1,0 +1,56 @@
+label: 'About us'
+configuration:
+  label_display: false
+bem_block_modifiers:
+  - 'type-content'
+paragraph:
+  content: true
+  bem_p_block:
+  bem_p_element:
+  bem_p_modifiers:
+    - view-mode-default
+    - type-p-003
+  bem_p_extra:
+    - has-bg-stretched
+    - p--view-mode--left
+    - p-003--view-mode--left
+  fields:
+    title:
+      label_hidden: true
+      field_name: field_p_title
+      field_type: string
+      bem_field_modifiers:
+        - 'label-hidden'
+      heading_display: true
+      heading_level: 2
+      heading: 'About us'
+    teaser:
+      label_hidden: true
+      field_name: field_p_teaser
+      field_type: string_long
+      bem_field_modifiers:
+        - 'label-hidden'
+      content: "'One world, one company'"
+    text:
+      label_hidden: true
+      field_name: field_p_text
+      field_type: text_long
+      bem_field_modifiers:
+        - 'label-hidden'
+      bem_field_extra:
+        - 'text-long'
+      content: |
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat dolor ex, ac tincidunt neque pulvinar et. <i>Hoc simile tandem est?</i> <a href="http://loripsum.net/" target="_blank">An hoc usque quaque, aliter in vita?</a> Pellentesque id tortor eu urna pulvinar eleifend nec ut ipsum.Donec imperdiet nisl vel lobortis dictum.</p>
+        <p><i>Bonum negas esse divitias, praeposìtum esse dicis?</i> Non quaeritur autem quid naturae tuae consentaneum sit, sed quid disciplinae. Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam.</p>
+    button:
+      label_hidden: true
+      field_name: 'field_p_button'
+      field_type: 'link'
+      items:
+        - content:
+            '#title': 'More about us'
+            '#type': "link"
+        - content:
+            '#type': 'link'
+            '#url': '#'
+            '#title': 'Contact us'

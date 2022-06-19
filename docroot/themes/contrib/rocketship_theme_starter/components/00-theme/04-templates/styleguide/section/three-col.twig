@@ -1,0 +1,294 @@
+{% set settings = settings|default({})%}
+
+{% set bem_section_block = bem_section_block|default(['layout'])%}
+{% set bem_section_element = bem_section_element|default(false)%}
+{% set bem_section_modifier = bem_section_modifier|default([]) %}
+{% set bem_section_extra = bem_section_extra|default([]) %}
+
+{% set modifier = modifier ?? false %}
+{% if (modifier|trim is not empty) %}
+  {% set modifier = modifier %}
+{% endif %}
+
+{% set layoutModifier = 'sidebars' %}
+{% set classMain = 'center' %}
+{% set classAsideLeft = 'left' %}
+{% set classAsideRight = 'right' %}
+
+{% set bem_section_modifier = bem_section_modifier|merge([
+  '3col',
+  'sidebar',
+  layoutModifier
+]) %}
+
+{% if label %}
+  {% set bem_section_modifier = bem_section_modifier|merge(['label-' ~ label|clean_class]) %}
+{% endif %}
+{% if modifier %}
+  {% set bem_section_modifier = bem_section_modifier|merge([modifier]) %}
+{% endif %}
+{% if variant %}
+  {% set bem_section_modifier = bem_section_modifier|merge([variant|clean_class]) %}
+{% endif %}
+
+{% set bem_section_extra = bem_section_extra|merge([
+  'layout-section',
+]) %}
+
+{% if extra_classes %}
+  {% set extraArray = extra_classes|split(' ') %}
+  {% set bem_section_extra = bem_section_extra|merge(extraArray) %}
+{% endif %}
+
+{# cols wrapper #}
+
+{% set colclasses = [
+    'layout__cols',
+    'layout__cols--sidebar',
+] %}
+
+{% if modifier %}
+  {% set colclasses = colclasses|merge(['layout__cols' ~ '--' ~ modifier]) %}
+  {% set colclasses = colclasses|merge(['layout__cols--' ~ layoutModifier ~ '--' ~ modifier]) %}
+{% endif %}
+
+{# asides #}
+
+{% set sidebarclasses = [
+    'layout__region',
+    'layout-builder__region',
+    'layout__sidebar',
+    'layout__sidebar--' ~ layoutModifier,
+] %}
+
+{% set firstclasses = firstclasses|merge([
+    'layout__sidebar--' ~ layoutModifier ~ '--' ~ classAsideLeft,
+]) %}
+
+{% set secondclasses = firstclasses|merge([
+    'layout__sidebar--' ~ layoutModifier ~ '--' ~ classAsideRight,
+]) %}
+
+{% if modifier %}
+  {% set sidebarclasses = sidebarclasses|merge(['layout__region--' ~ modifier]) %}
+  {% set sidebarclasses = sidebarclasses|merge(['layout__sidebar--' ~ modifier]) %}
+
+  {% set firstclasses = sidebarclasses|merge(['layout__sidebar--' ~ classAsideLeft ~ '--' ~ modifier]) %}
+
+  {% set secondclasses = sidebarclasses|merge(['layout__sidebar--' ~ classAsideRight ~ '--' ~ modifier]) %}
+{% endif %}
+
+{# center #}
+
+{% set centerclasses = [
+    'layout__region',
+    'layout-builder__region',
+    'layout__content',
+    'layout__content--' ~ layoutModifier,
+    'layout__content--' ~ layoutModifier ~ '--' ~ classMain,
+] %}
+
+{% if modifier %}
+  {% set centerclasses = centerclasses|merge(['layout__region--' ~ modifier]) %}
+  {% set centerclasses = centerclasses|merge(['layout__content--' ~ modifier]) %}
+{% endif %}
+
+
+{% if content %}
+
+  <div {{bem(bem_section_block, bem_section_element, bem_section_modifier, bem_section_extra)}}>
+    <div class="{{colclasses|join(' ')}}">
+
+        <div class="{{firstclasses|join(' ')}}">
+          {% if content.first_top %}
+            {% set top_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--primary',
+                'layout__sidebar__row--top',
+                'layout__sidebar__row--top--primary',
+              ]
+            %}
+            {% if modifier %}
+              {% set top_classes = top_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__sidebar__row--top' ~ '--' ~ modifier,
+                'layout__sidebar__row--top--primary' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{top_classes|join(' ')}}">
+              {% block first_top %}
+              {{content.first_top}}
+              {% endblock %}
+            </div>
+          {% endif %}
+          {% if content.first_main %}
+            {% set main_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--primary',
+                'layout__sidebar__row--main',
+                'layout__sidebar__row--main--primary',
+              ]
+            %}
+            {% if modifier %}
+              {% set main_classes = main_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__sidebar__row--main' ~ '--' ~ modifier,
+                'layout__sidebar__row--main--primary' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{main_classes|join(' ')}}">
+              {% block first_main %}
+              {{content.first_main}}
+              {% endblock %}
+            </div>
+          {% endif %}
+          {% if content.first_bottom %}
+            {% set bottom_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--primary',
+                'layout__sidebar__row--bottom',
+                'layout__sidebar__row--bottom--primary',
+              ]
+            %}
+            {% if modifier %}
+              {% set bottom_classes = bottom_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__sidebar__row--bottom' ~ '--' ~ modifier,
+                'layout__sidebar__row--bottom--primary' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{bottom_classes|join(' ')}}">
+              {% block first_bottom %}
+              {{content.first_bottom}}
+              {% endblock %}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="{{centerclasses|join(' ')}}">
+          {% if content.second_top %}
+            {% set top_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--top',
+              ]
+            %}
+            {% if modifier %}
+              {% set top_classes = top_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__content__row--top' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{top_classes|join(' ')}}">
+              {% block second_top %}
+              {{content.second_top}}
+              {% endblock %}
+            </div>
+          {% endif %}
+          {% if content.second_main %}
+            {% set main_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--main',
+              ]
+            %}
+            {% if modifier %}
+              {% set main_classes = main_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__sidebar__row--main' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{main_classes|join(' ')}}">
+              {% block second_main %}
+              {{content.second_main}}
+              {% endblock %}
+            </div>
+          {% endif %}
+          {% if content.second_bottom %}
+            {% set bottom_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--bottom',
+              ]
+            %}
+            {% if modifier %}
+              {% set bottom_classes = bottom_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__sidebar__row--bottom' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{bottom_classes|join(' ')}}">
+              {% block second_bottom %}
+              {{content.second_bottom}}
+              {% endblock %}
+            </div>
+          {% endif %}
+        </div>
+
+        <div class="{{secondclasses|join(' ')}}">
+          {% if content.second_top %}
+            {% set top_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--secondary',
+                'layout__sidebar__row--top',
+                'layout__sidebar__row--top--secondary',
+              ]
+            %}
+            {% if modifier %}
+              {% set top_classes = top_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__sidebar__row--top' ~ '--' ~ modifier,
+                'layout__sidebar__row--top--secondary' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{top_classes|join(' ')}}">
+              {% block second_top %}
+              {{content.second_top}}
+              {% endblock %}
+            </div>
+          {% endif %}
+          {% if content.second_main %}
+            {% set main_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--secondary',
+                'layout__sidebar__row--main',
+                'layout__sidebar__row--main--secondary',
+              ]
+            %}
+            {% if modifier %}
+              {% set main_classes = main_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__sidebar__row--main' ~ '--' ~ modifier,
+                'layout__sidebar__row--main--secondary' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{main_classes|join(' ')}}">
+              {% block second_main %}
+              {{content.second_main}}
+              {% endblock %}
+            </div>
+          {% endif %}
+          {% if content.second_bottom %}
+            {% set bottom_classes = [
+                'layout__sidebar__row',
+                'layout__sidebar__row--secondary',
+                'layout__sidebar__row--bottom',
+                'layout__sidebar__row--bottom--secondary',
+              ]
+            %}
+            {% if modifier %}
+              {% set bottom_classes = bottom_classes|merge([
+                'layout__sidebar__row' ~ '--' ~ modifier,
+                'layout__sidebar__row--bottom' ~ '--' ~ modifier,
+                'layout__sidebar__row--bottom--secondary' ~ '--' ~ modifier,
+              ]) %}
+            {% endif %}
+            <div class="{{bottom_classes|join(' ')}}">
+              {% block second_bottom %}
+              {{content.second_bottom}}
+              {% endblock %}
+            </div>
+          {% endif %}
+        </div>
+
+    </div>
+  </div>
+
+{% endif %}

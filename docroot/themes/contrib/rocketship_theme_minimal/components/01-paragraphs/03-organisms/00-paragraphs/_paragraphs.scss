@@ -1,0 +1,610 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs
+// *
+// * General styling for paragraphs (whitespaces, general fields, ...)
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// * individual paragraphs
+// =============================================================================
+
+.paragraph {
+
+  $paragraph: &;
+
+  position: relative;
+
+  // -- some resets for fields as lists
+  .field__items {
+    @include list-reset;
+  }
+
+  .field__item {
+    @include list-reset;
+  }
+
+  // alignment from a view mode (layout class on the paragraph)
+  // can be overridden by CKE for individual parts of the text in a field that has CKEditor
+  // if a CKE text field is added
+  // Exception applies for centered layout
+  //
+
+  .field {
+    .text-align-centered {
+      text-align: center;
+    }
+
+    .text-align-right {
+      text-align: right;
+    }
+
+    .text-align-justify {
+      text-align: justify;
+    }
+  }
+
+  // -- Body text
+
+  .field--type-text-long,
+  .text-long {
+    > p,
+    > ul,
+    > ol {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // -- Buttons
+
+  .field--buttons {
+    //
+
+    .button {
+      //
+
+      // -- make the other buttons look different
+
+      // 2nd button
+      &:nth-child(2) {
+        //@include button-secondary();
+      }
+
+      // 3rd button and all buttons after that
+      &:nth-child(n+3) {
+        //@include button-tertiary();
+      }
+
+    }
+
+  }
+
+  // -- background image: make it stretch (like "cover")
+
+  .field--name-field-p-bg-image,
+  .field--name-field-p-media-bg-image {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+
+    // -- make img stretch with width (visually cropped height)
+
+    // prevent blazy wrappers from breaking positioning of absolute image
+    // so needs some styling to enable proper position and stretch of the img
+    // basically, match what the sidebar div is doing
+    .media {
+      position: static;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: auto;
+      min-width: 100%;
+      min-height: 100%;
+      width: 100%;
+      height: auto;
+      max-width: none;
+      transform: translateX(-50%) translateY(-50%);
+      object-fit: cover; // keep image in ratio (not in IE)
+    }
+
+  }
+
+  // ** if explicitely set, make background-image stretch width of page
+  &.has-bg-stretched .field--name-field-p-bg-image,
+  &.has-bg-stretched .field--name-field-p-media-bg-image {
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+  }
+
+
+  // needs better class name, but this is one that is inside p016
+  .info-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  // ***************************************************************************
+  // Add your paragraph specific backgrounds here.
+  // See example below.
+  // ***************************************************************************
+
+  // ** paragraph backgrounds
+  //    you can use these to override stuff based on background-color changes as well
+  //    eg. different button colors.
+
+  &.bg--white {
+    //@include full-bg ($color-white, "before", false);
+  }
+
+  &.bg--grey {
+    //@include full-bg ($color-gray-light-1, "before", false);
+  }
+
+  &.bg--spot-1 {
+    //@include full-bg ($color-spot-1, "before", false);
+  }
+
+  &.bg--spot-2 {
+    //@include full-bg ($color-spot-2, "before", false);
+  }
+
+  // ** stretched paragraph backgrounds
+
+  &.has-bg-stretched {
+
+    &::before {
+      margin-left: calc((-100vw + 100%) / 2);
+      width: 100vw;
+    }
+  }
+
+  // ** color change example with the 2 main colors
+
+  &.bg--spot-1,
+  &.bg--spot-2 {
+
+    //color: $color-white;
+    //
+    //a,
+    //a:visited,
+    //a:hover,
+    //a:active {
+    //  color: $color-white;
+    //}
+    //
+    //h1,
+    //h2,
+    //h3,
+    //h4 {
+    //  color: $color-white;
+    //
+    //  a,
+    //  a:visited,
+    //  a:hover,
+    //  a:active {
+    //    color: $color-white;
+    //  }
+    //}
+    //
+    //// CKE lists
+    //
+    //.filter-type ul:not(.inline),
+    //.text-long ul:not(.inline) {
+    //
+    //  & > li::before {
+    //    background-color: $color-white;
+    //  }
+    //
+    //}
+    //
+    // .filter-type ol,
+    // .text-long ol {
+    //   & > li::before {
+    //     color: $color-white;
+    //   }
+    // }
+    //
+    // // CKE links
+    // .text-long a:not(.button):not(.cke-button):not(.cke-button--secondary) {
+    //   @include link-underline((
+    //     color: $color-white,
+    //     color-hover: $color-white,
+    //     color-active: $color-white
+    //   ));
+    // }
+    //
+    //hr {
+    //  border-top-color: $color-white;
+    //}
+    //
+    //// quotes
+    //
+    //blockquote {
+    //  color: $color-white;
+    //}
+    //
+    //// breadcrumb
+    //
+    //.breadcrumb {
+    //  color: $color-white;
+    //}
+    //
+    //.breadcrumb__item {
+    //  &::before {
+    //    color: $color-white;
+    //  }
+    //}
+    //
+    //.breadcrumb__element {
+    //  color: $color-white;
+    //}
+    //
+    //.breadcrumb__link {
+    //  @include link-underline((color: $color-white));
+    //}
+    //
+    //// other types of links
+    //.field--name-field-blog-tags,
+    //.field--name-node-title,
+    //.field--name-node-link,
+    //.field--name-field-p-link {
+    //  color: $color-white;
+    //
+    //  a {
+    //    &,
+    //    &:visited,
+    //    &:hover,
+    //    &:active {
+    //      color: $color-white;
+    //    }
+    //  }
+    //}
+    //
+    //// titles & subtitles
+    //.field--name-field-p-title,
+    //.field--name-field-p-subtitle {
+    //
+    //  h2,
+    //  h3,
+    //  h4 {
+    //    color: $color-white;
+    //
+    //    a,
+    //    a:visited,
+    //    a:hover,
+    //    a:active {
+    //      color: $color-white;
+    //    }
+    //  }
+    //}
+    //
+    //
+    // #{$text-inputs-list},
+    //   textarea,
+    //   select {
+    //     border: 0 none;
+    //   }
+
+    //   input[type="radio"],
+    //   input[type="checkbox"] {
+    //     border-color: $color-white;
+    //     background: transparent;
+
+    //     & + label {
+
+    //       &.is-active {
+    //         color: inherit;
+    //       }
+
+    //       &::before {
+    //         color: $color-white;
+    //       }
+    //     }
+
+    //   }
+
+    //   input + label {
+    //     a {
+    //       @include link-underline((color: $color-white, inverse: false));
+    //     }
+    //   }
+    //
+    //.button {
+    //
+    //  @include button-negative;
+    //
+    //  // -- make the other buttons look different
+    //
+    //  &:nth-child(n+2) {
+    //    @include button-negative-secondary;
+    //  }
+    //
+    //
+    //  // 2nd button
+    //  &:nth-child(2) {
+    //    @include button-secondary();
+    //  }
+    //
+    //  // 3rd button and all buttons after that
+    //  &:nth-child(n+3) {
+    //
+    //  }
+    //}
+
+  }
+
+  // ***************************************************************************
+  // Add your paragraph specific backgrounds here for the content
+  // See example below.
+  // ***************************************************************************
+
+  // ** background for content of paragraph (eg. Testimonial)
+
+  &.has-content-bg > .p-content {
+
+    color: $color-base; // override stuff set by the general bg-color class
+
+    a {
+      &,
+      &:visited,
+      &:hover,
+      &:active {
+        color: $color-link;
+      }
+    }
+
+    // CKE links
+    .text-long a:not(.button):not(.cke-button):not(.cke-button--secondary) {
+      @include link-underline((
+        color: $color-link,
+        color-hover: $color-link-hover,
+        color-active: $color-link-active
+      ));
+    }
+
+    .field--name-field-blog-tags,
+    .field--name-node-title,
+    .field--name-node-link,
+    .field--name-field-p-link {
+      color: $color-base;
+
+      a {
+        &,
+        &:visited,
+        &:hover,
+        &:active {
+          color: $color-link;
+        }
+      }
+    }
+
+    // if background of the content
+    // need spacing
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem($p-gap-content-hor);
+    padding-right: rem($p-gap-content-hor);
+    padding-bottom: rem($p-gap-content-vert);
+  }
+
+  // ** background colors for the content
+  //    you can use these to override other stuff based on background-color changes as well
+  //    eg. different button colors.
+
+  &.content-bg--white > .p-content {
+    //background-color: $color-white;
+  }
+
+  &.content-bg--grey > .p-content {
+    //background-color: $color-gray-light-1;
+  }
+
+  &.content-bg--spot-1 > .p-content {
+    //background-color: $color-spot-1;
+  }
+
+  &.content-bg--spot-2 > .p-content {
+    //background-color: $color-spot-2;
+  }
+
+  // ** color changes example with the main 2 colors
+
+  &.content-bg--spot-1,
+  &.content-bg--spot-2 {
+
+    // ** Change of colors because of the background
+
+    & > .p-content {
+      //color: $color-white;
+      //
+      //// quote mark
+      //.text-long::before {
+      //  color: $color-white;
+      //
+      //  a {
+      //    &,
+      //    &:visited,
+      //    &:hover,
+      //    &:active {
+      //      color: $color-white;
+      //    }
+      //  }
+      //}
+      // // CKE links
+      // .text-long a:not(.button):not(.cke-button):not(.cke-button--secondary) {
+      //   @include link-underline((
+      //     color: $color-white,
+      //     color-hover: $color-white,
+      //     color-active: $color-white
+      //   ));
+      // }
+      //
+      //.field--name-field-blog-tags,
+      //.field--name-node-title,
+      //.field--name-node-link,
+      //.field--name-field-p-link {
+      //  color: $color-white;
+      //
+      //  a {
+      //    &,
+      //    &:visited,
+      //    &:hover,
+      //    &:active {
+      //      color: $color-white;
+      //    }
+      //  }
+      //}
+    }
+  }
+
+}
+
+// ** recurring elements
+
+
+.field--name-field-p-title {
+  h2,
+  h3 {
+    //margin-bottom: rem($p-gap-title-vert);
+  }
+}
+
+.field--name-field-p-subtitle {
+  h3,
+  h4 {
+    //margin-bottom: rem($p-gap-subtitle-vert);
+  }
+}
+
+.field--name-field-p-teaser {
+  //margin-bottom: rem($p-gap-teaser-vert);
+  //font-weight: $font-weight-bold;
+}
+
+
+// * Grouped paragraphs
+// =============================================================================
+
+.group--paragraphs {
+  //
+}
+
+// -- spacing and alignment for paragraphs as part of a group
+
+.group--paragraphs__item {
+  @include clearfix;
+
+  $selfSelector: ".group--paragraphs__item";
+
+  &,
+  & * {
+    box-sizing: border-box;
+  }
+
+  // padding to make space around the paragraph
+  .paragraph {
+    padding-top: rem($p-gap-vert);
+    padding-bottom: rem($p-gap-vert);
+
+    // ** EXAMPLE:
+    //    if using breakpoints, you could split spacing vars per breakpoint like this:
+    //padding-top: rem($p-gap-vert-top-xs);
+    //padding-bottom: rem($p-gap-vert-bottom-xs);
+
+    // ** paragraph with backgrounds need padding on sides
+
+    padding-left: rem($p-gap-hor);
+    padding-right: rem($p-gap-hor);
+
+    // ** paragraph with stretched backgrounds need no padding on the sides
+
+    &.has-bg-stretched {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  // no top padding if 2 have matching background-colors
+  &.has-matching-bg + #{$selfSelector}.has-matching-bg-last {
+    .paragraph {
+      padding-top: 0; // no double spacing when same bg
+    }
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  // -- grouped paragraphs: get more margin
+
+  .group--paragraphs__item {
+
+    $selfSelector: ".group--paragraphs__item";
+
+    // padding to make space around the paragraph
+    .paragraph {
+      //padding-top: rem($p-gap-vert-top-sm);
+      //padding-bottom: rem($p-gap-vert-bottom-sm);
+    }
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  // -- grouped paragraphs: get more margin
+
+  .group--paragraphs__item {
+
+    $selfSelector: ".group--paragraphs__item";
+
+    // padding to make space around the paragraph
+    .paragraph {
+      //padding-top: rem($p-gap-vert-top-md);
+      //padding-bottom: rem($p-gap-vert-bottom-md);
+    }
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: large
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  .group--paragraphs__item {
+
+    $selfSelector: ".group--paragraphs__item";
+
+    // padding to make space around the paragraph
+    .paragraph {
+      //padding-top: rem($p-gap-vert-top-lg-2);
+      //padding-bottom: rem($p-gap-vert-bottom-lg-2);
+    }
+
+  }
+
+}

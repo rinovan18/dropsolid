@@ -1,0 +1,104 @@
+{#
+/**
+ * This is strictly an example file to demonstrate markup in Storybook.
+ * It is not intended to be included in any other component.
+ */
+#}
+
+{% embed "@%theme_prefix%-molecules/00-block/_block.twig" with {
+    label: label,
+    configuration: configuration,
+    bem_block_modifiers: bem_block_modifiers,
+    fields: fields,
+    paragraph: paragraph,
+  } %}
+
+  {% block block_content %}
+
+    {# Option 1:
+      This block should not have a paragraph because it only needs 1 field (for the image),
+      otherwise it's a mess of unneeded wrappers, and you need to override some default Paragraph styling, ànd you are bound to the Paragraph's image style
+
+      So please DON'T use the 'content' block in Drupal and just make a new block type 'visual' (or similar) with a responsive image field instead of Paragraphs field
+    #}
+
+    {% include "@%theme_prefix%-atoms/04-images/styleguide/blazy-responsive.twig" with {
+      label_display: fields.image.label_display,
+      field_name: fields.image.field_name,
+      field_type: fields.image.field_type,
+      field_attributes: fields.image.field_attributes,
+      settings: fields.image.settings,
+      bem_field_modifiers: fields.image.bem_field_modifiers,
+      bem_field_extra: fields.image.bem_field_extra,
+      blazy_bem_block: fields.image.blazy_bem_block,
+      blazy_bem_modifiers: fields.image.blazy_bem_modifiers,
+      blazy_attributes: fields.image.blazy_attributes,
+      image_src: fields.image.image_src,
+      image_alt: fields.image.image_alt,
+      image_srcset: fields.image.image_srcset,
+      image_sizes: fields.image.image_sizes,
+      image_bem_modifiers: fields.image.image_bem_modifiers,
+      image_bem_extra: fields.image.image_bem_extra,
+      attributes: fields.image.image_attributes,
+    } %}
+
+    {# Option 2: 'content' block type, using a Paragraph (DO NOT USE!!! For demo only)
+
+    <div class="group--paragraphs">
+
+      <!-- Paragraph: p002 Image -->
+      {% embed "@%theme_prefix%-p-organisms/00-paragraphs/_paragraph.twig" with {
+        bem_p_block: paragraph.bem_p_block,
+        bem_p_element: paragraph.bem_p_element,
+        bem_p_modifiers: paragraph.bem_p_modifiers,
+        bem_p_extra: paragraph.bem_p_extra,
+      } %}
+
+        {% block paragraph_content %}
+
+          <!-- image field -->
+          {% embed "@%theme_prefix%-atoms/00-field/_field.twig" with {
+            label_display: paragraph.fields.image.label_display,
+            field_name: paragraph.fields.image.field_name,
+            field_type: paragraph.fields.image.field_type,
+            bem_field_modifiers: paragraph.fields.image.bem_field_modifiers,
+            bem_field_extra: paragraph.fields.image.bem_field_extra,
+            attributes: paragraph.fields.image.field_attributes,
+          } %}
+
+            {% block field_content %}
+
+              {% include "@%theme_prefix%-atoms/04-images/styleguide/blazy-responsive.twig" with {
+                label_display: paragraph.fields.image.label_display,
+                field_name: paragraph.fields.image.field_name,
+                field_type: paragraph.fields.image.field_type,
+                field_attributes: paragraph.fields.image.field_attributes,
+                settings: paragraph.fields.image.settings,
+                bem_field_modifiers: paragraph.fields.image.bem_field_modifiers,
+                bem_field_extra: paragraph.fields.image.bem_field_extra,
+                blazy_bem_block: paragraph.fields.image.blazy_bem_block,
+                blazy_bem_modifiers: paragraph.fields.image.blazy_bem_modifiers,
+                blazy_attributes: paragraph.fields.image.blazy_attributes,
+                image_src: paragraph.fields.image.image_src,
+                image_alt: paragraph.fields.image.image_alt,
+                image_srcset: paragraph.fields.image.image_srcset,
+                image_sizes: paragraph.fields.image.image_sizes,
+                image_bem_modifiers: paragraph.fields.image.image_bem_modifiers,
+                image_bem_extra: paragraph.fields.image.image_bem_extra,
+                attributes: paragraph.fields.image.image_attributes,
+              } %}
+
+            {% endblock %}
+
+          {% endembed %}
+          <!-- /End image field -->
+
+        {% endblock %}
+
+      {% endembed %}
+      <!-- end Paragraph p002 -->
+    </div> #}
+
+  {% endblock %}
+
+{% endembed %}

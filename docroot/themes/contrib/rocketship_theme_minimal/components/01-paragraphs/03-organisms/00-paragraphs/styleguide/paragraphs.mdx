@@ -1,0 +1,60 @@
+import { Story } from '@storybook/addon-docs/blocks';
+
+# Paragraphs
+
+## Color variants
+
+This component shows you a dummy (Text) paragraph with the generic paragraph fields that occur in most Paragraph Types, along with background-color variations.<br />
+This way, you can see the impact of the color variants on the fields.<br />
+The color variants are set using the `bem_p_extra` key in the data, which is used to construct BEM classes.<br />
+More info on that in the <a href="#data-structure">'Data structure' section</a> further below.
+
+## Structure
+
+You can also see what wrapper templates to use in order to produce a Paragraph.<br />
+Pay special attention to the `group--paragraphs` and `group--paragraphs__item` divs, as well as the `_paragraph.twig` embed.<br />
+The first wrappers are basically for the paragraph reference field. This groups all paragraph items for a node.<br />
+The paragraph embed, will provide the item wrapper and paragraph classes that set up the individual paragraph.
+
+inside `{% block paragraph_content %}` you can nest all the fields of the specific paragraph you are building.<br />
+Just like with Blocks (Molecules), you can import and merge data in the component's story file to reuse Atoms for the fields.
+
+## Data structure
+
+**Class names** are built up using the BEM principle. <br />
+The most important bits are: `type` and extra classes (output by the paragraph types configuration options).<br />
+So take a look at a couple paragraphs to see how those are built up.
+
+- `view_mode`: String, not that useful since we mostly use the 'default' view mode
+- `type`: String, is a 3-digit number prefixed by 'p' to indicate the paragraphs type
+- `bem_p_extra`: Array of strings indicating the set options, with or without the types
+  in the case of the 'overview' paragraph, there is also an extra class to denote the paragraph type + CT + location
+  - `has-bg-stretched`: a default setting, can be turned off in Paragraphs Configuration form. Means the backgrounds are always stretched from page edge to edge.
+  - `has-bg`: (optional) indicates that there is a background-color
+  - `bg--[color name]`: (only if has-bg is set) sets the background-color class
+  - …
+
+**Example of p003 Text Paragraph**
+
+```
+view_mode: default
+type: p_003
+bem_p_extra:
+  - 'has-bg-stretched'
+  - 'has-bg'
+  - 'bg--spot-1'
+  - 'p--view-mode--left'
+  - 'p-003--view-mode--left'
+```
+
+**Example of Overview Paragraph**
+
+```
+view_mode: default
+type: overview
+bem_p_extra:
+  - 'has-bg-stretched'
+  - 'overview--blog-overview-front'
+```
+
+For info on the data structure of the fields, see the theme Atoms and the Docs for the example Molecule.

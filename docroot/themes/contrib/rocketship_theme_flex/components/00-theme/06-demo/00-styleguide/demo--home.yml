@@ -1,0 +1,51 @@
+page:
+  content:
+    blocks:
+      visual:
+      content:
+      blog:
+        overview:
+      event:
+        overview:
+    layouts:
+      header:
+        label: 'Header'
+        variant: 'rs-header'
+        region_type: 'header'
+        modifier: null
+        extra_classes: 'home__section home__section--visual'
+        content:
+          content: true
+          before01: false
+          before02: false
+          after01: false
+          after02: false
+      usp_info:
+        label: 'Rocketship 2-col'
+        variant: 'rs-two-col'
+        region_type: 'content'
+        modifier: null
+        extra_classes: 'home__section home__section--usp-info'
+        settings:
+          layout_reversed: false
+        content:
+          first_main: true
+          second_main: true
+      blog_event:
+        label: 'Rocketship 2-col'
+        variant: 'rs-two-col'
+        region_type: 'content'
+        modifier: null
+        extra_classes: 'home__section home__section--blog-events'
+        settings:
+          layout_reversed: false
+        content:
+          first_main: true
+          second_main: true
+      paragraphs:
+        label: 'Body'
+        variant: 'rs-content'
+        region_type: 'content'
+        content:
+          content: true
+

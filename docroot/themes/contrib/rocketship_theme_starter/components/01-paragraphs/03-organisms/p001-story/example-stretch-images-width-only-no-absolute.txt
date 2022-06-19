@@ -1,0 +1,160 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// ** WARNING! this will NOT stretch the images in height, only the width
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & larger
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+
+  .paragraph--type-p-001 {
+
+    // normal size image
+
+    &.p--layout--image_normal {
+
+      // ** image and text next to each other
+
+      .paragraph__cols {
+        margin-top: 0;
+      }
+
+      // image/video aside
+      .paragraph__sidebar {
+        @include flex-col(6, 12, $story-gap);
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+
+      // content
+      .layout__content {
+        @include flex-col(6, 12, $story-gap);
+        margin-top: 0;
+      }
+
+      // ** STORY RIGHT
+
+      &.p-001--view-mode--right,
+      &.p-001--view-mode--image_right {
+
+        .paragraph__cols {
+          flex-direction: row-reverse;
+        }
+      }
+
+    }
+
+
+    // Some layout changes when stretched image
+
+    &.p--layout--image_stretched {
+
+      // override the top padding to add make space
+      // when 2 paragraphs with same bg follow each other
+
+      .group--paragraphs__item.has-matching-bg + .group--paragraphs__item.has-matching-bg & {
+        padding-top: rem($p-gap-vert-top-sm);
+      }
+
+      // ** image and text next to each other
+
+      .paragraph__cols {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: visible;
+        justify-content: flex-end;
+        margin-top: rem(-$p-gap-vert-top-sm);
+        margin-bottom: rem(-$p-gap-vert-top-sm);
+      }
+
+      // image/video aside
+      .paragraph__sidebar {
+        flex-basis: 50%;
+        height: 100%;
+        width: 50%;
+        margin: 0;
+
+        img {
+          float: right;
+          width: 50vw;
+          max-width: none;
+        }
+      }
+
+      // content
+      .layout__content {
+        flex-basis: 50%;
+        width: 50%;
+        margin: 0;
+        padding-left: rem($story-gap);
+      }
+
+      // ** STORY RIGHT
+
+      &.p-001--view-mode--right,
+      &.p-001--view-mode--image_right {
+
+        .paragraph__cols {
+          justify-content: flex-start;
+        }
+
+        .paragraph__sidebar {
+          order: 2;
+
+          img {
+            float: left;
+          }
+        }
+
+        .layout__content {
+          padding-right: rem($story-gap);
+          padding-left: 0;
+        }
+
+      }
+
+    }
+
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & larger
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  &.p--layout--image_stretched {
+
+    // ** image and text next to each other
+
+    .paragraph__cols {
+      margin-top: rem(-$p-gap-vert-top-md);
+      margin-bottom: rem(-$p-gap-vert-top-md);
+    }
+  }
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: large
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  &.p--layout--image_stretched {
+
+    // ** image and text next to each other
+
+    .paragraph__cols {
+      margin-top: rem(-$p-gap-vert-top-lg);
+      margin-bottom: rem(-$p-gap-vert-top-lg);
+    }
+  }
+}

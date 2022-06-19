@@ -1,0 +1,35 @@
+{% set image_bem_block = image_bem_block ?? false %}
+{% set image_bem_element = image_bem_element|default('image') %}
+{% set image_modifiers = image_modifiers|default([]) %}
+{% set image_bem_extra = image_bem_extra|default([]) %}
+
+{# if there is no alt property filled in, it won't render as an attribute
+   but we need it for accessibility, so we force it to render an empty prop instead
+   Or we could set another attribute instead: role="presentation", on decorative images, that would also be a good fix
+#}
+{% set alternativeAlt = image_alt %}
+{% if image_alt is null or image_alt is not defined or image_alt is empty %}
+{% set alternativeAlt = '' %}
+{% endif %}
+
+<img
+  {{ bem(image_bem_block, image_bem_element, image_modifiers, image_bem_extra) }}
+  {# because 'attributes' method doesn't work in styleguide, as part of BEM or standalone, we need to build the prop manually#}
+  {% for attribute,value in attributes %}
+    {% if attribute != 'class' and attribute != 'srcset' and attribute != 'sizes' and attribute != 'src' and attribute != 'alt' and attribute != 'title' %}
+      {{ attribute }}="{{ value }}"
+    {% endif %}
+  {% endfor %}
+
+  {% if image_srcset %}
+    srcset="{{ image_srcset }}"
+  {% endif %}
+  {% if image_sizes %}
+    sizes="{{ image_sizes }}"
+  {% endif %}
+  src="{{ image_src }}"
+  alt="{{ alternativeAlt }}"
+  {% if image_title %}
+    title="{{ image_title }}"
+  {% endif %}
+/>

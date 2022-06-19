@@ -1,0 +1,119 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: Related Items
+// *
+// * The individual items are styled in another file
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// * General
+// =============================================================================
+
+.paragraph--type-p-014 {
+
+  // ** related items field
+
+  .field--name-field-p-related-items {
+
+    & > .field__items {
+      //
+    }
+
+  }
+
+  .field__item--name-field-p-related-items {
+    //
+
+    &:last-child {
+      //
+    }
+  }
+
+  // space between items & the fields above it (teaser, title, subtitle)
+  .field + .field--name-field-p-related-items {
+    margin-top: rem($p-gap-teaser-wide);
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: wide phone & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-xs-wide {
+
+  .paragraph--type-p-014 {
+
+    // ** related items field
+
+    .field--name-field-p-related-items {
+
+      & > .field__items {
+        //
+      }
+    }
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  .paragraph--type-p-014 {
+
+    // ** related items field
+
+    .field--name-field-p-related-items {
+
+      & > .field__items {
+        //
+      }
+
+    }
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  .paragraph--type-p-014 {
+    //
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  .paragraph--type-p-014 {
+    //
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+  }
+
+}

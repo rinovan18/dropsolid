@@ -1,0 +1,141 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: Related Items - individual items
+// *
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+// * Related items
+// =============================================================================
+
+.paragraph--type-p-014 {
+
+  .field__item--name-field-p-related-items {
+
+    // ** image
+
+    .field--image,
+    .field--name-field-media-canonical-image {
+      margin-bottom: rem($gap-vert-sm);
+    }
+
+    // ** item title
+
+    h2,
+    h3,
+    h4 {
+      @include h4;
+      margin-bottom: rem($gap-vert-sm);
+
+      a {
+        &,
+        &:visited {
+          color: $color-heading;
+        }
+
+        &:hover,
+        &:active {
+          color: $color-link;
+        }
+      }
+    }
+
+    // ** if there is a readmore link
+
+    .field--name-node-link {
+      margin-top: rem($gap-vert-sm);
+      a {
+        @include link-more;
+      }
+    }
+
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: wide phone & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-xs-wide {
+
+  .paragraph--type-p-014 {
+
+    .field__item--name-field-p-related-items {
+
+      // -- Example: push readmore link to the end
+      //
+      //display: flex;
+      //width: 100%;
+      //
+      //.node--view-mode-related {
+      //  display: flex;
+      //  width: 100%;
+      //}
+      //
+      //.layout__content--node--page--related {
+      //  display: flex;
+      //  width: 100%;
+      //}
+      //
+      //.field--name-node-link {
+      //  flex-grow: 1;
+      //  display: flex;
+      //  align-items: flex-end;
+      //}
+    }
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  .paragraph--type-p-014 {
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  .paragraph--type-p-014 {
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: large
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  .paragraph--type-p-014 {
+
+    .field__item--name-field-p-related-items {
+      //
+    }
+
+  }
+
+}

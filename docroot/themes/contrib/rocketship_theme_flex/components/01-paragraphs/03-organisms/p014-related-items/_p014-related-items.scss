@@ -1,0 +1,122 @@
+////////////////////////////////////////////////////////////////////////////////
+// *
+// * Paragraphs: Related Items
+// *
+// * The individual items are styled in another file
+// *
+////////////////////////////////////////////////////////////////////////////////
+
+
+// * General
+// =============================================================================
+
+.paragraph--type-p-014 {
+
+  // ** related items field
+
+  .field--name-field-p-related-items {
+
+    & > .field__items {
+      //
+    }
+
+  }
+
+  .field__item--name-field-p-related-items {
+    margin-bottom: rem($p-gap-vert);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // space between items & the fields above it (teaser, title, subtitle)
+  .field + .field--name-field-p-related-items {
+    margin-top: rem($p-gap-teaser-wide);
+  }
+
+}
+
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: wide phone & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-xs-wide {
+
+  .paragraph--type-p-014 {
+
+    // ** related items field
+
+    .field--name-field-p-related-items {
+
+      & > .field__items {
+        @include flex-grid(12, $gap-related);
+      }
+    }
+
+    .field__item--name-field-p-related-items {
+      @include flex-col(6, 12, $gap-related);
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: tablet & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-sm {
+
+  .paragraph--type-p-014 {
+
+    // ** related items field
+
+    .field--name-field-p-related-items {
+
+      & > .field__items {
+        //
+      }
+
+    }
+
+    .field__item--name-field-p-related-items {
+      flex-basis: auto;
+      width: calc(#{100% / 3} - #{rem($gap-related)}); // for IE
+    }
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-md {
+
+  .paragraph--type-p-014 {
+    //
+
+  }
+
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+// * Breakpoint: desktop & wider
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+@include bp-lg {
+
+  .paragraph--type-p-014 {
+    //
+
+    .field__item--name-field-p-related-items {
+      flex-basis: auto;
+      width: calc(#{100% / 4} - #{rem($gap-related)}); // for IE
+    }
+  }
+
+}
